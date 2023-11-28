@@ -8,18 +8,13 @@
 	"icon": "smiley",
 	"description": "Example block scaffolded with Create Block tool.",
 	"attributes": {
-			"title": {
-				"type": "string",
-				"source": "text",
-				"selector": ".tab-title",
-				"default": ""
-			},
-			"desc": {
-				"type": "string",
-				"source": "text",
-				"selector": ".tab-content",
-				"default": ""
+			"panels": {
+				"type": "array",
+				"default": [
+					{ "subtitle": "", "title": "", "desc": "", "imageUrl": "", "iconUrl": "", "linkTitle": "", "linkUrl": "" }
+				]
 			}
+			
 	},
 	"example": {},
 	"supports": {

@@ -28,6 +28,20 @@ var __webpack_exports__ = {};
 /* eslint-disable no-console */
 console.log('Hello World! (from create-block-engii-blocks block)');
 /* eslint-enable no-console */
+
+document.addEventListener('DOMContentLoaded', function () {
+  const tabs = document.querySelectorAll('.custom-tabs .tab-title');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', function () {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      const index = Array.from(tabs).indexOf(tab);
+      document.querySelectorAll('.custom-tabs .tab-panel').forEach((panel, idx) => {
+        panel.classList.toggle('active', idx === index);
+      });
+    });
+  });
+});
 /******/ })()
 ;
 //# sourceMappingURL=view.js.map
