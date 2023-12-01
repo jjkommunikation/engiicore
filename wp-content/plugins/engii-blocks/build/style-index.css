@@ -7,17 +7,6 @@
  *
  * Replace them with your own styles or remove the file completely.
  */
-.tab-panel {
-  background: #fff;
-  padding: 3rem;
-  gap: 3rem;
-  position: relative;
-  grid-template-columns: 1fr 1fr;
-}
-.tab-panel.active {
-  display: grid !important;
-}
-
 ul.tab-titles {
   list-style: none;
   padding: 0;
@@ -25,35 +14,71 @@ ul.tab-titles {
   justify-content: center;
 }
 ul.tab-titles li.tab-title {
+  font-size: 13px;
   text-align: center;
-  border-bottom: 2px solid grey;
+  border-bottom: 2px solid #D9D9D9;
   position: relative;
   padding: 1rem 1.5rem;
+  font-weight: 400;
   cursor: pointer;
 }
 ul.tab-titles li.tab-title img {
   display: block;
   margin: 0 auto;
+  height: 60px;
 }
 ul.tab-titles li.tab-title:after {
   content: "";
   display: block;
-  height: 30px;
-  width: 20px;
   background: transparent;
   opacity: 0;
   position: absolute;
   left: calc(50% - 10px);
   bottom: -150px;
+  transform: rotate(45deg);
+  width: 35px;
+  height: 35px;
+  border-radius: 10px;
 }
 ul.tab-titles li.tab-title.active {
-  border-color: blue;
+  border-color: var(--primary-color);
 }
 ul.tab-titles li.tab-title.active:after {
   background: white;
-  bottom: -40px;
+  bottom: -55px;
   opacity: 1;
   transition: bottom 0.5s ease, opacity 0.5s ease;
+}
+
+.tab-panel {
+  background: #fff;
+  padding: 3rem;
+  gap: 3rem;
+  position: relative;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 30px;
+}
+.tab-panel.active {
+  display: grid !important;
+}
+.tab-panel--image {
+  border-radius: 10px;
+}
+.tab-panel--smallheading {
+  font-size: 17px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  display: block;
+}
+.tab-panel--heading {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 30px;
 }
 
 /*# sourceMappingURL=style-index.css.map*/

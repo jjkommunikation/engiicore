@@ -8,6 +8,14 @@
  */
 .wp-block-create-block-engii-blocks .components-button.components-panel__body-toggle {
   height: 70px;
+  background-color: #eee;
+}
+.wp-block-create-block-engii-blocks .components-panel__row img {
+  width: 45%;
+  padding-left: 5%;
+}
+.wp-block-create-block-engii-blocks h2 {
+  margin: 0;
 }
 
 /*# sourceMappingURL=index.css.map*/

@@ -10,9 +10,7 @@
 	"attributes": {
 			"panels": {
 				"type": "array",
-				"default": [
-					{ "subtitle": "", "title": "", "desc": "", "imageUrl": "", "iconUrl": "", "linkTitle": "", "linkUrl": "" }
-				]
+				"default": []
 			}
 			
 	},
