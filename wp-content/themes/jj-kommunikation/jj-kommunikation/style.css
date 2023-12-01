@@ -415,6 +415,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
     margin-bottom: 20px;
     font-weight: 600;
+    color: var(--secondary-color);
 }
 h2 {
     font-size: 2.25rem;
@@ -1302,14 +1303,14 @@ ul#global-menu li a, ul#footer-menu-2 li a {
     margin-bottom: 18px;
 }
 
-a.wp-block-button__link, li.button a {
+a.wp-block-button__link, li.button a, .tab-panel a:last-child {
     background-color: var(--primary-color);
     padding: 12px 48px 12px 25px !important;
     min-width: 150px;
     min-height: 48px;
     transition: .3s ease;
     line-height: 1;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     font-family: var(--body-font);
     font-size: 17px;
@@ -1319,8 +1320,9 @@ a.wp-block-button__link, li.button a {
     position: relative;
     z-index: 1;
     font-weight: 700;
+    color: #fff;
 }
- a.wp-block-button__link:after, li.button a:after {
+ a.wp-block-button__link:after, li.button a:after, .tab-panel a:last-child:after {
     content: "";
     display: block;
     position: absolute;
@@ -1367,7 +1369,7 @@ a.wp-block-button__link, li.button a {
 a.wp-block-button__link:hover, li.button a:hover {
     background-color: var(--secondary-color);
 }
-a.wp-block-button__link.has-background:hover {
+a.wp-block-button__link.has-background:hover, .tab-panel a:last-child:hover {
     background-color: var(--secondary-color) !important;
 }
 li.button {
@@ -1692,4 +1694,8 @@ ul#secondary-menu > li.button {
 }
 ul#secondary-menu > li.button > a {
 	height: 48px !important;
+}
+
+.bluecircle {
+    background: url(/wp-content/uploads/blue-circle-bg.svg) no-repeat right center;
 }
