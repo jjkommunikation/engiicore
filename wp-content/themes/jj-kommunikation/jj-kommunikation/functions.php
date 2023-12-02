@@ -272,7 +272,7 @@ function jj_kommunikation_widgets_init() {
 
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'CTA megamenu', 'jj-kommunikation' ),
+			'name'          => esc_html__( 'Features bottom', 'jj-kommunikation' ),
 			'id'            => 'sidebar-2',
 			'description'   => esc_html__( 'Add widgets here.', 'jj-kommunikation' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
@@ -408,12 +408,14 @@ function my_wp_nav_menu_objects( $items, $args ) {
         // vars
 		//$label = get_field('mega_menu_sub_label', $item);
         $icon = get_field('mega_menu_icon', $item);
+		$color = get_field('ribbon_background_color', $item);
         
         
         // append icon
         if( $icon ) {
             $item->title .= '<img src="'.$icon.'" class="menu-icon" height="30" width="30">';
             $item->title .= '<label class="sub-label">'.$item->description.'</label>';
+			$item->title .= '<span class="ribbon-background-color" style="background-color:'.$color.'"></span>';
 			
         }
         

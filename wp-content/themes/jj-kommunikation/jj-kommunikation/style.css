@@ -1699,3 +1699,50 @@ ul#secondary-menu > li.button > a {
 .bluecircle {
     background: url(/wp-content/uploads/blue-circle-bg.svg) no-repeat right center;
 }
+
+#integrationer:after {
+    content: url("/wp-content/uploads/bg_right.svg");
+    position: absolute;
+    bottom: -10px;
+    right: 0;
+}
+
+#integrationer:before {
+    content: url("/wp-content/uploads/bg_left.svg");
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#integrationer {
+    position: relative;
+    min-height: 845px;
+    overflow: hidden;
+}
+
+.ribbon-banner ul#menu-optimer-din-forretning-1 {
+    padding: 0;
+    display: flex;
+}
+
+
+.ribbon-banner ul#menu-optimer-din-forretning-1 li:nth-child(odd) {
+    background: #ccc;
+}
+
+.ribbon-banner ul#menu-optimer-din-forretning-1 a {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    display: block;
+}
+
+.ribbon-banner span.ribbon-background-color {
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+    left: 0;
+}

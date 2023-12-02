@@ -10,7 +10,12 @@
  */
 
 ?>
-
+<div class="ribbon-banner">
+<?php dynamic_sidebar( 'sidebar-2' ); ?>
+</div>
+<div class="cta-area">
+<?php dynamic_sidebar( 'sidebar-4' ); ?>
+</div>
 	<footer id="colophon" class="site-footer">
 		<div class="alignwide">
 			<div class="site-info">
