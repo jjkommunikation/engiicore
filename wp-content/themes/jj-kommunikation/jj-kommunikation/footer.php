@@ -10,13 +10,15 @@
  */
 
 ?>
-<div class="ribbon-banner">
-<?php dynamic_sidebar( 'sidebar-2' ); ?>
+<div id="ribbon-section" class="widget-area">
+	<?php dynamic_sidebar( 'ribbon' ); ?>
 </div>
-<div class="cta-area">
-<?php dynamic_sidebar( 'sidebar-4' ); ?>
+<div id="cta-section" class="widget-area">
+			<div class="alignwide">
+				<?php dynamic_sidebar( 'cta' ); ?>
+			</div>
 </div>
-	<footer id="colophon" class="site-footer">
+	<footer id="footer-section" class="widget-area">
 		<div class="alignwide">
 			<div class="site-info">
 				<?php dynamic_sidebar( 'sidebar-3' ); ?>
@@ -28,7 +30,7 @@
 
 			
 		</div><!-- .alignwide -->
-	</footer><!-- #colophon -->
+	</footer><!-- #footer-section -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

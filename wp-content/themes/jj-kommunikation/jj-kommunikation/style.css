@@ -414,11 +414,11 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.2;
     margin-top: 0;
     margin-bottom: 20px;
-    font-weight: 600;
+    font-weight: 700;
     color: var(--secondary-color);
 }
 h2 {
-    font-size: 2.25rem;
+    font-size: 2rem;
 }
 body:not(.home) h2 {
     font-size: 2rem;
@@ -971,12 +971,12 @@ textarea {
 
 /* Hide the Posts Navigation and the Footer when Infinite Scroll is in use. */
 .infinite-scroll .posts-navigation,
-.infinite-scroll.neverending .site-footer {
+.infinite-scroll.neverending footer {
 	display: none;
 }
 
 /* Re-display the Theme Footer when Infinite Scroll has reached its end. */
-.infinity-end.neverending .site-footer {
+.infinity-end.neverending footer {
 	display: block;
 }
 
@@ -1183,8 +1183,7 @@ textarea {
 	--head-font: 'Inter', sans-serif;
 	--body-font: 'Inter', sans-serif;
 
-	--wide-grid: 1400px;
-	--grid: 1200px;
+	--grid: 1400px;
 }
 html[lang="en-GB"] .site-header {
     background: #000;
@@ -1287,7 +1286,6 @@ ul#global-menu li a, ul#footer-menu-2 li a {
 
 
 .entry-content {
-    /*max-width: var(--wide-grid); */
     margin: 0 auto;
 }
 
@@ -1462,8 +1460,19 @@ body.logged-in .site-header {
     top: 32px;
 }
 
-.wp-block-group__inner-container {
-    padding: 100px 0;
+.wp-block-group > .wp-block-group__inner-container {
+    padding: 50px;
+}
+
+#cta-section .wp-block-group {
+    margin-left: auto !important;
+}
+#cta-section .wp-block-columns {
+    gap: 0;
+}
+
+#cta-section {
+    padding: 50px 0;
 }
 
 ul.mega-sub-menu {
@@ -1720,24 +1729,28 @@ ul#secondary-menu > li.button > a {
     overflow: hidden;
 }
 
-.ribbon-banner ul#menu-optimer-din-forretning-1 {
+#ribbon-section ul {
     padding: 0;
     display: flex;
+    gap: 5px;
 }
 
 
-.ribbon-banner ul#menu-optimer-din-forretning-1 li:nth-child(odd) {
+#ribbon-section ul li:nth-child(odd) {
     background: #ccc;
 }
 
-.ribbon-banner ul#menu-optimer-din-forretning-1 a {
+#ribbon-section ul a {
     position: relative;
     z-index: 1;
-    padding: 20px;
+    padding: 110px 20px 20px 20px;
     display: block;
+    min-height: 350px;
+    transition: 300ms ease-in-out;
 }
 
-.ribbon-banner span.ribbon-background-color {
+
+#ribbon-section .ribbon-background-color {
     display: block;
     height: 100%;
     position: absolute;
@@ -1745,4 +1758,112 @@ ul#secondary-menu > li.button > a {
     width: 100%;
     z-index: -1;
     left: 0;
+    opacity: .2;
+}
+
+#ribbon-section ul a:hover, #ribbon-section ul .current-menu-item a {
+    color: #fff !important;
+    min-height: 370px;
+    margin-top: -20px;
+}
+
+#ribbon-section ul a:hover .ribbon-background-color, #ribbon-section ul .current-menu-item a .ribbon-background-color {
+    opacity: 1 !important;
+}
+
+#ribbon-section .menu-icon {
+    left: 15px;
+    top: 20px;
+    height: 60px;
+    width: 60px;
+}
+#ribbon-section ul a:hover .menu-icon, #ribbon-section ul .current-menu-item .menu-icon  {
+    filter: brightness(0) invert(1);
+}
+
+#ribbon-section label {
+    padding-left: 0;
+}
+
+#cta-section .wp-block-column:not(:last-child) {
+    border-right: 1px solid #D9D9D9;
+}
+
+#cta-section .wp-block-column * {
+    width: fit-content !important;
+}
+
+#cta-section .wp-block-column:first-child {
+    width: fit-content !important;
+}
+
+.checkmark li {
+    padding-left: 45px;
+    text-align: left;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.checkmark li:before {
+    content: url(/wp-content/uploads/checkmark-list-item.svg);
+    position: absolute;
+    top: -4px;
+    margin-right: 0;
+    left: 0;
+    width: 30px;
+}
+
+.checkmark {
+    list-style: none;
+    padding-left: 0;
+}
+
+#footer-section {
+    background: #0D1D2C;
+    padding: 150px 0;
+    color: #fff;
+    font-size: 16px;
+}
+
+footer .menu-item label, footer .menu-item img {
+    display: none;
+}
+
+footer ul.menu {
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 8px;
+}
+
+.footer-logo {
+    width: 200px;
+    margin: 0 0 40px 0;
+}
+
+footer .wp-block-columns {
+    padding: 0;
+}
+
+footer .wp-block-heading {
+    margin-top: 40px;
+}
+
+footer .wp-block-heading {
+    margin-top: 35px;
+    margin-bottom: 30px;
+}
+
+footer p {
+    line-height: 1.85;
+}
+
+footer hr {
+    background-color: #D9D9D9 !important;
+    border: none !important;
+    margin-bottom: 40px;
+}
+
+footer a:hover {
+    color: var(--primary-color);
 }

@@ -127,64 +127,6 @@ add_action( 'after_setup_theme', 'jj_kommunikation_content_width', 0 );
 
 
 
-
-
-function display_prispakke($atts){
-	
-		 $atts = shortcode_atts( array(
-        'pakke' => ''
-    ), $atts );
-
-	
-		$args = array(
-			'post_type' => 'prispakker',
-			'post_status' => 'publish',
-			'p' => $atts['pakke'],
-			'posts_per_page' => 1
-		);
-		$pakke_string = '';
-		$query = new WP_Query( $args );
-		if( $query->have_posts() ){
-			while( $query->have_posts() ){
-				$query->the_post();
-				$title = get_the_title(); 
-				$image_url =  get_field('ikon');
-				$pris = get_field('pris'); 
-				$undertitel = get_field('undertitel'); 
-				$pakken_inkluderer = get_field('pakken_inkluderer'); 
-				$tilmeldingslink = get_field('tilmeldingslink');
-				$icon_class = get_field('icon');
-
-
-				$pakke_string .= '<div class="prispakke">
-				<div class="prispakke_content">
-				<img src="' . $image_url . '">
-				<span class="prispakke_title">' . $title . '</span>
-				<span class="prispakke_price"><span>Pris</span>' . $pris . ',-</span>
-				<span class="prispakke_subtitle">' . $undertitel . '</span>
-				<div>' . $pakken_inkluderer . '</div>
-				<div class="wp-block-button ' . $icon_class . '"><a class="wp-block-button__link" target="'.$tilmeldingslink['target'].'" href="'. $tilmeldingslink['url'] .'">'.$tilmeldingslink['title'].'</a></div></div>
-				</div>
-				';
-				
-			}
-		}
-		wp_reset_postdata();
-
-		return $pakke_string;
-
-}
-
-add_shortcode( 'prispakke', 'display_prispakke' );
-
-
-
-
-
-
-
-
-
 function display_slideshow($atts) {
 	
 
@@ -273,7 +215,19 @@ function jj_kommunikation_widgets_init() {
 	register_sidebar(
 		array(
 			'name'          => esc_html__( 'Features bottom', 'jj-kommunikation' ),
-			'id'            => 'sidebar-2',
+			'id'            => 'ribbon',
+			'description'   => esc_html__( 'Add widgets here.', 'jj-kommunikation' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h4 class="widget-title">',
+			'after_title'   => '</h4>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'CTA bottom', 'jj-kommunikation' ),
+			'id'            => 'cta',
 			'description'   => esc_html__( 'Add widgets here.', 'jj-kommunikation' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
@@ -416,7 +370,6 @@ function my_wp_nav_menu_objects( $items, $args ) {
             $item->title .= '<img src="'.$icon.'" class="menu-icon" height="30" width="30">';
             $item->title .= '<label class="sub-label">'.$item->description.'</label>';
 			$item->title .= '<span class="ribbon-background-color" style="background-color:'.$color.'"></span>';
-			
         }
         
     }
