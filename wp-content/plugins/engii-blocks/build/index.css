@@ -9,6 +9,7 @@
 .wp-block-create-block-engii-blocks .components-button.components-panel__body-toggle {
   height: 70px;
   background-color: #eee;
+  color: #333;
 }
 .wp-block-create-block-engii-blocks .components-panel__row img {
   width: 45%;
@@ -16,6 +17,10 @@
 }
 .wp-block-create-block-engii-blocks h2 {
   margin: 0;
+  color: #333;
+}
+.wp-block-create-block-engii-blocks .block-editor-rich-text__editable.rich-text {
+  color: #333;
 }
 
 /*# sourceMappingURL=index.css.map*/

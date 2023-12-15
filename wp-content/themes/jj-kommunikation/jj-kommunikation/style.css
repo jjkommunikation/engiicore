@@ -1460,7 +1460,7 @@ body.logged-in .site-header {
     top: 32px;
 }
 
-.wp-block-group > .wp-block-group__inner-container {
+.wp-block-columns .wp-block-group > .wp-block-group__inner-container {
     padding: 50px;
 }
 
@@ -1473,8 +1473,11 @@ body.logged-in .site-header {
 
 #cta-section {
     padding: 50px 0;
+    background: #fff;
 }
-
+#ribbon-section section, #ribbon-section ul {
+    margin-bottom: 0px;
+}
 ul.mega-sub-menu {
 	background: white !important;
 	border-radius: 30px !important;
@@ -1730,11 +1733,14 @@ ul#secondary-menu > li.button > a {
 }
 
 #ribbon-section ul {
-    padding: 0;
+    padding: 5px 0;
     display: flex;
     gap: 5px;
 }
 
+#ribbon-section li {
+    flex: 1 1 0px;
+}
 
 #ribbon-section ul li:nth-child(odd) {
     background: #ccc;
@@ -1866,4 +1872,8 @@ footer hr {
 
 footer a:hover {
     color: var(--primary-color);
+}
+
+.wp-block-group {
+    padding: 100px 0;
 }

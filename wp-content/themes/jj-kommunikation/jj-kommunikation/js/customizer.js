@@ -18,19 +18,6 @@ jQuery(document).ready(function(){
 
 const menuItems = Array.from(document.querySelectorAll("#ribbon-section ul.menu li a"));
 const currentUrl = window.location.href;
-//let currentItemIndex = 0;
-/*
-menuItems.forEach(menuItem => {
-	console.dir(menuItem.childNodes[0].textContent);
-	if (menuItem.attributes[0].nodeValue == currentUrl) {
-		console.log('yay det virker ' + menuItem.attributes[0].nodeValue);
-		
-	} else {
-		
-	}
-}); */
-
-//console.dir(menuItems[1].attributes[0]);
 
 const nextButton = document.createElement("a");
 nextButton.id = "next-button";
@@ -49,8 +36,7 @@ function updateButtonsText() {
 
 
  menuItems.forEach(function(menuItem, index) {
-//console.log(menuItem.attributes[0].nodeValue);
-console.log(menuItems[index].getAttribute("href"));
+
 	if (menuItem.attributes[0].nodeValue == currentUrl) {
 		
 	
