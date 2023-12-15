@@ -1728,7 +1728,6 @@ ul#secondary-menu > li.button > a {
 
 #integrationer {
     position: relative;
-    min-height: 845px;
     overflow: hidden;
 }
 
@@ -1876,4 +1875,9 @@ footer a:hover {
 
 .wp-block-group {
     padding: 100px 0;
+}
+
+.wp-block-group__inner-container {
+    position: relative;
+    z-index: 1;
 }
