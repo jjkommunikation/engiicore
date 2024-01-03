@@ -1708,9 +1708,6 @@ ul#secondary-menu > li.button > a {
 	height: 48px !important;
 }
 
-.bluecircle {
-    background: url(/wp-content/uploads/blue-circle-bg.svg) no-repeat right center;
-}
 
 #integrationer:after {
     content: url("/wp-content/uploads/bg_right.svg");
@@ -1880,4 +1877,87 @@ footer a:hover {
 .wp-block-group__inner-container {
     position: relative;
     z-index: 1;
+}
+
+.bluecircle {
+    position: relative;
+    overflow: hidden;
+}
+.bluecircle.right:before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30% !important;
+    background: url(/wp-content/uploads/blue-circle-bg.svg);
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+.bluecircle.left:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 30% !important;
+    background: url(/wp-content/uploads/blue-circle-bg-left.svg);
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+.integrationer_image {
+    margin-top: -100px;
+    position: relative;
+    z-index: -1;
+}
+
+a#prev-button {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    background: orange;
+    z-index: 5;
+}
+
+a#next-button {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    background: blue;
+    z-index: 5;
+}
+
+a#next-button .feature-nav.next {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    right: 130px !important;
+    color: #fff;
+    text-shadow: 1px 1px 3px #000;
+    transform: rotate(-15deg);
+    line-height: 1;
+    top: -60px;
+}
+
+a#next-button:hover .feature-nav.next {
+    opacity: 1;
+    visibility: visible;
+}
+a#next-button img {
+    transform: rotate(-90deg);
+}
+
+span.feature-name {
+    transform: rotate(-90deg);
+    display: block;
+    width: 30px;
+}
+
+a#next-button img {
+    position: relative;
+    left: -30px;
 }
