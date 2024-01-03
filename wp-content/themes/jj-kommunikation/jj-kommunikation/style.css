@@ -1919,21 +1919,21 @@ a#prev-button {
     position: fixed;
     left: 0;
     top: 50%;
-    background: orange;
     z-index: 5;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
 }
 
 a#next-button {
     position: fixed;
     right: 0;
     top: 50%;
-    background: blue;
     z-index: 5;
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
 }
 
 a#next-button .feature-nav.next {
-    opacity: 0;
-    visibility: hidden;
     position: absolute;
     right: 130px !important;
     color: #fff;
@@ -1943,21 +1943,88 @@ a#next-button .feature-nav.next {
     top: -60px;
 }
 
-a#next-button:hover .feature-nav.next {
-    opacity: 1;
-    visibility: visible;
-}
-a#next-button img {
-    transform: rotate(-90deg);
-}
-
 span.feature-name {
-    transform: rotate(-90deg);
     display: block;
-    width: 30px;
+    padding: 10px 50px 10px 10px;
+    writing-mode: tb;
+    color: #fff;
+    font-size: 14px;
+    height: 160px;
+    text-align: center;
+}
+a#next-button span.feature-name {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+}
+span.feature-nav.next {
+    position: relative;
+    display: block;
+    transform: rotate(15deg);
+    color: #fff;
+    text-shadow: 1px 1px 3px #000;
+}
+
+span.feature-nav + img {
+    transform: rotate(90deg);
+    filter: brightness(0) invert(1);
+    position: absolute;
+    right: 7px;
+    height: 40px;
+    width: 40px;
+    top: 50%;
+    margin-top: -20px;
 }
 
 a#next-button img {
-    position: relative;
-    left: -30px;
+    transform: rotate(-90deg);
+    right: unset;
+    left: 7px;
+}
+
+span.feature-nav.prev {
+    position: absolute;
+    display: block;
+    transform: rotate(12deg);
+    color: #fff;
+    text-shadow: 1px 1px 2px #000;
+    top: -30px;
+    left: -150px;
+    transition: 1500ms ease-in-out;
+    width: 170px;
+    height: 30px;
+}
+.incoming_tooltip span.feature-nav.prev {
+    left: 20px;
+    transition: 1500ms ease-in-out;
+}
+a#prev-button > svg {
+    transform: rotate(180deg);
+}
+
+a#prev-button > svg, a#next-button > svg {
+    position: absolute;
+    z-index: -1;
+    height: 160px;
+}
+a#next-button > svg {
+    right: 0
+}
+
+.feature-nav svg {
+    width: 40px;
+    height: 85px;
+    position: absolute;
+    top: 5px;
+    transform: rotate(85deg);
+    right: 50px;
+}
+
+a#next-button .feature-nav svg {
+    width: 40px;
+    height: 85px;
+    position: absolute;
+    top: 5px;
+    transform: rotate(0);
+    right: unset;
+    left: 50px;
 }
