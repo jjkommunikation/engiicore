@@ -1709,21 +1709,21 @@ ul#secondary-menu > li.button > a {
 }
 
 
-#integrationer:after {
+.integrationer:after {
     content: url("/wp-content/uploads/bg_right.svg");
     position: absolute;
     bottom: -10px;
     right: 0;
 }
 
-#integrationer:before {
+.integrationer:before {
     content: url("/wp-content/uploads/bg_left.svg");
     position: absolute;
     top: 0;
     left: 0;
 }
 
-#integrationer {
+.integrationer {
     position: relative;
     overflow: hidden;
 }
@@ -1879,11 +1879,11 @@ footer a:hover {
     z-index: 1;
 }
 
-.bluecircle {
+.bluecircle-overflow-hidden {
     position: relative;
     overflow: hidden;
 }
-.bluecircle.right:before {
+.bluecircle-overflow-hidden.right:before {
     content: "";
     position: absolute;
     right: 0;
@@ -1896,7 +1896,7 @@ footer a:hover {
     background-position: left center;
 }
 
-.bluecircle.left:before {
+.bluecircle-overflow-hidden.left:before {
     content: "";
     position: absolute;
     left: 0;
@@ -2028,3 +2028,66 @@ a#next-button .feature-nav svg {
     right: unset;
     left: 50px;
 }
+
+.yellowcircle, .bluecircle {
+    position: relative;
+}
+.yellowcircle::before, .bluecircle:before {
+    content: "";
+    height: 120%;
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-image: url(/wp-content/uploads/yellow-circle-left.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 1;
+}
+.bluecircle:before {
+    background-image: url(/wp-content/uploads/blue-circle-left.svg);
+}
+
+.yellowcircle.right::before, .bluecircle.right:before {
+    position: absolute;
+    left: unset;
+    right: 0;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+
+
+.yellowcircle.top::before, .bluecircle.top::before  {
+    content: "";
+    height: 120%;
+    width: 50%;
+    position: absolute;
+    bottom: unset;
+    top: 0;
+    left: 0;
+    background-image: url(/wp-content/uploads/yellow-circle-left.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.smallbg::before  {
+    height: 90% !important;
+}
+.bluecircle.top::before  {
+    background-image: url(/wp-content/uploads/blue-circle-left.svg);
+}
+.yellowcircle.right.top::before, .bluecircle.right.top::before {
+    position: absolute;
+    left: unset;
+    right: 0;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+

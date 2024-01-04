@@ -323,13 +323,6 @@ add_filter( 'get_the_archive_title', function ($title) {
 });
 
 
-/**
- * Registers an editor stylesheet for the theme.
- */
-function wpdocs_theme_add_editor_styles() {
-    add_editor_style( 'gutenberg.css' );
-}
-add_action( 'admin_init', 'wpdocs_theme_add_editor_styles' );
 
 
 
@@ -474,3 +467,14 @@ function mytheme_setup_theme_supported_features() {
 }
 
 add_action( 'after_setup_theme', 'mytheme_setup_theme_supported_features' );
+
+
+/**
+ * Registers an editor stylesheet for the theme.
+ */
+
+function add_editor_styles() {
+	add_theme_support( 'editor-styles' );
+    add_editor_style( 'gutenberg.css' );
+}
+add_action( 'after_setup_theme', 'add_editor_styles' );
