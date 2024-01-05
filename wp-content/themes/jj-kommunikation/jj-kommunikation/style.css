@@ -2141,11 +2141,6 @@ ol li {
 }
 
 /* Accordion base styles */
-.schema-faq {
-    background-color: #f7f7f7;
-    border: 1px solid #d8d8d8;
-    border-radius: 4px;
-  }
   
   .schema-faq-section {
     padding: 10px;
@@ -2164,8 +2159,8 @@ ol li {
   
   .schema-faq-answer {
     display: none;
-    margin-top: 5px;
-  }
+    margin-top: 15px;
+}
   
   /* Active class for opened accordion content */
   .active .schema-faq-answer {
@@ -2173,15 +2168,24 @@ ol li {
   }
 
   .schema-faq-section:after {
-    content: url(http://engiicore.test/wp-content/uploads/accordion-icon.svg);
+    content: url(/wp-content/uploads/accordion-icon.svg);
     position: absolute;
-    right: 0;
-    top: 0;
+    right: 15px;
+    top: 15px;
+    transition: 300ms ease-in-out;
+    height: 34px;
+    width: 34px;
 }
-
+.schema-faq-section.active:after {
+    transform: rotate(45deg);
+}
 .schema-faq-section {
-    padding: 10px;
+    padding: 15px 20px;
     border-bottom: 1px solid #d8d8d8;
     cursor: pointer;
     position: relative;
+    min-height: 65px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
