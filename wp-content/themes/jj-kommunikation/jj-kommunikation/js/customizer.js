@@ -169,3 +169,16 @@ document.addEventListener("DOMContentLoaded", function() {
 	}
   });
   
+
+  // JavaScript for handling the accordion behavior
+document.querySelectorAll('.schema-faq-section').forEach(section => {
+	section.addEventListener('click', function() {
+	  this.classList.toggle('active');
+	  var answer = this.querySelector('.schema-faq-answer');
+	  if (answer.style.display === 'block') {
+		answer.style.display = 'none';
+	  } else {
+		answer.style.display = 'block';
+	  }
+	});
+  });

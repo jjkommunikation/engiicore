@@ -2091,3 +2091,97 @@ a#next-button .feature-nav svg {
     -ms-filter: "FlipH";
 }
 
+
+
+.yellowcircle.left.center::before, .bluecircle.left.center::before,
+.yellowcircle.right.center::before, .bluecircle.right.center::before {
+    background-image: url(/wp-content/uploads/center-blue-circle.svg);
+    position: absolute;
+    left: unset;
+    right: 0;
+    bottom: 50px;
+    height: 80% !important;
+    width: 40%;
+    background-position: right;
+}
+
+.yellowcircle.left.center::before, .bluecircle.left.center::before {
+    right: unset;
+    left: 0;
+}
+
+.yellowcircle.right.center::before,
+.yellowcircle.left.center::before {
+    background-image: url(/wp-content/uploads/center-yellow-circle.svg);
+}
+
+.center-inline-image {
+    display: inline-flex;
+    align-items: center;
+    text-indent: 6px;
+}
+ol {
+    counter-reset: list-counter;
+    list-style: none; /* Removes default numbering */
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  
+  ol li::before {
+    counter-increment: list-counter;
+    content: "0" counter(list-counter);
+    position: absolute;
+    left: -40px;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+ol li {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+/* Accordion base styles */
+.schema-faq {
+    background-color: #f7f7f7;
+    border: 1px solid #d8d8d8;
+    border-radius: 4px;
+  }
+  
+  .schema-faq-section {
+    padding: 10px;
+    border-bottom: 1px solid #d8d8d8;
+    cursor: pointer;
+  }
+  
+  .schema-faq-section:last-child {
+    border-bottom: none;
+  }
+  
+  .schema-faq-question {
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .schema-faq-answer {
+    display: none;
+    margin-top: 5px;
+  }
+  
+  /* Active class for opened accordion content */
+  .active .schema-faq-answer {
+    display: block;
+  }
+
+  .schema-faq-section:after {
+    content: url(http://engiicore.test/wp-content/uploads/accordion-icon.svg);
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.schema-faq-section {
+    padding: 10px;
+    border-bottom: 1px solid #d8d8d8;
+    cursor: pointer;
+    position: relative;
+}

@@ -982,6 +982,7 @@ a#next-button .feature-nav svg {
 .smallbg::before  {
     height: 90% !important;
 }
+
 .bluecircle.top::before  {
     background-image: url(/wp-content/uploads/blue-circle-left.svg);
 }
@@ -997,3 +998,26 @@ a#next-button .feature-nav svg {
     -ms-filter: "FlipH";
 }
 
+
+
+.yellowcircle.left.center::before, .bluecircle.left.center::before,
+.yellowcircle.right.center::before, .bluecircle.right.center::before {
+    background-image: url(/wp-content/uploads/center-blue-circle.svg);
+    position: absolute;
+    left: unset;
+    right: 0;
+    bottom: 50px;
+    height: 80% !important;
+    width: 40%;
+    background-position: right;
+}
+
+.yellowcircle.left.center::before, .bluecircle.left.center::before {
+    right: unset;
+    left: 0;
+}
+
+.yellowcircle.right.center::before,
+.yellowcircle.left.center::before {
+    background-image: url(/wp-content/uploads/center-yellow-circle.svg);
+}
