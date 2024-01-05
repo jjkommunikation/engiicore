@@ -223,7 +223,7 @@ document.querySelectorAll('.schema-faq-section').forEach(section => {
 });
 
 function attachPaginationEvent(category_ids) {
-    $('#category-posts .page-numbers a').on('click', function(e) {
+    $('.post-grid .page-numbers a').on('click', function(e) {
         e.preventDefault(); // Prevents the default anchor action
         var page = $(this).attr('href').split('page=')[1]; // Get the page number from the href attribute
         fetchPosts(category_ids, page);
