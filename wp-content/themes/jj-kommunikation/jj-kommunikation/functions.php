@@ -478,3 +478,11 @@ function add_editor_styles() {
     add_editor_style( 'gutenberg.css' );
 }
 add_action( 'after_setup_theme', 'add_editor_styles' );
+
+
+function cc_mime_types($mimes) {
+    $mimes['json'] = 'application/json';
+    $mimes['svg'] = 'image/svg+xml';
+    return $mimes;
+}
+add_filter('upload_mimes', 'cc_mime_types');
