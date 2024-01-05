@@ -182,3 +182,50 @@ document.querySelectorAll('.schema-faq-section').forEach(section => {
 	  }
 	});
   });
+
+
+
+  // Filter for posts
+
+  jQuery(document).ready(function($) {
+    function fetchPosts(category_ids, page = 1) {
+        $.ajax({
+            url: ajax_object.ajax_url,
+            type: 'post',
+            data: { 
+                action: 'filter_posts', 
+                category_ids: category_ids, 
+                page: page 
+            },
+            success: function(result) {
+                $('#category-posts').html(result);
+                attachPaginationEvent(category_ids); // Attach event to new pagination links
+            }
+
+        });
+    }
+
+    function attachPaginationEvent(category_ids) {
+        $('#category-posts .page-numbers').on('click', function(e) {
+            e.preventDefault();
+            var page = $(this).text(); // Get the page number
+            fetchPosts(category_ids, page);
+        });
+    }
+
+    $('.category-filter').on('change', function() {
+        var category_ids = [];
+        $('.category-filter:checked').each(function() {
+            category_ids.push($(this).val());
+        });
+        fetchPosts(category_ids);
+    });
+});
+
+function attachPaginationEvent(category_ids) {
+    $('#category-posts .page-numbers a').on('click', function(e) {
+        e.preventDefault(); // Prevents the default anchor action
+        var page = $(this).attr('href').split('page=')[1]; // Get the page number from the href attribute
+        fetchPosts(category_ids, page);
+    });
+}

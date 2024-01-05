@@ -260,6 +260,9 @@ function jj_kommunikation_scripts() {
 	wp_enqueue_script( 'jj-kommunikation-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'jj-kommunikation-customizer', get_template_directory_uri() . '/js/customizer.js', array(), _S_VERSION, true );
 
+	// Pass the AJAX URL to the script
+    wp_localize_script('jj-kommunikation-customizer', 'ajax_object', array('ajax_url' => admin_url('admin-ajax.php')));
+
 
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -486,3 +489,89 @@ function cc_mime_types($mimes) {
     return $mimes;
 }
 add_filter('upload_mimes', 'cc_mime_types');
+
+
+/*filter*/
+
+function ajax_category_filter_shortcode() {
+    $categories = get_categories();
+
+    // Start output buffering
+    ob_start(); ?>
+
+    <div id="category-filters">
+        <?php foreach ( $categories as $category ) : ?>
+            <input type="checkbox" class="category-filter" value="<?php echo $category->term_id; ?>" id="cat-<?php echo $category->term_id; ?>" />
+            <label for="cat-<?php echo $category->term_id; ?>"><?php echo $category->name; ?></label>
+        <?php endforeach; ?>
+    </div>
+    <div id="category-posts"></div>
+
+    <script>
+    jQuery(document).ready(function($){
+        function fetchPosts(category_ids){
+            $.ajax({
+                url: '<?php echo admin_url('admin-ajax.php'); ?>',
+                type: 'post',
+                data: { action: 'filter_posts', category_ids: category_ids },
+                success: function( result ) {
+                    $('#category-posts').html( result );
+                }
+            });
+        }
+
+        $('.category-filter').on('change', function() {
+            var category_ids = [];
+            $('.category-filter:checked').each(function(){
+                category_ids.push($(this).val());
+            });
+            fetchPosts(category_ids);
+        });
+    });
+    </script>
+
+    <?php
+    // Return output buffer content
+    return ob_get_clean();
+}
+add_shortcode('ajax_category_filter', 'ajax_category_filter_shortcode');
+
+function filter_posts_by_category() {
+    $category_ids = $_POST['category_ids'];
+    $paged = isset($_POST['page']) ? $_POST['page'] : 1;
+
+    $args = array(
+        'post_type' => 'post',
+        'posts_per_page' => 2, // Set your desired posts per page
+        'paged' => $paged,
+        'category__in' => $category_ids
+    );
+    $query = new WP_Query($args);
+
+    if ($query->have_posts()) {
+        while ($query->have_posts()) {
+            $query->the_post();
+            // Output the title and excerpt of each post
+            echo '<h2><a href="' . get_permalink() . '">' . get_the_title() . '</a></h2>';
+            the_excerpt();
+        }
+
+        // Pagination
+        echo paginate_links(array(
+            'total' => $query->max_num_pages,
+            'current' => $paged,
+            'type' => 'plain',
+            'add_args' => array(
+                'action' => 'filter_posts', // Add the action to the arguments
+                'category_ids' => json_encode($category_ids)
+            ),
+        ));
+    } else {
+        echo 'No posts found.';
+    }
+    wp_die();
+}
+
+
+add_action('wp_ajax_filter_posts', 'filter_posts_by_category');
+add_action('wp_ajax_nopriv_filter_posts', 'filter_posts_by_category');
