@@ -500,9 +500,15 @@ function ajax_category_filter_shortcode() {
     ob_start(); ?>
 
     <div id="category-filters">
+<div class="inputwrap">
+	<input type="radio" class="category-filter" name="category-filter" value="0" id="cat-0" checked="checked" />
+            <label for="cat-0">Alle</label></div>
+		
         <?php foreach ( $categories as $category ) : ?>
-            <input type="checkbox" class="category-filter" value="<?php echo $category->term_id; ?>" id="cat-<?php echo $category->term_id; ?>" />
+			<div class="inputwrap">
+            <input type="radio" class="category-filter" name="category-filter" value="<?php echo $category->term_id; ?>" id="cat-<?php echo $category->term_id; ?>" />
             <label for="cat-<?php echo $category->term_id; ?>"><?php echo $category->name; ?></label>
+			</div>
         <?php endforeach; ?>
     </div>
     <div id="category-posts"></div>
@@ -527,6 +533,7 @@ function ajax_category_filter_shortcode() {
             });
             fetchPosts(category_ids);
         });
+
     });
     </script>
 
@@ -542,10 +549,14 @@ function filter_posts_by_category() {
 
     $args = array(
         'post_type' => 'post',
-        'posts_per_page' => 2, // Set your desired posts per page
+        'posts_per_page' => 16, // Set your desired posts per page
         'paged' => $paged,
-        'category__in' => $category_ids
+        //'category__in' => $category_ids
     );
+	 // If '0' is the only value in category_ids, fetch posts from all categories
+	 if (!(count($category_ids) == 1 && in_array(0, $category_ids))) {
+        $args['category__in'] = $category_ids;
+    }
     $query = new WP_Query($args);
 	
     if ($query->have_posts()) {
@@ -553,18 +564,18 @@ function filter_posts_by_category() {
         while ($query->have_posts()) {
             $query->the_post();
             // Output the title and excerpt of each post
-			echo '<div class="post-item"><div class="post-image">'. get_the_post_thumbnail() .'</div><div class="post-cats">';
+			echo '<div class="post-item"><div class="post-image">'. get_the_post_thumbnail() .'</div><div class="post-content"><div class="post-cats">';
 
 			foreach (get_the_terms(get_the_ID(), 'category') as $cat) {
 				 echo '<span class="cat-title">' . $cat->name . '</span>';
 			 }
 
-           echo '</div><h2><a href="' . get_permalink() . '">' . get_the_title() . '</a></h2></div>';
+           echo '</div><h2 class="post-title"><a href="' . get_permalink() . '">' . get_the_title() . '</a></h2></div></div>';
         }
 		echo '</div>'; // .post-grid
 
         // Pagination
-        echo paginate_links(array(
+        $pagination = paginate_links(array(
             'total' => $query->max_num_pages,
             'current' => $paged,
             'type' => 'plain',
@@ -573,6 +584,11 @@ function filter_posts_by_category() {
                 'category_ids' => json_encode($category_ids)
             ),
         ));
+
+        // Wrap the pagination links in a div
+        if ($pagination) {
+            echo '<div class="pagination-wrapper">' . $pagination . '</div>';
+        }
     } else {
         echo 'No posts found.';
     }

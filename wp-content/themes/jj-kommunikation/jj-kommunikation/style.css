@@ -2195,3 +2195,89 @@ ol li {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
 }
+
+.pagination-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    padding: 50px 0;
+}
+.pagination-wrapper * {
+    border: 1px solid #ccc;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+a.page-numbers:hover {
+    background: #ccc;
+}
+span.page-numbers.current, a.page-numbers:hover {
+    color: var(--primary-color);
+    background: #eee;
+}
+
+a.prev.page-numbers, a.next.page-numbers {
+    display: none;
+}
+
+.post-grid .post-item img {
+    border-radius: 20px;
+    display: block;
+}
+.post-grid .post-item {
+    background: #fff;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.post-title a {
+    font-size: 1.56rem;
+}
+
+.post-title {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+span.cat-title {
+    text-transform: uppercase;
+    color: var(--primary-color);
+    display: block;
+}
+
+.post-content {
+    padding: 20px 10px;
+}
+#category-filters label {
+    cursor: pointer;
+}
+
+#category-filters {
+    border-bottom: 10px solid grey;
+    margin-bottom: 30px;
+    display: flex;
+    gap: 15px;
+}
+
+#category-filters input:checked + label {
+    border-bottom: 10px solid green;
+}
+.inputwrap {
+    position: relative;
+}
+#category-filters input {
+    visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: red;
+}

@@ -1,5 +1,5 @@
 jQuery(document).ready(function(){
-	
+
 		jQuery("li.menu-item-has-children").prepend("<button class='toggle_submenu'>+</button>");
   jQuery("button.toggle_submenu").click(function(){
 	  jQuery(this).siblings("ul.sub-menu").toggle(200,"linear");
@@ -142,6 +142,7 @@ function updateButtonsText() {
 
 updateButtonsText();
 
+
 /*
 document.addEventListener("DOMContentLoaded", function() {
 	// Check if the 'visited' flag is set in local storage
@@ -188,6 +189,7 @@ document.querySelectorAll('.schema-faq-section').forEach(section => {
   // Filter for posts
 
   jQuery(document).ready(function($) {
+
     function fetchPosts(category_ids, page = 1) {
         $.ajax({
             url: ajax_object.ajax_url,
@@ -201,7 +203,6 @@ document.querySelectorAll('.schema-faq-section').forEach(section => {
                 $('#category-posts').html(result);
                 attachPaginationEvent(category_ids); // Attach event to new pagination links
             }
-
         });
     }
 
@@ -214,18 +215,24 @@ document.querySelectorAll('.schema-faq-section').forEach(section => {
     }
 
     $('.category-filter').on('change', function() {
-        var category_ids = [];
-        $('.category-filter:checked').each(function() {
-            category_ids.push($(this).val());
-        });
-        fetchPosts(category_ids);
+        updateCategoriesAndFetchPosts();
     });
+
+    function updateCategoriesAndFetchPosts() {
+        var category_ids = [];
+        if ($('#cat-0').is(':checked')) {
+            category_ids = [0];
+        } else {
+            category_ids = $('.category-filter:checked').map(function() {
+                return $(this).val();
+            }).get();
+        }
+        fetchPosts(category_ids);
+    }
+
+    // Fetch posts for the initially checked category
+    updateCategoriesAndFetchPosts();
+
 });
 
-function attachPaginationEvent(category_ids) {
-    $('.post-grid .page-numbers a').on('click', function(e) {
-        e.preventDefault(); // Prevents the default anchor action
-        var page = $(this).attr('href').split('page=')[1]; // Get the page number from the href attribute
-        fetchPosts(category_ids, page);
-    });
-}
+
