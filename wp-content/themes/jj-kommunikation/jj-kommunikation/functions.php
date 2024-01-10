@@ -564,7 +564,7 @@ function filter_posts_by_category() {
         while ($query->have_posts()) {
             $query->the_post();
             // Output the title and excerpt of each post
-			echo '<div class="post-item"><div class="post-image">'. get_the_post_thumbnail() .'</div><div class="post-content"><div class="post-cats">';
+			echo '<div class="post-item"><div class="post-image"><a href="' . get_permalink() . '">'. get_the_post_thumbnail() .'</a></div><div class="post-content"><div class="post-cats">';
 
 			foreach (get_the_terms(get_the_ID(), 'category') as $cat) {
 				 echo '<span class="cat-title">' . $cat->name . '</span>';
