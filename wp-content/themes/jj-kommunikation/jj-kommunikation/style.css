@@ -1278,12 +1278,10 @@ ul#global-menu li a, ul#footer-menu-2 li a {
     z-index: 1;
 }
 .alignwide {
-    max-width: 100%;
+    max-width: 90%;
     margin: 0 auto;
     width: var(--grid);
 }
-
-
 
 .entry-content {
     margin: 0 auto;
