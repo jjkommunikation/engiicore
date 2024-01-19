@@ -1564,13 +1564,13 @@ a.mega-menu-link:before {
 	visibility: hidden;
     content: "";
     position: absolute !important;
-    width: 35px !important;
-    height: 35px !important;
-    background: white !important;
+    width: 40px !important;
+    height: 9px !important;
+    background: url('/wp-content/uploads/SVG-Shape.svg') no-repeat !important;
     border-radius: 10px;
-    transform: translate(0, 75px) rotate(45deg);
+    transform: translate(0, 55px);
 	left: calc(50% - 30px);
-	animation: removeit .6s;
+	animation: removeit .3s;
 }
 #mega-menu-wrap-menu-1 #mega-menu-menu-1 > li.mega-menu-item.mega-current-menu-item > a.mega-menu-link, #mega-menu-wrap-menu-1 #mega-menu-menu-1 > li.mega-menu-item.mega-current-menu-ancestor > a.mega-menu-link, #mega-menu-wrap-menu-1 #mega-menu-menu-1 > li.mega-menu-item.mega-current-page-ancestor > a.mega-menu-link {
     background: transparent !important;
@@ -1584,8 +1584,8 @@ a.mega-menu-link:before {
 .mega-toggle-on a.mega-menu-link:before {
 	opacity: 1;
 	visibility: visible;
-	transform: translate(0, 45px) rotate(45deg);
-	animation: moveit .6s;
+	transform: translate(0, 35px);
+	animation: moveit .3s; 
 }
 
 @keyframes moveit {
@@ -2233,7 +2233,7 @@ a.prev.page-numbers, a.next.page-numbers {
 }
 
 .post-grid .post-item img {
-    border-radius: 20px;
+    border-radius: 13px;
     display: block;
 }
 .post-grid .post-item {
