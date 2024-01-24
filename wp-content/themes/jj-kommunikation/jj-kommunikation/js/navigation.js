@@ -32,7 +32,7 @@
 	}
 
 	// Toggle the .toggled class and the aria-expanded value each time the button is clicked.
-	button.addEventListener( 'click', function() {
+/*	button.addEventListener( 'click', function() {
 		siteNavigation.classList.toggle( 'toggled' );
 
 		if ( button.getAttribute( 'aria-expanded' ) === 'true' ) {
@@ -44,7 +44,7 @@
 			jQuery(".custom-logo-link > img").attr("src", "/wp-content/uploads/logo_white.svg");
 			jQuery('body').addClass("mobile_menu_no_bg_scroll");
 		}
-	} );
+	} ); */
 
 	// Remove the .toggled class and set aria-expanded to false when the user clicks outside the navigation.
 	document.addEventListener( 'click', function( event ) {

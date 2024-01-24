@@ -2420,3 +2420,57 @@ li.button.outline:before, li.button.outline:after {
         padding: 10px 0px;
     }
 }
+
+
+
+
+@media (max-width: 767px) {
+	html {
+		font-size: 80%;
+	}
+    
+    ul.mega-sub-menu .widget_maxmegamenu_reusable_block {
+        display: none !important;
+    }
+    ul.mega-sub-menu {
+        grid-template-columns: 1fr !important;
+    }
+    li.widget_nav_menu {
+        margin-top: 0 !important;
+        border-right: 1px solid white !important;
+        margin-bottom: 0 !important;
+        padding-left: 10px !important;
+    }
+    ul.mega-sub-menu {
+        display: none !important;
+    }
+    .mega-toggle-on > ul.mega-sub-menu {
+        display: grid !important;
+        position: static !important;
+    }
+    li.widget_nav_menu {
+        border-right: 0 !important;
+    }
+    ul#mega-menu-menu-1 {
+        position: absolute !important;
+        width: 100% !important;
+        left: 0 !important;
+        top: 90px !important;
+    }
+
+    ul#mega-menu-menu-1 {
+        height: calc(100vh - 62px) !important;
+        overflow: auto !important;
+        top: 62px !important;
+        padding-top: 30px !important;
+        padding-bottom: 30px !important;
+    }
+        ul#mega-menu-menu-1 > li > a {
+        font-size: 26px !important;
+        font-weight: 700 !important;
+        text-align: center !important;
+    }
+    div#mega-menu-wrap-menu-1 {
+        position: static;
+    }
+}

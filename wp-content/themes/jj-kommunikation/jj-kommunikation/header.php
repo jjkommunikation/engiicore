@@ -63,7 +63,7 @@
 
 
 		</div><!-- .site-lang -->
-						<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"></button>
+						<!-- <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"></button> -->
 
 	</div>
 		
