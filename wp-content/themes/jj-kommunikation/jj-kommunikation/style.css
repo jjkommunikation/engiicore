@@ -1194,7 +1194,7 @@ html[lang="en-GB"] .site-header {
     top: 0;
     left: 0;
     z-index: 9999;
-    padding: 10px 2%;
+    padding: 5px 2%;
     transition: .6s ease;
     right: 0;
 }
@@ -1223,9 +1223,9 @@ html[lang="en-GB"] .site-header {
     top: 3px;
 }
 .fade-in {
-    background: #ffffff !important;
+    background: var(--secondary-color) !important;
     transition: .6s ease;
-    box-shadow: 2px 2px 6px #00000021;
+    box-shadow: 2px 2px 6px #ffffff21;
 }
 
 .toggled {
@@ -1323,18 +1323,42 @@ a.wp-block-button__link, li.button a, .tab-panel a:last-child {
     display: block;
     position: absolute;
     right: 15px;
-    background: url('/wp-content/uploads/button-arrow.svg');
+    -webkit-mask-image: url(/wp-content/uploads/button-arrow.svg);
+    mask-image: url(/wp-content/uploads/button-arrow.svg);
+    background-color: white;
+    -webkit-mask-size: contain;
+    mask-size: contain;
     height: 15px;
     width: 20px;
     background-size: contain;
 	z-index: 1;
 }
+.wp-block-button.is-style-outline>.wp-block-button__link:after {
+    background-color: var(--secondary-color);
+}
+.wp-block-button.is-style-outline>.wp-block-button__link:hover:after {
+    background-color: white;
+}
+.wp-block-button.is-style-outline>.wp-block-button__link {
+    color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+.wp-block-button.is-style-outline>.wp-block-button__link:hover {
+    color: white;
+    border-color:  var(--secondary-color);
+    background-color:  var(--secondary-color);
+}
 li.button.login a:after {
-    background: url(/wp-content/uploads/login-icon.svg);
+    /*background: url(/wp-content/uploads/login-icon.svg);*/
+    -webkit-mask-image: url(/wp-content/uploads/login-icon.svg);
+    mask-image: url(/wp-content/uploads/login-icon.svg);
+    background-color: white;
+    -webkit-mask-size: contain;
+    mask-size: contain;
     background-size: contain;
-    height: 20px;
+    height: 22px;
     background-repeat: no-repeat;
-    width: 21px;
+    width: 22px;
 }
 .wp-block-button {
 	position: relative;
@@ -1348,8 +1372,8 @@ li.button.login a:after {
     position: absolute;
     mask-image: url(/wp-content/uploads/right.svg);
     background-color: var(--primary-color);
-    -webkit-mask-size: cover;
-    mask-size: cover;
+    -webkit-mask-size: contain;
+    mask-size: contain;
     right: 0;
     top: 0;
     pointer-events: none;
@@ -2317,4 +2341,82 @@ input#is-search-input-704 {
 
 .is-ajax-search-post {
     padding-left: 10px !important;
+}
+
+li a.mega-menu-link:hover {
+    color: var(--primary-color) !important;
+}
+
+ul#secondary-menu > li.button.outline > a {
+    border: 2px solid white;
+    background: none;
+}
+ul#secondary-menu > li.button.outline > a:hover {
+    border: 2px solid white;
+    background: #fff;
+    color: var(--secondary-color) !important;
+}
+li.button.outline:hover a:after {
+    background-color: var(--secondary-color) !important;
+}
+li.button.outline:before, li.button.outline:after {
+    background-color: transparent;
+}
+
+.button.menu-item a:hover, .buton.mega-menu-link:hover {
+    color: #fff !important;
+}
+
+
+
+@media (max-width: 767px) {
+    html {
+        font-size: 90%;
+    }
+    #ribbon-section ul a {
+        min-width: 250px;
+    }
+    div#ribbon-section {
+        overflow-x: auto;
+    }
+    #cta-section .wp-block-column:not(:last-child) {
+        border-right: 0;
+    }
+    .wp-block-group {
+        padding: 40px 0;
+    }
+
+    ul.tab-titles {
+        justify-content: flex-start;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+    ul.tab-titles li.tab-title {
+        min-width: 140px;
+    }
+    .tab-panel {
+        padding: 2rem;
+        gap: 2rem;
+        grid-template-columns: 1fr;
+    }
+    .tab-panel--image {
+        order: -1;
+    }
+    .integrationer_image {
+        margin-top: 0;
+    }
+    .post-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+    .post-title a, h2.post-title {
+        font-size: 1.2rem;
+    }
+    span.cat-title {
+        font-size: 14px;
+    }
+    .post-content {
+        padding: 10px 0px;
+    }
 }

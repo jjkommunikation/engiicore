@@ -6,13 +6,22 @@ jQuery(document).ready(function(){
 	  jQuery(this).text(jQuery(this).text() == '+' ? '-' : '+');
 	});
 	
-	jQuery(window).scroll(function() {
-	 if (jQuery(this).scrollTop() > 150){
-		jQuery('#masthead').addClass("fade-in");
-	 } else {
-		jQuery('#masthead').removeClass("fade-in");
-	 }
-  });
+	jQuery(function() {
+		function adjustHeader() {
+			if (jQuery(window).scrollTop() > 150) {
+				jQuery('#masthead').addClass("fade-in");
+			} else {
+				jQuery('#masthead').removeClass("fade-in");
+			}
+		}
+	
+		// Run on page load
+		adjustHeader();
+	
+		// Run on scroll
+		jQuery(window).scroll(adjustHeader);
+	});
+	
 
 }); 
 
