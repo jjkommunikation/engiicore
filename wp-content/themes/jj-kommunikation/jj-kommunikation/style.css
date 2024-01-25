@@ -2455,15 +2455,17 @@ li.button.outline:before, li.button.outline:after {
         position: absolute !important;
         width: 100% !important;
         left: 0 !important;
-        top: 90px !important;
-    }
-
-    ul#mega-menu-menu-1 {
-        height: calc(100vh - 62px) !important;
+        height: 100vh !important;
         overflow: auto !important;
-        top: 62px !important;
+        top: 0 !important;
         padding-top: 30px !important;
         padding-bottom: 30px !important;
+        z-index: 5;
+    }
+    .mega-menu-toggle.mega-menu-open {
+        position: absolute;
+        z-index: 6!important;
+        right: 0;
     }
         ul#mega-menu-menu-1 > li > a {
         font-size: 26px !important;
