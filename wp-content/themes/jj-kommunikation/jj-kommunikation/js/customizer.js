@@ -5,6 +5,20 @@ jQuery(document).ready(function(){
 	  jQuery(this).siblings("ul.sub-menu").toggle(200,"linear");
 	  jQuery(this).text(jQuery(this).text() == '+' ? '-' : '+');
 	});*/
+
+	//if (window.matchMedia('(max-width: 768px)').matches) {
+		jQuery("<div/>", { "id": "mobile-jj" }).prependTo('#mega-menu-menu-1'); 
+		jQuery("<div/>", { "id": "mobile-header" }).appendTo('#mobile-jj'); 
+
+    	
+		jQuery(".mega-toggle-blocks-right").clone().prependTo("#mobile-header");
+		jQuery("#mega-menu-menu-1 li.astm-search-menu.is-menu.popup.is-first.menu-item").prependTo(".mega-toggle-blocks-right");
+		jQuery(".site-branding").clone().prependTo("#mobile-header");
+		jQuery("#secondary-menu").clone().appendTo("#mobile-jj");
+		jQuery("#mobile-header .site-branding img.custom-logo").attr("src", "/wp-content/uploads/EngiiCore-Logo.svg");
+
+	//}
+
 	
 	jQuery(function() {
 		function adjustHeader() {
