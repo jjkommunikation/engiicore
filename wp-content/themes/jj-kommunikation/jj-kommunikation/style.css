@@ -1405,35 +1405,13 @@ li.button {
 
 
 
-.wp-block-cover__inner-container {
-    height: 100%;
-    position: absolute;
-    top: 0;
+
+
+#hero .wp-block-cover__inner-container {
+    padding-top: 80px;
+    padding-bottom: 80px;
 }
 
-.wp-block-cover__inner-container > div {
-    height: 100%;
-}
-
-
-
-
-#hero .wp-block-buttons {
-    margin-top: auto;
-}
-#hero h1 {
-    font-size: 2.8rem;
-    line-height: 1.4;
-}
-#hero .wp-block-column {
-    display: flex;
-    flex-direction: column;
-}
-
-
-#hero {
-    height: 720px !important;
-}
 @media (min-width: 1270px) {
     button.menu-toggle {
         display: none;
@@ -2373,6 +2351,9 @@ li.button.outline:before, li.button.outline:after {
     html {
         font-size: 90%;
     }
+    #hero {
+        min-height: unset !important;
+    }
     #ribbon-section ul a {
         min-width: 250px;
     }
@@ -2426,6 +2407,34 @@ div#mobile-header {
     justify-content: space-between;
     border-bottom: 1px solid var(--secondary-color);
 }
+#mega-menu-wrap-menu-1 .mega-menu-toggle {
+    background: none;
+}
+#mega-menu-wrap-menu-1 .mega-menu-toggle .mega-toggle-block-0 .mega-toggle-animated-slider .mega-toggle-animated-inner::before {
+    width: 80%;
+    right: 0;
+}
+#mega-menu-wrap-menu-1 .mega-menu-toggle .mega-toggle-block-0 .mega-toggle-animated-inner, #mega-menu-wrap-menu-1 .mega-menu-toggle .mega-toggle-block-0 .mega-toggle-animated-inner::before, #mega-menu-wrap-menu-1 .mega-menu-toggle .mega-toggle-block-0 .mega-toggle-animated-inner::after {
+    height: 2px !important;
+}
+.mega-menu-menu-1-mobile-open .mega-toggle-blocks-right path {
+    fill: var(--secondary-color) !important;
+}
+.mega-menu-menu-1-mobile-open  header#masthead .mega-toggle-blocks-right path {
+    fill: #fff !important;
+}
+
+
+
+#mega-menu-wrap-menu-1 .mega-menu-toggle.mega-menu-open .mega-toggle-block-0 .mega-toggle-animated-slider .mega-toggle-animated-inner::after,
+#mega-menu-wrap-menu-1 .mega-menu-toggle.mega-menu-open .mega-toggle-block-0 .mega-toggle-animated-slider .mega-toggle-animated-inner::before,
+#mega-menu-wrap-menu-1 .mega-menu-toggle.mega-menu-open .mega-toggle-block-0 .mega-toggle-animated-slider .mega-toggle-animated-inner {
+    transform: none !important;
+    display: block;
+    opacity: 1;
+}
+
+
 
 @media (min-width: 769px) {
     #mobile-jj {
@@ -2442,7 +2451,7 @@ div#mobile-header {
 		font-size: 80%;
 	}
 
-    li.astm-search-menu {
+    #secondary-menu li.astm-search-menu {
         display: none;
     }
     .mega-menu-menu-1-mobile-open li.astm-search-menu {
