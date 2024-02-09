@@ -2325,6 +2325,22 @@ li a.mega-menu-link:hover {
     color: var(--primary-color) !important;
 }
 
+ul#secondary-meny > li.button.outline > a {
+    border: 2px solid var(--primary-color);
+    background: var(--primary-color);
+    color: #ffffff;
+
+    & :hover {
+        border: 2px solid var(--secondary-color);
+        background-color: var(--secondary-color);
+
+        & :after {
+            background-color: #ffffff;
+        }
+    }
+}
+
+/* 
 ul#secondary-menu > li.button.outline > a {
     border: 2px solid white;
     background: none;
@@ -2333,7 +2349,7 @@ ul#secondary-menu > li.button.outline > a:hover {
     border: 2px solid white;
     background: #fff;
     color: var(--secondary-color) !important;
-}
+} */
 li.button.outline:hover a:after {
     background-color: var(--secondary-color) !important;
 }
