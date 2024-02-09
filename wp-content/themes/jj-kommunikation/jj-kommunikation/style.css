@@ -2466,8 +2466,45 @@ div#mobile-header {
 @media (min-width: 769px) {
     #mobile-jj {
         display: none;
+    }   
+}
+
+/*
+* min-width: 475px
+*/
+@media (min-width: 475px) and (max-width: 768px) {
+    ul.mega-sub-menu .menu {
+        grid-template-columns: 1fr 1fr;
     }
-    
+}
+
+/*
+* Max width: 575px
+*/
+@media (max-width: 575px) {
+    ul.mega-sub-menu li a label {
+        display: none;
+    }
+}
+
+/*
+* Min width: 576px
+* Max width: 768ppx
+*/
+@media (min-width: 576px) and (max-width: 768px) {
+    ul.mega-sub-menu li a label {
+        display: block;
+        line-height: initial;
+    }
+}
+
+/*
+* Max-width: 474px
+*/
+@media (max-width: 474px) {
+    ul.mega-sub-menu .menu {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 768px) {
@@ -2491,7 +2528,7 @@ div#mobile-header {
         display: none !important;
     }
     ul.mega-sub-menu {
-        grid-template-columns: 1fr !important;
+        grid-template-columns: 1fr;
         width: 100% !important;
         background: none !important;
     }
@@ -2613,9 +2650,6 @@ div#mobile-header {
     li#mega-menu-item-text-2, #mega-menu-wrap-menu-1 #mega-menu-menu-1 li.mega-menu-item a.mega-menu-link:before {
         display: none !important;
     }
-    ul.mega-sub-menu .menu {
-        grid-template-columns: 1fr;
-    }
 
     #mega-menu-wrap-menu-1 #mega-menu-menu-1 > li.mega-menu-item.mega-current-menu-item {
         margin-inline: 35px !important;
@@ -2630,7 +2664,5 @@ div#mobile-header {
         top: -6px;
     }
 
-    ul.mega-sub-menu li a label {
-        display: none;
-    }
+    
 }
