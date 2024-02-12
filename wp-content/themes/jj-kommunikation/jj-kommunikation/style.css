@@ -2431,6 +2431,25 @@ li.button.outline:before, li.button.outline:after {
     }
 }
 
+/*
+* min width: 375px
+* max width: 768px
+*/
+@media (min-width: 375px) and (max-width: 768px) {
+    ul#secondary-menu {
+        justify-content: flex-start;
+    }
+}
+
+/*
+* max width: 374px
+*/
+@media (max-width: 374px) {
+    ul#secondary-menu {
+        justify-content: space-evenly;
+    }
+}
+
 div#mobile-header {
     display: flex;
     justify-content: space-between;
@@ -2656,13 +2675,26 @@ div#mobile-header {
     }
 
     #mega-menu-wrap-menu-1 #mega-menu-menu-1 > li.mega-menu-item.mega-current-menu-item > a.mega-menu-link {
+        border-top: none;
         border-bottom: 2px solid #D9D9D9;
         padding-inline: 0;
+    }
+
+    #mega-menu-wrap-menu-1 #mega-menu-menu-1 > li.mega-menu-item.mega-current-menu-item.mega-toggle-on > a.mega-menu-link {
+        border-top: 2px solid #D9D9D9;
+        border-bottom: none;
+        padding-inline: 0;
+    }
+
+    #mega-menu-wrap-menu-1 #mega-menu-menu-1 > li.mega-menu-item.mega-toggle-on {
+        border-bottom: 2px solid #D9D9D9;
+    }
+
+    #mega-menu-wrap-menu-1 #mega-menu-menu-1 > li.mega-menu-item.mega-current-menu-item.mega-toggle-on > ul.mega-sub-menu li.mega-menu-item {
+        border-bottom: 2px solid #d9d9d9;
     }
 
     ul.mega-sub-menu li a img {
         top: -6px;
     }
-
-    
 }
