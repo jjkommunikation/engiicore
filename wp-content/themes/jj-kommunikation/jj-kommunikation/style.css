@@ -2497,7 +2497,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
      }
      
      ul#secondary-menu > li.button.outline > a {
-         border: 2px solid var(--primary-color);
+         border: 2px solid #ffffff;
          /* background-color: var(--primary-color);  @depercated */
          background: transparent;
          color: #ffffff;
@@ -2803,6 +2803,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
             flex-direction: column-reverse !important;
          }
 
+         .bluecircle-overflow-hidden.left,
+         .bluecircle-overflow-hidden.right {
+            overflow: hidden;
+         }
+
          .bluecircle-overflow-hidden.left:before,
          .bluecircle-overflow-hidden.right:before {
             background-image: url(/wp-content/uploads/center-blue-circle.svg);
@@ -2810,9 +2815,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         }
 
         .bluecircle-overflow-hidden.left:before {
-            left: 0px;
+            left: -20px;
             top: unset;
-            bottom: 10px;
+            bottom: -57px;
             height: 44% !important;
         }
 
