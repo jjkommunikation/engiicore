@@ -1438,6 +1438,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         background-color: var(--secondary-color) !important;
     }
 
+
      a.wp-block-button__link, li.button a, .tab-panel a:last-child {
          background-color: var(--primary-color);
          padding: 12px 48px 12px 25px !important;
@@ -2490,15 +2491,22 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
      
      ul#secondary-menu > li.button.outline > a {
          border: 2px solid var(--primary-color);
-         background: var(--primary-color);
+         /* background-color: var(--primary-color);  @depercated */
+         background: transparent;
          color: #ffffff;
      }
 
+     /*
+     * @deprecated
+     * outline button with green background
+     * @author leo knudsen
+     */
+/* 
      ul#secondary-menu > li.button.outline > a:hover {
         border: 2px solid var(--secondary-color);
         background: var(--secondary-color);
         color: #ffffff;
-     }
+     } */
 
      ul#secondary-menu > li.button.outline > a:hover::after {
         background-color: #ffffff;
