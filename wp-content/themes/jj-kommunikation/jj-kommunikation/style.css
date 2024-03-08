@@ -1497,6 +1497,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
          position: relative;
      }
      
+     /*
+     @deprecated
      .wp-block-button:before, .wp-block-button:after, li.button:before, li.button:after {
          content: "";
          -webkit-mask-image: url(/wp-content/uploads/right.svg);
@@ -1514,7 +1516,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
          z-index: 0;
          transition: .3s ease;
      }
-     
+     */
      .wp-block-button.is-style-outline:before, .wp-block-button.is-style-outline:after {
          display: none;
      }
@@ -1536,6 +1538,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
      a.wp-block-button__link.has-background:hover, .tab-panel a:last-child:hover {
          background-color: var(--secondary-color) !important;
      }
+
+     /*
+     * @TODO make buttons full rounded instead of SVG imported buttons sides
+     * @author Leo Knudsen 
+     **/
      
      /*
      * ---------------------------------------------
@@ -2791,6 +2798,30 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
          .schema-faq-question {
             font-size: 1.15rem;
          }
+
+         .bluecircle-overflow-hidden.left .wp-block-group__inner-container .wp-block-columns.alignwide {
+            flex-direction: column-reverse !important;
+         }
+
+         .bluecircle-overflow-hidden.left:before,
+         .bluecircle-overflow-hidden.right:before {
+            background-image: url(/wp-content/uploads/center-blue-circle.svg);
+            width: 85% !important;
+        }
+
+        .bluecircle-overflow-hidden.left:before {
+            left: 0px;
+            top: unset;
+            bottom: 10px;
+            height: 44% !important;
+        }
+
+        .bluecircle-overflow-hidden.right:before {
+            right: -40px;
+            top: unset;
+            bottom: 10px;
+            height: 42% !important; 
+        }
      }
      
      /*
