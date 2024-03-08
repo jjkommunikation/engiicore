@@ -2782,30 +2782,23 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
             grid-template-columns: 1fr 1fr;
         }
     }
-     
-     /*
-     * Max width: 575px
-     */
-     @media (max-width: 575px) {
-         ul.mega-sub-menu li a label {
-             display: none;
-         }
-         
-         #ribbon-section li {
-             flex: 0 0 80%;
-         }
 
-         .schema-faq-question {
-            font-size: 1.15rem;
-         }
-
-         .bluecircle-overflow-hidden.left .wp-block-group__inner-container .wp-block-columns.alignwide {
+    /*
+    * Max width: 393px
+    **/
+    @media (max-width: 393px) {
+        .bluecircle-overflow-hidden.left .wp-block-group__inner-container .wp-block-columns.alignwide {
             flex-direction: column-reverse !important;
          }
 
          .bluecircle-overflow-hidden.left,
          .bluecircle-overflow-hidden.right {
             overflow: hidden;
+         }
+
+         .bluecircle-overflow-hidden.left .wp-block-group__inner-container .wp-block-columns.alignwide .wp-block-column p,
+         .bluecircle-overflow-hidden.right .wp-block-group__inner-container .wp-block-columns.alignwide .wp-block-column p {
+            font-size: 15px;
          }
 
          .bluecircle-overflow-hidden.left:before,
@@ -2825,8 +2818,27 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
             right: -40px;
             top: unset;
             bottom: 10px;
-            height: 42% !important; 
+            height: 52% !important; 
         }
+    }
+     
+     /*
+     * Max width: 575px
+     */
+     @media (max-width: 575px) {
+         ul.mega-sub-menu li a label {
+             display: none;
+         }
+         
+         #ribbon-section li {
+             flex: 0 0 80%;
+         }
+
+         .schema-faq-question {
+            font-size: 1.15rem;
+         }
+
+         
      }
      
      /*
