@@ -1060,132 +1060,185 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
      /********************************************************** CUSTOM CSS ***********************************************************/
      /*********************************************************************************************************************************/
      /*********************************************************************************************************************************/
-     
+
+     /*
+     * Custom variables
+     */
+     :root {
+        /*
+        * Color variables
+        */
+        --primary-color: #3ABF47;
+        --light-green: #60BF69;
+        --secondary-color: #16324A;
+        --tertiary-color: #D5DFDA;
+        --black: #3A3A3A;
+        --orange: #E99838;
+        --yellow: #E2BC5D;
+        --petrol: #316363;
+        --blue-skye: #74BECC;
+        --purple: #3868B5;
+        --navy-blue: #295275;
+        --rose: #DCB7EA;
+        --pink: #FD90D9;
+        --red: #E16169;
+        --salmon: #FD876B;
+        --butterscotch: #E99838;
+        --text-color: #2E2E2E;
+        --footer-color: #0D1D2C;
+    
+        /*
+        * Font variables
+        */
+        --head-font: 'Inter', sans-serif;
+        --body-font: 'Inter', sans-serif;
+    
+        /*
+        * Grid variables
+        */
+        --grid: 1400px;
+    }
+
+     /*---------------------- Engiicore colors ----------------------------*/
      
      .has-engii-green-color {
-         color: #3ABF47;
+         color: var(--primary-color);
      }
+
      .has-engii-green-background-color {
-         background-color: #3ABF47
+         background-color: var(--prrimary-color);
      }
+
      .has-engii-blue-color {
-         color: #16324A;
+         color: var(--secondary-color);
      }
+
      .has-engii-blue-background-color {
-         background-color: #16324A;
+         background-color: var(--secondary-color);
      }
      
      .has-engii-orange-color {
-         color: #E99838;
+         color: var(--orange);
      }
+
      .has-engii-orange-background-color {
-         background-color: #E99838;
+         background-color: var(--orange);
      }
      
      .has-engii-yellow-color {
-         color: #E2BC5D;
+         color: var(--yellow);
      }
+
      .has-engii-yellow-background-color {
-         background-color: #E2BC5D;
+         background-color: var(--yellow);
      }
      
      .has-engii-light-green-color {
-         color: #60BF69;
+         color: var(--light-green);
      }
+     
      .has-engii-light-green-background-color {
-         background-color: #60BF69;
+         background-color: var(--light-green);
      }
      
      .has-engii-petrol-color {
-         color: #316363;
+         color: var(--petrol);
      }
+     
      .has-engii-petrol-background-color {
-         background-color: #316363;
+         background-color: var(--petrol);
      }
      
      .has-engii-blue-sky-color {
-         color: #74BECC;
+         color: var(--blue-skye);
      }
+     
      .has-engii-blue-sky-background-color {
-         background-color: #74BECC;
+         background-color: var(--blue-skye);
      }
      
      .has-engii-purple-color {
-         color: #3868B5;
+         /* color: #3868B5; */
+         color: var(--purple);
      }
+     
      .has-engii-purple-background-color {
-         background-color: #3868B5;
+         /* background-color: #3868B5; */
+         background: var(--purple);
      }
      
      .has-engii-navy-color {
-         color: #295275;
+         /* color: #295275; */
+         color: var(--navy-blue);
      }
+     
      .has-engii-navy-background-color {
-         background-color: #295275;
+         /* background-color: #295275; */
+         background-color: var(--navy-blue);
      }
      
      .has-engii-rose-color {
-         color: #DCB7EA;
+         /* color: #DCB7EA; */
+         color: var(--rose);
      }
+     
      .has-engii-rose-background-color {
-         background-color: #DCB7EA;
+         /* background-color: #DCB7EA; */
+         background-color: var(--rose);
      }
      
      .has-engii-pink-color {
-         color: #FD90D9;
+         color: var(--pink);
      }
+     
      .has-engii-pink-background-color {
-         background-color: #FD90D9;
+         background-color: var(--pink);
      }
      
      .has-engii-indian-red-color {
-         color: #E16169;
+         color: var(--red);
      }
+     
      .has-engii-indian-red-background-color {
-         background-color: #E16169;
+         background-color: var(--red);
      }
      
      .has-engii-salmon-color {
-         color: #FD876B;
+         color: var(--salmon);
      }
+     
      .has-engii-salmon-background-color {
-         background-color: #FD876B;
+         background-color: var(--salmon)
      }
      
      .has-engii-butterscotch-color {
-         color: #E99838;
+         color: var(--butterscotch);
      }
+     
      .has-engii-butterscotch-background-color {
-         background-color: #E99838;
+         background-color: var(--butterscotch);
      }
      
      .has-engii-text-color {
-         color: #2E2E2E;
+         color: var(--text-color);
      }
+     
      .has-engii-text-background-color {
-         background-color: #2E2E2E;
+        background-color: var(--text-color);
      }
      
      .has-engii-footer-color {
-         color: #0D1D2C;
+            color: var(--footer-color);
      }
+     
      .has-engii-footer-background-color {
-         background-color: #0D1D2C;
+            background-color: var(--footer-color);
      }
-     
-     
-     :root {
-         --primary-color: #3ABF47;
-         --secondary-color: #16324A;
-         --tertiary-color: #D5DFDA;
-         --black: #3A3A3A;
-     
-         --head-font: 'Inter', sans-serif;
-         --body-font: 'Inter', sans-serif;
-     
-         --grid: 1400px;
-     }
-     
+
+    /*
+    * Site header
+    * ---------------------------------------------
+    */     
      html[lang="en-GB"] .site-header {
          background: #000;
      }
@@ -1227,6 +1280,15 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
          position: relative;
          top: 3px;
      }
+
+     /*
+     * ---------------------------------------------
+     */
+
+     /*
+     * Utilities
+     * ---------------------------------------------
+     */
      
      .fade-in {
          background: var(--secondary-color) !important;
@@ -1239,6 +1301,15 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
          flex-direction: column;
          height: 100vh;
      }
+
+     /*
+     * ---------------------------------------------
+     */
+
+     /*
+     * Global menu
+     * ---------------------------------------------
+     */
      
      ul#global-menu, ul#footer-menu-2 {
          display: inline-flex;
@@ -1288,6 +1359,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
          position: relative;
          z-index: 1;
      }
+
+     /*
+     * ---------------------------------------------
+     */
      
      .alignwide {
          max-width: 90%;
@@ -1314,7 +1389,55 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
          margin-top: 0;
          margin-bottom: 18px;
      }
-     
+
+     /*
+     * wp-block-button
+     * ---------------------------------------------
+     */
+     .wp-block-button {
+        position: relative;
+    }
+    
+    .wp-block-button:before, .wp-block-button:after, li.button:before, li.button:after {
+        content: "";
+        -webkit-mask-image: url(/wp-content/uploads/right.svg);
+        display: block;
+        height: 48px;
+        width: 28px;
+        position: absolute;
+        mask-image: url(/wp-content/uploads/right.svg);
+        background-color: var(--primary-color);
+        -webkit-mask-size: contain;
+        mask-size: contain;
+        right: 0;
+        top: 0;
+        pointer-events: none;
+        z-index: 0;
+        transition: .3s ease;
+    }
+    
+    .wp-block-button.is-style-outline:before, .wp-block-button.is-style-outline:after {
+        display: none;
+    }
+    
+    .wp-block-button:before, li.button:before {
+        transform: rotate(180deg);
+        left: 0;
+        right: unset;
+    }
+    
+    .wp-block-button:hover:after, .wp-block-button:hover:before, li.button:hover:before, li.button:hover:after {
+        background-color: var(--secondary-color);
+    }
+    
+    a.wp-block-button__link:hover, li.button a:hover {
+        background-color: var(--secondary-color);
+    }
+    
+    a.wp-block-button__link.has-background:hover, .tab-panel a:last-child:hover {
+        background-color: var(--secondary-color) !important;
+    }
+
      a.wp-block-button__link, li.button a, .tab-panel a:last-child {
          background-color: var(--primary-color);
          padding: 12px 48px 12px 25px !important;
@@ -1368,19 +1491,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
          border-color:  var(--secondary-color);
          background-color:  var(--secondary-color);
      }
-     
-     li.button.login a:after {
-         /*background: url(/wp-content/uploads/login-icon.svg);*/
-         -webkit-mask-image: url(/wp-content/uploads/login-icon.svg);
-         mask-image: url(/wp-content/uploads/login-icon.svg);
-         background-color: white;
-         -webkit-mask-size: contain;
-         mask-size: contain;
-         background-size: contain;
-         height: 22px;
-         background-repeat: no-repeat;
-         width: 22px;
-     }
+
      .wp-block-button {
          position: relative;
      }
@@ -1425,6 +1536,23 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
          background-color: var(--secondary-color) !important;
      }
      
+     /*
+     * ---------------------------------------------
+     */
+     
+     li.button.login a:after {
+         background: url(/wp-content/uploads/login-icon.svg);
+         -webkit-mask-image: url(/wp-content/uploads/login-icon.svg);
+         mask-image: url(/wp-content/uploads/login-icon.svg);
+         background-color: white;
+         -webkit-mask-size: contain;
+         mask-size: contain;
+         background-size: contain;
+         height: 22px;
+         background-repeat: no-repeat;
+         width: 22px;
+     }
+     
      li.button {
          position: relative;
      }
@@ -1440,6 +1568,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
              display: none;
          }
      }
+
      .toggled .wp-block-button.icon-phone {
          margin-bottom: 10px;
      }
@@ -1651,6 +1780,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
          position: absolute;
          right: 0;
          top: calc(50% - 3px);
+         transition: ease-in-out 0.2s all;
      }
      .mega-menu > .mega-menu-item {
          margin: 0 10px !important;
@@ -1671,7 +1801,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
          transition: .2s ease;
          width: 180px;
      }
-     
      .menu-item-has-children:hover .sub-menu {
          visibility: visible;
          opacity: 1;
@@ -1707,7 +1836,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
          top: 26px;
      }
      
-     
      .mega-menu-flyout {
          position: relative !important;
      }
@@ -1737,7 +1865,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
      ul#secondary-menu > li.button > a {
          height: 48px !important;
      }
-     
      
      .integrationer:after {
          content: url("/wp-content/uploads/bg_right.svg");
@@ -1783,7 +1910,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
          min-height: 350px;
          transition: 300ms ease-in-out;
      }
-     
      
      #ribbon-section .ribbon-background-color {
          display: block;
@@ -2366,15 +2492,16 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
          border: 2px solid var(--primary-color);
          background: var(--primary-color);
          color: #ffffff;
-     
-         & :hover {
-             border: 2px solid var(--secondary-color);
-             background-color: var(--secondary-color);
-     
-             & :after {
-                 background-color: #ffffff;
-             }
-         }
+     }
+
+     ul#secondary-menu > li.button.outline > a:hover {
+        border: 2px solid var(--secondary-color);
+        background: var(--secondary-color);
+        color: #ffffff;
+     }
+
+     ul#secondary-menu > li.button.outline > a:hover::after {
+        background-color: #ffffff;
      }
      
      /* 
@@ -2398,6 +2525,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
          color: #fff !important;
      }
      
+     /*
+     * Max width: 781px
+     */
      @media (max-width: 781px) {
          .alignwide {
              width: 100%;
@@ -2408,7 +2538,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
              justify-content: center;
          }
      }
-     
+
      /*
      * min width: 768px
      * max width: 1199px
@@ -2427,6 +2557,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
          }
      }
      
+     /*
+     * min width: 768px
+     * max width: 991px
+     */
      @media (min-width: 767px) and (max-width: 991px) {
          #category-posts .post-grid {
              grid-template-columns: repeat(3, 1fr);
@@ -2440,9 +2574,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
          .tab-panel.active .tab-panel--image {
             order: 0;
          }
-         
      }
      
+     /*
+     * Media query 
+     * Max width: 767px
+     */
      @media (max-width: 767px) {
          html {
              font-size: 90%;
@@ -2512,6 +2649,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
          
      }
 
+     /*
+     * Max width: 782px
+     */
      @media (max-width: 782px) {
         .wp-block-cover .wp-block-columns .wp-block-column .wp-block-image {
             display: flex;
@@ -2538,9 +2678,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
              gap: 10px;
              padding: 1.5rem 1rem;
          }
+
+         
      }
      
-     
+     /*
+     * Min width: 375px
+     * Max width: 992px
+     */
      @media (min-width: 375px) and (max-width: 992px) {
          ul#secondary-menu {
              justify-content: flex-start;
@@ -2585,25 +2730,19 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
          opacity: 1;
      }
      
+     /*
+     * Min width: 992px
+     */
      @media (min-width: 992px) {
          #mobile-jj {
              display: none;
          }   
      }
      
+     
      /*
-     * min-width: 475px
+     * Max width: 474px
      */
-     @media (min-width: 475px) and (max-width: 768px) {
-         ul.mega-sub-menu .menu {
-             grid-template-columns: 1fr 1fr;
-         }
-     
-         #category-posts .post-grid {
-             grid-template-columns: 1fr 1fr;
-         }
-     }
-     
      @media (max-width: 474px) {
          #category-filters {
              gap: 25px;
@@ -2612,7 +2751,22 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         #category-posts .post-grid {
              grid-template-columns: 1fr;
         }
+
+        
      }
+
+     /*
+     * min-width: 475px
+     */
+     @media (min-width: 475px) and (max-width: 768px) {
+        ul.mega-sub-menu .menu {
+            grid-template-columns: 1fr 1fr;
+        }
+    
+        #category-posts .post-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
      
      /*
      * Max width: 575px
@@ -2624,6 +2778,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
          
          #ribbon-section li {
              flex: 0 0 80%;
+         }
+
+         .schema-faq-question {
+            font-size: 1.15rem;
          }
      }
      
@@ -2678,7 +2836,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
          }
      }
      
-     
+     /*
+     * Min width: 768px
+     * Max width: 1199px
+     */
      @media (min-width: 768px) and (max-width: 1199px) {
          .wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column {
              flex-basis: 50% !important;
@@ -2687,13 +2848,21 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
             flex-basis: 100% !important;
          }
      }
-     
+
+     /*
+     * Min width: 992px
+     * Max width: 1199px
+     */
      @media (min-width: 992px) and (max-width: 1199px) {
          #ribbon-section li {
              flex: 0 0 25%;
          }
      }
      
+     /*
+     * Min width: 1200px
+     * Max width: 1439px
+     */
      @media (min-width: 1200px) and (max-width: 1439px) {
          #ribbon-section li {
              flex: 0 0 16.66%;
@@ -2708,9 +2877,26 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
              grid-template-columns: 1fr;
          }
      }
+
+     /*
+     * Max width: 768px
+     */
+     @media (max-width: 768px) {
+        #mega-menu-wrap-menu-1 .mega-menu-toggle + #mega-menu-menu-1 {
+            background: #eee !important;
+        }
+
+        .bluecircle.left.center::before {
+            left: unset;
+            right: 0;
+            height: 100%;
+        }
+     }
      
+     /*
+     * Max width: 991px
+     */
      @media (max-width: 991px) {
-         
         html {
              font-size: 80%;
          }
@@ -2734,6 +2920,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
              /* display: block; */
              display: flex;
              align-items: center;
+         }
+
+         #mega-menu-wrap-menu-1 .mega-menu-toggle .mega-toggle-blocks-right {
+            gap: 15px;
+            line-height: 45px;
          }
          
          ul.mega-sub-menu .widget_maxmegamenu_reusable_block {
@@ -2955,6 +3146,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         }
 
         #mega-menu-wrap-menu-1 #mega-menu-menu-1 > li.mega-menu-item a.mega-menu-link:before {
-            top: 36px !important;
+            top: 37px !important;
         }
     }
