@@ -2787,13 +2787,13 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     * Max width: 393px
     **/
     @media (max-width: 393px) {
+        .bluecircle-overflow-hidden.left,
+        .bluecircle-overflow-hidden.right {
+           overflow: hidden;
+        }
+        
         .bluecircle-overflow-hidden.left .wp-block-group__inner-container .wp-block-columns.alignwide {
             flex-direction: column-reverse !important;
-         }
-
-         .bluecircle-overflow-hidden.left,
-         .bluecircle-overflow-hidden.right {
-            overflow: hidden;
          }
 
          .bluecircle-overflow-hidden.left .wp-block-group__inner-container .wp-block-columns.alignwide .wp-block-column p,
@@ -2801,25 +2801,96 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
             font-size: 15px;
          }
 
-         .bluecircle-overflow-hidden.left:before,
          .bluecircle-overflow-hidden.right:before {
-            background-image: url(/wp-content/uploads/center-blue-circle.svg);
+            background-image: url(/wp-content/uploads/right-blue-circle-150x150-1.svg)
+         }
+
+         .bluecircle-overflow-hidden.left:before {
+            background-image: url(/wp-content/uploads/left-blue-circle-150x150-1.svg);
             width: 85% !important;
         }
 
         .bluecircle-overflow-hidden.left:before {
-            left: -20px;
+            left: -70px;
             top: unset;
-            bottom: -57px;
-            height: 44% !important;
+            bottom: -10px;
+            width: 350px !important;
+            height: 350px !important;
         }
 
         .bluecircle-overflow-hidden.right:before {
             right: -40px;
             top: unset;
             bottom: 10px;
-            height: 52% !important; 
+            width: 350px !important;
+            height: 350px !important; 
         }
+    }
+
+    /*
+    * Min width: 394px
+    * Max width: 574px
+    */
+    @media (min-width: 394px) and (max-width: 574px) {
+        .bluecircle-overflow-hidden.left,
+        .bluecircle-overflow-hidden.right {
+           overflow: hidden;
+        }
+
+        .bluecircle-overflow-hidden.left .wp-block-group__inner-container .wp-block-columns.alignwide {
+           flex-direction: column-reverse !important;
+        }
+
+        .bluecircle-overflow-hidden.right:before {
+           background-image: url(/wp-content/uploads/right-blue-circle-150x150-1.svg);
+           width: 350px !important;
+           height: 400px !important;
+           top: unset;
+           bottom: 10px;
+           right: -40px;
+       }
+
+        .bluecircle-overflow-hidden.left:before {
+           background-image: url(/wp-content/uploads/left-blue-circle-150x150-1.svg);
+           width: 400px !important;
+           height: 400px !important;
+           top: unset;
+           bottom: -10px;
+           left: -70px;
+       }
+    }
+
+    /*
+    * Min width: 575px
+    * Max width: 781px
+    */
+    @media (min-width: 575px) and (max-width: 781px) {
+        .bluecircle-overflow-hidden.left,
+        .bluecircle-overflow-hidden.right {
+           overflow: hidden;
+        }
+
+        .bluecircle-overflow-hidden.left .wp-block-group__inner-container .wp-block-columns.alignwide {
+           flex-direction: column-reverse !important;
+        }
+
+        .bluecircle-overflow-hidden.right:before {
+           background-image: url(/wp-content/uploads/right-blue-circle-150x150-1.svg);
+           width: 350px !important;
+           height: 400px !important;
+           top: 300px;
+           bottom: unset;
+           right: -40px;
+       }
+
+        .bluecircle-overflow-hidden.left:before {
+           background-image: url(/wp-content/uploads/left-blue-circle-150x150-1.svg);
+           width: 400px !important;
+           height: 400px !important;
+           top: 370px;
+           bottom: usnet;
+           left: -70px;
+       }
     }
      
      /*
@@ -2837,8 +2908,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
          .schema-faq-question {
             font-size: 1.15rem;
          }
-
-         
      }
      
      /*
