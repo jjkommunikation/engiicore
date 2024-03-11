@@ -1398,6 +1398,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         position: relative;
     }
     
+    /* Deprecated -> Leo Knudsen
     .wp-block-button:before, .wp-block-button:after, li.button:before, li.button:after {
         content: "";
         -webkit-mask-image: url(/wp-content/uploads/right.svg);
@@ -1415,6 +1416,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         z-index: 0;
         transition: .3s ease;
     }
+    */
     
     .wp-block-button.is-style-outline:before, .wp-block-button.is-style-outline:after {
         display: none;
@@ -1457,6 +1459,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
          z-index: 1;
          font-weight: 700;
          color: #fff;
+         border-radius: 50px;
      }
      
       a.wp-block-button__link:after, li.button a:after, .tab-panel a:last-child:after {
@@ -1521,11 +1524,13 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
          display: none;
      }
      
+     /* Deprecated -> leo knudsen
      .wp-block-button:before, li.button:before {
          transform: rotate(180deg);
          left: 0;
          right: unset;
      }
+     */
      
      .wp-block-button:hover:after, .wp-block-button:hover:before, li.button:hover:before, li.button:hover:after {
          background-color: var(--secondary-color);
@@ -2791,7 +2796,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         .bluecircle-overflow-hidden.right {
            overflow: hidden;
         }
-        
+
         .bluecircle-overflow-hidden.left .wp-block-group__inner-container .wp-block-columns.alignwide {
             flex-direction: column-reverse !important;
          }
