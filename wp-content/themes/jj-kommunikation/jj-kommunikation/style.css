@@ -2548,7 +2548,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
      /*
      * Lottie player animation container
      */
-     .main {
+     dotlottie-player {
         width: auto !important;
      }
      /* ----------- */
