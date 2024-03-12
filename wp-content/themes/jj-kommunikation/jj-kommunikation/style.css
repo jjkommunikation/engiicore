@@ -2544,6 +2544,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
      .button.menu-item a:hover, .buton.mega-menu-link:hover {
          color: #fff !important;
      }
+
+     /*
+     * Lottie player animation container
+     */
+     .lpbLottiePLayer > #animation-container.main {
+        width: auto !important;
+     }
+     /* ----------- */
      
      /*
      * Max width: 781px
@@ -2882,8 +2890,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         .bluecircle-overflow-hidden.right:before {
            background-image: url(/wp-content/uploads/right-blue-circle-150x150-1.svg);
            width: 350px !important;
-           height: 400px !important;
-           top: 300px;
+           height: 370px !important;
+           top: 410px;
            bottom: unset;
            right: -40px;
        }
