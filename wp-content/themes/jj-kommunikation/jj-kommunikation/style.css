@@ -2544,6 +2544,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
      .button.menu-item a:hover, .buton.mega-menu-link:hover {
          color: #fff !important;
      }
+
+     .bluecircle-mobile {
+        padding: 50px 30px !important;
+     }
      
      /*
      * Max width: 781px
