@@ -2544,14 +2544,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
      .button.menu-item a:hover, .buton.mega-menu-link:hover {
          color: #fff !important;
      }
-
-     /*
-     * Lottie player animation container
-     */
-     dotlottie-player {
-        width: auto !important;
-     }
-     /* ----------- */
      
      /*
      * Max width: 781px

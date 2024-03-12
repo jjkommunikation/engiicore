@@ -170,7 +170,7 @@ function display_slideshow($atts) {
 	wp_enqueue_style( 'swiper-style2', get_template_directory_uri() . '/css/swiper-custom.css' );
 	wp_enqueue_script( 'swiper-script', get_template_directory_uri() . '/js/swiper-bundle.min.js', 'jquery' );
 	wp_enqueue_script( 'swiper-script2', get_template_directory_uri() . '/js/swiper-custom.js');
-
+	
 
 	return $slideshow_string;
 
@@ -262,7 +262,7 @@ function jj_kommunikation_scripts() {
 
 	// Pass the AJAX URL to the script
     wp_localize_script('jj-kommunikation-customizer', 'ajax_object', array('ajax_url' => admin_url('admin-ajax.php')));
-
+	wp_enqueue_script('jj-kommunikation-lottie', get_template_directory_uri() . '/js/lottie.js', array('jquery'));
 
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
