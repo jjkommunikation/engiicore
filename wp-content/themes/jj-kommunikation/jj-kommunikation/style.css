@@ -3359,10 +3359,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
      */
      @media(min-width: 1600px) {
         .bluecircle-overflow-hidden.left:before {
-            width: 45% !important;
+            width: 40% !important;
         }
 
         .bluecircle-overflow-hidden.right:before {
-            width: 40% !important;
+            width: 35% !important;
         }
      }
