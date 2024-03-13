@@ -1912,7 +1912,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
      }
      
      #ribbon-section ul li:nth-child(odd) {
-         background: #ccc;
+        background-color: #ffffff; 
+        /* background: #ccc; */
      }
      
      #ribbon-section ul a {
