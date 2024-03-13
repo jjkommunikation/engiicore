@@ -465,7 +465,11 @@ function mytheme_setup_theme_supported_features() {
 			'slug'  => 'Engii_Footer',
 			'color' => '#0D1D2C',
 		),
-		
+		array(
+			'name' => ext_attr__( 'Engii Light blue', 'jj-kommunikation' ),
+			'slug' => 'Engii_Light_Blue',
+			'color' => '#F1F9FF'
+		)
     ) );
 }
 

@@ -1902,10 +1902,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
          padding: 5px 0;
          display: flex;
          gap: 5px;
-         overflow-x: scroll;
-        scroll-snap-type: x mandatory;
          background: #ffffff;
      }
+
+    
      
      #ribbon-section li {
          flex: 1 1 0px;
@@ -3357,6 +3357,16 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
             top: 37px !important;
         }
     }
+
+    /*
+    * Max width: 1439px
+    */
+    @media (max-width: 1439px) {
+        #ribbon-section ul {
+            overflow-x: scroll;
+            scroll-snap-type: x mandatory;
+        }
+     }
 
      /*
      * Min width: 1600px
