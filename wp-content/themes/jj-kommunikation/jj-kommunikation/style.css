@@ -1086,6 +1086,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         --butterscotch: #E99838;
         --text-color: #2E2E2E;
         --footer-color: #0D1D2C;
+        --light-blue-color: #F1F9FF;
     
         /*
         * Font variables
@@ -1233,6 +1234,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
      
      .has-engii-footer-background-color {
             background-color: var(--footer-color);
+     }
+
+     .has-blue-soft-background-color {
+        background-color: var(--light-blue-color);
      }
 
     /*
