@@ -2082,6 +2082,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
          background-repeat: no-repeat;
          background-position: right center;
      }
+
      
      .integrationer_image {
          margin-top: -100px;
@@ -2775,8 +2776,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         #category-posts .post-grid {
              grid-template-columns: 1fr;
         }
-
-        
      }
 
      /*
@@ -2867,6 +2866,76 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
            bottom: -10px;
            left: -100px;
        }
+    }
+
+    /*
+    * Min width: 394px
+    * max width: 438px
+    */
+    @media (min-width: 394px) and (max-width: 438px) {
+       .bluecircle.right:before {
+            top: 500px;
+        }
+    }
+
+    /*
+    * Min width: 394px
+    * Max width: 511px
+    */
+    @media (min-width: 439px) and (max-width: 511px) {
+        .bluecircle.right:before {
+            top: 450px;
+        }
+    }
+
+    /*
+    * Min width: 512px
+    * Max width: 574px
+    */
+    @media (min-width: 512px) and (max-width: 574px) {
+        .bluecircle.right:before {
+            top: 430px;
+        }
+    }
+
+    /*
+    * Min width: 575px
+    * Max width: 709px
+    */
+    @media (min-width: 575px) and (max-width: 709px) {
+        .bluecircle.right:before {
+            top: 400px;
+        }
+    }
+
+    /*
+    * Min width: 710px
+    * Max width: 727px
+    */
+    @media (min-width: 710px) and (max-width: 727px) {
+        .bluecircle.right:before {
+            top: 370px;
+        }
+    }
+
+    /*
+    * Min width: 728px
+    * Max width: 767px
+    */
+    @media (min-width: 728px) and (max-width: 767px) {
+        .bluecircle.right:before {
+            top: 350px;
+        }
+    }
+
+    /*
+    * Min width: 768px
+    * Max width: 781px
+    */
+    @media (min-width: 768px) and (max-width: 781px) {
+        .bluecircle.right:before {
+            top: 400px;
+        }
     }
 
     /*
@@ -3284,3 +3353,16 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
             top: 37px !important;
         }
     }
+
+     /*
+     * Min width: 1600px
+     */
+     @media(min-width: 1600px) {
+        .bluecircle-overflow-hidden.left:before {
+            width: 45% !important;
+        }
+
+        .bluecircle-overflow-hidden.right:before {
+            width: 40% !important;
+        }
+     }
