@@ -1902,8 +1902,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
          padding: 5px 0;
          display: flex;
          gap: 5px;
-         overflow-y: scroll;
-         scroll-snap-type: inline;
+         overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+         background: #ffffff;
      }
      
      #ribbon-section li {
@@ -1911,7 +1912,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
          scroll-snap-align: start;
      }
      
-     #ribbon-section ul li:nth-child(odd) {
+     #ribbon-section ul li:nth-child(odd),
+     #ribbon-section ul li:nth-child(even) {
         background-color: #ffffff; 
         /* background: #ccc; */
      }
@@ -1923,6 +1925,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
          display: block;
          min-height: 350px;
          transition: 300ms ease-in-out;
+         height: 100%;
      }
      
      #ribbon-section .ribbon-background-color {
