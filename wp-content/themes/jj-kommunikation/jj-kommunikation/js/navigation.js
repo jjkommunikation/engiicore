@@ -100,16 +100,6 @@
 			menuItem.classList.toggle( 'focus' );
 		}
 	}
-
-	const ribbonSection = document.getElementById( 'ribbon-section' );
-	const ribbonItems = ribbonSection.querySelectorAll( '#ribbon-section li' );
-
-	ribbonItems.forEach( (item) => {
-		item.addEventListener('click', (e) => {
-			console.log("click")
-			ribbonSection.style.overflowX = 'scroll'
-		})
-	})
 }() );
 
 

@@ -348,6 +348,43 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
      
      /* Interactive
           ========================================================================== */
+
+    /*
+    * keyframes
+    */
+     @keyframes fadeUp {
+        0% {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+     }
+
+     @keyframes slideLeft {
+        0% {
+            opacity: 0;
+            transform: translateX(-30px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+     }
+
+     @keyframes slideRight {
+        0% {
+            opacity: 0;
+            transform: translateX(30px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+     }
+    /* -----------------*/
      
      /*
       * Add the correct display in Edge, IE 10+, and Firefox.
@@ -983,7 +1020,41 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
      /*--------------------------------------------------------------
      # Utilities
      --------------------------------------------------------------*/
-     
+    
+     .engiicore-animate-fade-up-one,
+     .engiicore-animate-fade-up-two,
+     .engiicore-animate-fade-up-three {
+        opacity: 1;
+        animation: fadeUp 1s ease-in-out forwards;
+     }
+
+     .engiicore-animate-slide-left-one,
+     .engiicore-animate-slide-left-two,
+     .engiicore-animate-slide-left-three {
+        opacity: 1;
+        animation: slideLeft 1s ease-in-out forwards;
+     }
+
+    .engiicore-animate-slide-right-one,
+    .engiicore-animate-slide-right-two,
+    .engiicore-animate-slide-right-three {
+        opacity: 1;
+        animation: slideRight 1s ease-in-out forwards;
+    }
+
+    .engiicore-animate-fade-up-two,
+    .engiicore-animate-slide-left-two,
+    .engiicore-animate-slide-right-two {
+        animation-delay: 0.3s;
+    }
+
+    .engiicore-animate-fade-up-three,
+    .engiicore-animate-slide-left-three,
+    .engiicore-animate-slide-right-three {
+        animation-delay: 0.6s;
+    }
+
+     /* ---------------- */
      /* Accessibility
      --------------------------------------------- */
      
