@@ -1900,7 +1900,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
      
      .integrationer {
          position: relative;
-         /* overflow: hidden; */
+         overflow: hidden;
      }
 
      #ribbon-section {
