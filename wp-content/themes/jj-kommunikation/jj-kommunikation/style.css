@@ -1904,10 +1904,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
      }
 
      #ribbon-section {
-        overflow-x: scroll;
-        overflow-y: scroll;
         scroll-snap-type: x mandatory;
-        overflow-y: clip;
      }
 
      /* TODO: adding scroll effect with scroll snapping but without have an overflow issue**/
