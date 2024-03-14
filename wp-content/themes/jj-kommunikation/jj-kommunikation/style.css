@@ -1748,7 +1748,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
          background: transparent !important;
          display: flex;
          align-items: center;
-         font-size: 18px;
+         /* font-size: 18px; */
      }
      #mega-menu-wrap-menu-1 {
          background: none !important;
@@ -3300,9 +3300,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
              display: none !important;
          }
      
-         #mega-menu-wrap-menu-1 #mega-menu-menu-1 > li.mega-menu-item.mega-current-menu-item {
+        /*  #mega-menu-wrap-menu-1 #mega-menu-menu-1 > li.mega-menu-item.mega-current-menu-item {
              margin-inline: 35px !important;
-         }
+         } */
 
          #mega-menu-wrap-menu-1 #mega-menu-menu-1 > li.mega-menu-item {
             padding-inline: 20px !important;
