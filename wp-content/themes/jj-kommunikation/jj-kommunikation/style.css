@@ -3283,7 +3283,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
          }
      
          #mega-menu-wrap-menu-1 #mega-menu-menu-1 img {
-             max-width: 60%;
+             max-width: 100%;
          }
      
          ul#secondary-menu > li.button.outline > a {
