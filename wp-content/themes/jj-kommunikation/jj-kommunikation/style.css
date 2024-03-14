@@ -1029,21 +1029,21 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
      .engiicore-animate-fade-up-one,
      .engiicore-animate-fade-up-two,
      .engiicore-animate-fade-up-three {
-        opacity: 1;
+        opacity: 0;
         animation: fadeUp 1s ease-in-out forwards;
      }
 
      .engiicore-animate-slide-left-one,
      .engiicore-animate-slide-left-two,
      .engiicore-animate-slide-left-three {
-        opacity: 1;
+        opacity: 0;
         animation: slideLeft 1s ease-in-out forwards;
      }
 
     .engiicore-animate-slide-right-one,
     .engiicore-animate-slide-right-two,
     .engiicore-animate-slide-right-three {
-        opacity: 1;
+        opacity: 0;
         animation: slideRight 1s ease-in-out forwards;
     }
 
@@ -1980,7 +1980,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
      }
 
      #ribbon-section {
-        scroll-snap-type: x mandatory;
+        position: relative;
      }
 
      /* TODO: adding scroll effect with scroll snapping but without have an overflow issue**/
@@ -1989,6 +1989,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
          display: flex;
          gap: 5px;
          background: #ffffff;
+         position: absolute;
      }
 
      #ribbon-section li {
@@ -3438,6 +3439,18 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         a#next-button {
             display: none;
         }
+
+        #ribbon-section ul {
+            overflow-x: scroll;
+            scroll-snap-type: x mandatory;
+        }
+        #ribbon-section li:hover{
+            transform: translateY(0px);
+        }
+
+        #ribbon-section li a:hover{
+            margin-top: 0;
+         }
      } 
     
      /*
@@ -3464,10 +3477,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     * Max width: 1439px
     */
     @media (max-width: 1439px) {
-        #ribbon-section ul {
-            overflow-x: scroll;
-            scroll-snap-type: x mandatory;
-        }
+        
      }
 
      /*

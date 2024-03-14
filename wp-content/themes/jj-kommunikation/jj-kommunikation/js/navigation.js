@@ -100,6 +100,30 @@
 			menuItem.classList.toggle( 'focus' );
 		}
 	}
+
+	let dragStartX;
+
+	const ribbonCarousel = document.querySelector('#ribbon-section ul');
+	console.log(ribbonCarousel);
+
+	ribbonCarousel.addEventListener('mousedeown', (event) => {
+		dragStartX = event.clientX;
+		ribbonCarousel.classList.add('grabbing');
+	})
+
+	document.addEventListener('mousemove', (event) => {
+		if (dragStartX) {
+			let dx = event.clientX - dragStartX;
+			let currentLeft = parseInt(ribbonCarousel).left;
+			ribbonCarousel.style.left = `${currentLeft + dx}px`;
+			dragStartX = event.clientX;
+		}
+	})
+
+	document.addEventListener('mouseup', () => {
+		dragStartX = null;
+		ribbonCarousel.style.userSelect = '';
+	})
 }() );
 
 
