@@ -3433,7 +3433,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
             transform: rotate(180deg);
             top: calc(50% - 8px);
          }
-         
+
+        a#prev-button,
+        a#next-button {
+            display: none;
+        }
      } 
     
      /*
