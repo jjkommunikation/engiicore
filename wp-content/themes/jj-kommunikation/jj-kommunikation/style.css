@@ -3304,7 +3304,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
              margin-inline: 35px !important;
          }
 
-         #mega-menu-wrap-menu-1 #mega-menu-menu-1 {
+         #mega-menu-wrap-menu-1 #mega-menu-menu-1 > li.mega-menu-item {
             padding-inline: 20px !important;
          }
      
