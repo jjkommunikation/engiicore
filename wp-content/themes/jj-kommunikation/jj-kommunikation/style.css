@@ -1900,9 +1900,17 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
      
      .integrationer {
          position: relative;
-         overflow: hidden;
+         /* overflow: hidden; */
      }
-     
+
+     #ribbon-section {
+        overflow-x: scroll;
+        overflow-y: scroll;
+        scroll-snap-type: x mandatory;
+        overflow-y: clip;
+     }
+
+     /* TODO: adding scroll effect with scroll snapping but without have an overflow issue**/
      #ribbon-section ul {
          padding: 5px 0;
          display: flex;
@@ -1910,11 +1918,15 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
          background: #ffffff;
      }
 
-    
-     
      #ribbon-section li {
          flex: 1 1 0px;
          scroll-snap-align: start;
+         transition: transform 0.3s ease-in-out;
+         position: relative;
+     }
+
+     #ribbon-section li:hover {
+        transform: translateY(-10px);
      }
      
      #ribbon-section ul li:nth-child(odd),
@@ -1943,7 +1955,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
          left: 0;
          opacity: .2;
      }
-     
+
      #ribbon-section ul a:hover, #ribbon-section ul .current-menu-item a {
          color: #fff !important;
          min-height: 370px;
@@ -3297,6 +3309,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
              border-top: none;
              border-bottom: 2px solid #D9D9D9 !important;
              padding-inline: 0;
+         }
+
+         #mega-menu-wrap-menu-1 #mega-menu-menu-1 > li.mega-menu-item.mega-toggle-on > a.mega-menu-link {
+            background-color: transparent !important;
          }
      
          #mega-menu-wrap-menu-1 #mega-menu-menu-1 > li.mega-menu-item.mega-current-menu-item.mega-toggle-on > a.mega-menu-link {
