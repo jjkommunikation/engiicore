@@ -5,7 +5,34 @@
  * Replace them with your own styles or remove the file completely.
  */
 
+ /*
+ * description, button and image
+ */
+@keyframes fadeInFromDown {
+	0% {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
 
+/*
+* Fade in from right effect
+* should affect tagline and heading
+*/
+@keyframes fadeInFromRight {
+	0% {
+		opacity: 0;
+		transform: translateX(30px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
 
 ul.tab-titles {
     list-style: none;
@@ -26,6 +53,7 @@ ul.tab-titles {
 			display: block;
 			margin: 0 auto;
 			height: 60px;
+
 		}
 
 		&:after {
@@ -55,16 +83,54 @@ ul.tab-titles {
 	}
 }
 
+.tab-content {
+	background-color: #ffffff;
+	height: auto;
+	padding: 3rem;
+	border-radius: 30px;
+	transition: height 0.5s ease-in-out;
+}
+
 .tab-panel {
-	background: #fff;
-    padding: 3rem;
+	/* background: #fff; */
     gap: 3rem;
 	position: relative;
 	grid-template-columns: 1fr 1fr;
-	border-radius: 30px;
+	opacity: 0;
+	transform: translateY(50px);
+	height: auto;
+	transition: all 0.5s ease-in-out;
+
+	&--smallheading,
+	&--heading {
+		opacity: 0;
+		transform: translateX(0px);
+		animation: fadeInFromRight 1s forwards;
+		animation-delay: 500ms;
+	}
+
+	&--desc, &--image {
+		opacity: 0;
+		animation: fadeInFromDown 1s forwards;
+		animation-delay: 1s;
+	}
 
 	&.active {
 		display: grid !important;
+		opacity: 1 !important;
+		transform: translateY(0px) !important;
+		visibility: visible;
+		transition: all 0.5s ease-in-out;
+		height: auto;
+
+		.tab-panel--smallheading,
+		.tab-panel--heading {
+			transform: translateX(0px);
+		}
+
+		.tab-panel-desc, .tab-panel-image {
+			transform: translateY(20px);
+		}
 	}
 
 	&--image {
