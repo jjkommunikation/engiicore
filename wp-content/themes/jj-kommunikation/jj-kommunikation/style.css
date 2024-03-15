@@ -3213,7 +3213,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
          #ribbon-section li {
              flex: 0 0 33.333%;
          }
-         .bluecircle::before, {
+         .bluecircle::before {
             height: 75%;
             width: 100%;
          }
