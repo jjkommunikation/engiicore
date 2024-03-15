@@ -101,28 +101,44 @@
 		}
 	}
 
-	let dragStartX;
-
-	const ribbonCarousel = document.querySelector('#ribbon-section ul');
-	console.log(ribbonCarousel);
-
-	ribbonCarousel.addEventListener('mousedeown', (event) => {
-		dragStartX = event.clientX;
-		ribbonCarousel.classList.add('grabbing');
+	// animation observer
+	// not working yet
+	const fadeUpAnimationObservable = new IntersectionObserver((entries, observer) => {
+		entries.forEach(entry => {
+			if ( entry.isIntersecting ) {
+				console.log(entry.target + " is intersecting")
+				if ( entry.target.classList.contains('engiicore-animate-fade-up-one') ) {
+					entry.target.classList.add('engiicore-animate-fade-up-one-active')
+					entry.target.classList.remove('engiicore-animate-fade-down-one')
+				} else if ( entry.target.classList.contains('engiicore-animate-fade-up-two') ) {
+					entry.target.classList.add('engiicore-animate-fade-down-two-active')
+					entry.target.classList.remove('engiicore-animate-fade-down-two')
+				} else if ( entry.target.classList.contains('engiicore-animate-fade-up-three') ) {
+					entry.target.classList.add('engiicore-animate-fade-up-three-active')
+					entry.target.classList.remove('engiicore-animate-fade-down-three')
+				}
+			} else {
+				console.log(entry.target + " is not intersecting")
+				if ( entry.target.classList.contains('engiicore-animate-fade-up-one') ) {
+					entry.target.classList.remove('engiicore-animate-fade-up-one-active')
+					entry.target.classList.add('engiicore-animate-fade-down-one')
+				} else if ( entry.target.classList.contains('engiicore-animate-fade-up-two') ) {
+					entry.target.classList.remove('engiicore-animate-fade-up-two-active')
+					entry.target.classList.add('engiicore-animate-fade-down-two')
+				} else if ( entry.target.classList.contains('engiicore-animate-fade-up-three') ) {
+					entry.target.classList.remove('engiicore-animate-fade-up-three-active')
+					entry.target.classList.add('engiicore-animate-fade-down-three')
+				}
+			}
+		})
 	})
 
-	document.addEventListener('mousemove', (event) => {
-		if (dragStartX) {
-			let dx = event.clientX - dragStartX;
-			let currentLeft = parseInt(ribbonCarousel).left;
-			ribbonCarousel.style.left = `${currentLeft + dx}px`;
-			dragStartX = event.clientX;
-		}
-	})
+	const fadeUpElements = document.querySelectorAll('.engiicore-animate-fade-up-one, .engiicore-animate-fade-up-two, .engiicore-animate-fade-up-three');
+	const slideLeftElements = document.querySelectorAll('.engiicore-animate-slide-left-one, .engiicore-animate-slide-left-two, .engiicore-animate-slide-left-three');
+	const slideRightElements = document.querySelectorAll('.engiicore-animate-slide-right-one, .engiicore-animate-slide-right-two, .engiicore-animate-slide-right-three');
 
-	document.addEventListener('mouseup', () => {
-		dragStartX = null;
-		ribbonCarousel.style.userSelect = '';
+	fadeUpElements.forEach(element => {
+		fadeUpAnimationObservable.observe(element);
 	})
 }() );
 

@@ -363,6 +363,17 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         }
      }
 
+     @keyframes fadeDown {
+        0% {
+            opacity: 0;
+            transform: translateY(0px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(-30px);
+        }
+     }
+
      @keyframes slideLeft {
         0% {
             opacity: 0;
@@ -374,6 +385,17 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         }
      }
 
+    @keyframes slideLeftOut {
+        0% {
+            opacity: 0;
+            transform: translateX(0px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(-30px);
+        }
+    }
+
      @keyframes slideRight {
         0% {
             opacity: 0;
@@ -382,6 +404,17 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         100% {
             opacity: 1;
             transform: translateX(0);
+        }
+     }
+
+     @keyframes slideRightOut {
+        0% {
+            opacity: 0;
+            transform: translateX(0px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(30px);
         }
      }
     /* -----------------*/
@@ -1023,26 +1056,31 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     
      /**animation utilities*/
      .opacity-hidden {
-        opacity: 0;
+        opacity: 0 !important;
+        transition: ease-in-out 0.5s all;
      }
+
 
      .engiicore-animate-fade-up-one,
      .engiicore-animate-fade-up-two,
-     .engiicore-animate-fade-up-three {
+     .engiicore-animate-fade-up-three,
+     .engiicore-animate-fade-up-four {
         opacity: 0;
         animation: fadeUp 1s ease-in-out forwards;
      }
 
      .engiicore-animate-slide-left-one,
      .engiicore-animate-slide-left-two,
-     .engiicore-animate-slide-left-three {
+     .engiicore-animate-slide-left-three,
+     .engiicore-animate-slide-left-four {
         opacity: 0;
         animation: slideLeft 1s ease-in-out forwards;
      }
 
     .engiicore-animate-slide-right-one,
     .engiicore-animate-slide-right-two,
-    .engiicore-animate-slide-right-three {
+    .engiicore-animate-slide-right-three,
+    .engiicore-animate-slide-right-four {
         opacity: 0;
         animation: slideRight 1s ease-in-out forwards;
     }
@@ -1056,6 +1094,63 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     .engiicore-animate-fade-up-three,
     .engiicore-animate-slide-left-three,
     .engiicore-animate-slide-right-three {
+        animation-delay: 0.6s;
+    }
+
+    .engiicore-animate-fade-up-four,
+    .engiicore-animate-slide-left-four,
+    .engiicore-animate-slide-right-four {
+        animation-delay: 0.9s;
+    }
+
+    .engiicore-animate-fade-down-one,
+    .engiicore-animate-fade-down-two,
+   .engiicore-animate-fade-down-three {
+       opacity: 1;
+       animation: fadeDown 1s ease-in-out forwards;
+   }
+
+    .engiicore-animate-fade-down-two {
+         animation-delay: 0.3s;
+    }
+
+    .engiicore-animate-fade-down-three {
+         animation-delay: 0.6s;
+    }
+
+    .engiicore-animate-fade-up-four {
+        animation-delay: 0.9s;
+    }
+    
+    .engiicore-animate-slide-left-out-one,
+    .engiicore-animate-slide-left-out-two,
+    .engiicore-animate-slide-left-out-three {
+        opacity: 1;
+        animation: slideLeftOut 1s ease-in-out forwards;
+    }
+
+    .engiicore-animate-slide-left-out-two {
+        animation-delay: 0.3s;
+
+    }
+
+    .engiicore-animate-slide-left-out-three {
+        animation-delay: 0.6s;
+    }
+
+  
+    .engiicore-animate-slide-right-out-one,
+    .engiicore-animate-slide-right-out-two,
+    .engiicore-animate-slide-right-out-three {
+        opacity: 1;
+        animation: slideRightOut 1s ease-in-out forwards;
+    }
+
+    .engiicore-animate-slide-right-out-two {
+        animation-delay: 0.3s;
+    }
+
+    .engiicore-animate-slide-right-out-three {
         animation-delay: 0.6s;
     }
 
