@@ -243,6 +243,15 @@
 	slideRightElements.forEach(element => {
 		slideRightElementsObservable.observe(element, {rootMargin: "0px 0px -100px 0px"})
 	})
+
+
+
+
+	// --------------------------------------------------------------------------------------------
+
+	// add carousel effect to features section #ribbon-section
+	jQuery('#ribbon-section .menu-regnbue-banner-container').addClass('swiper').find('ul').addClass('swiper-wrapper').find('li').addClass('swiper-slide');
+	jQuery('#ribbon-section').append('<div class="swiper-button-prev"></div><div class="swiper-button-next"></div>');
 }() );
 
 

@@ -18,4 +18,14 @@ jQuery(document).ready(function(){
 
 
     });
-    }); 
+
+    const ribbonSwiper = new Swiper('.menu-regnbue-banner-container', {
+        direction: 'horizontal',
+		slidesPerView: "auto",
+		loop: false,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+	});
+}); 
