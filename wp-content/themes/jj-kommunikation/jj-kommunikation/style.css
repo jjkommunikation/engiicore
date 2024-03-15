@@ -349,75 +349,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
      /* Interactive
           ========================================================================== */
 
-    /*
-    * keyframes
-    */
-     @keyframes fadeUp {
-        0% {
-            opacity: 0;
-            transform: translateY(30px);
-        }
-        100% {
-            opacity: 1;
-            transform: translateY(0);
-        }
-     }
-
-     @keyframes fadeDown {
-        0% {
-            opacity: 0;
-            transform: translateY(0px);
-        }
-        100% {
-            opacity: 1;
-            transform: translateY(-30px);
-        }
-     }
-
-     @keyframes slideLeft {
-        0% {
-            opacity: 0;
-            transform: translateX(-30px);
-        }
-        100% {
-            opacity: 1;
-            transform: translateX(0);
-        }
-     }
-
-    @keyframes slideLeftOut {
-        0% {
-            opacity: 0;
-            transform: translateX(0px);
-        }
-        100% {
-            opacity: 1;
-            transform: translateX(-30px);
-        }
-    }
-
-     @keyframes slideRight {
-        0% {
-            opacity: 0;
-            transform: translateX(30px);
-        }
-        100% {
-            opacity: 1;
-            transform: translateX(0);
-        }
-     }
-
-     @keyframes slideRightOut {
-        0% {
-            opacity: 0;
-            transform: translateX(0px);
-        }
-        100% {
-            opacity: 1;
-            transform: translateX(30px);
-        }
-     }
-    /* -----------------*/
+    
      
      /*
       * Add the correct display in Edge, IE 10+, and Firefox.
@@ -1053,6 +985,76 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
      /*--------------------------------------------------------------
      # Utilities
      --------------------------------------------------------------*/
+
+     /*
+    * keyframes
+    */
+    @keyframes fadeUp {
+        0% {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+     }
+
+     @keyframes fadeDown {
+        0% {
+            opacity: 0;
+            transform: translateY(0px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(-30px);
+        }
+     }
+
+     @keyframes slideLeft {
+        0% {
+            opacity: 0;
+            transform: translateX(-30px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+     }
+
+    @keyframes slideLeftOut {
+        0% {
+            opacity: 1;
+            transform: translateX(0px);
+        }
+        100% {
+            opacity: 0;
+            transform: translateX(-30px);
+        }
+    }
+
+     @keyframes slideRight {
+        0% {
+            opacity: 0;
+            transform: translateX(30px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+     }
+
+     @keyframes slideRightOut {
+        0% {
+            opacity: 1;
+            transform: translateX(0px);
+        }
+        100% {
+            opacity: 0;
+            transform: translateX(30px);
+        }
+     }
+    /* -----------------*/
     
      /**animation utilities*/
      .opacity-hidden {
@@ -1068,6 +1070,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         animation: fadeUp 1s ease-in-out forwards;
      }
 
+     .engiicore-animate-fade-down-one,
+     .engiicore-animate-fade-down-two,
+     .engiicore-animate-fade-down-three,
+     .engiicore-animate-fade-down-four {
+        opacity: 1;
+        animation: fadeDown 1s ease-in-out forwards;
+     }
+
      .engiicore-animate-slide-left-one,
      .engiicore-animate-slide-left-two,
      .engiicore-animate-slide-left-three,
@@ -1075,6 +1085,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         opacity: 0;
         animation: slideLeft 1s ease-in-out forwards;
      }
+
+    .engiicore-animate-slide-left-out-one,
+    .engiicore-animate-slide-left-out-two,
+    .engiicore-animate-slide-left-out-three,
+    .engiicore-animate-slide-left-out-four {
+        opacity: 1;
+        animation: slideLeftOut 1s ease-in-out forwards;
+    }
 
     .engiicore-animate-slide-right-one,
     .engiicore-animate-slide-right-two,
@@ -1084,42 +1102,46 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         animation: slideRight 1s ease-in-out forwards;
     }
 
-    .engiicore-animate-fade-down-one,
-    .engiicore-animate-fade-down-two,
-   .engiicore-animate-fade-down-three {
-       opacity: 1;
-       animation: fadeDown 1s ease-in-out forwards;
-   }
-    
-    .engiicore-animate-slide-left-out-one,
-    .engiicore-animate-slide-left-out-two,
-    .engiicore-animate-slide-left-out-three {
-        opacity: 1;
-        animation: slideLeftOut 1s ease-in-out forwards;
-    }
-
     .engiicore-animate-slide-right-out-one,
     .engiicore-animate-slide-right-out-two,
-    .engiicore-animate-slide-right-out-three {
+    .engiicore-animate-slide-right-out-three,
+    .engiicore-animate-slide-right-out-four {
         opacity: 1;
         animation: slideRightOut 1s ease-in-out forwards;
     }
 
+    .engiicore-animate-fade-down-one,
+    .engiicore-animate-fade-down-two,
+    .engiicore-animate-fade-down-three,
+    .engiicore-animate-fade-down-four {
+       opacity: 1;
+       animation: fadeDown 1s ease-in-out forwards;
+    }
+
     .engiicore-animate-fade-up-two,
+    .engiicore-animate-fade-down-two,
     .engiicore-animate-slide-left-two,
-    .engiicore-animate-slide-right-two {
+    .engiicore-animate-slide-left-out-two,
+    .engiicore-animate-slide-right-two,
+    .engiicore-animate-slide-right-out-two {
         animation-delay: 0.3s;
     }
 
     .engiicore-animate-fade-up-three,
+    .engiicore-animate-fade-down-three,
     .engiicore-animate-slide-left-three,
-    .engiicore-animate-slide-right-three {
+    .engiicore-animate-slide-left-out-three,
+    .engiicore-animate-slide-right-three,
+    .engiicore-animate-slide-right-out-three {
         animation-delay: 0.6s;
     }
 
     .engiicore-animate-fade-up-four,
+    .engiicore-animate-fade-down-four,
     .engiicore-animate-slide-left-four,
-    .engiicore-animate-slide-right-four {
+    .engiicore-animate-slide-left-out-four,
+    .engiicore-animate-slide-right-four,
+    .engiicore-animate-slide-right-out-four {
         animation-delay: 0.9s;
     }
 

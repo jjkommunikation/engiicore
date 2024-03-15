@@ -103,43 +103,50 @@
 
 	// animation observer
 	// not working yet
-	/* const fadeUpAnimationObservable = new IntersectionObserver((entries, observer) => {
+	const fadeUpAnimationObservable = new IntersectionObserver((entries, observer) => {
 		entries.forEach(entry => {
+			const entryItemClassList = entry.target.classList;
 			if ( entry.isIntersecting ) {
 				console.log(entry.target + " is intersecting")
-				if ( entry.target.classList.contains('engiicore-animate-fade-up-one') ) {
-					entry.target.classList.add('engiicore-animate-fade-up-one-active')
-					entry.target.classList.remove('engiicore-animate-fade-down-one')
-				} else if ( entry.target.classList.contains('engiicore-animate-fade-up-two') ) {
-					entry.target.classList.add('engiicore-animate-fade-down-two-active')
-					entry.target.classList.remove('engiicore-animate-fade-down-two')
-				} else if ( entry.target.classList.contains('engiicore-animate-fade-up-three') ) {
-					entry.target.classList.add('engiicore-animate-fade-up-three-active')
-					entry.target.classList.remove('engiicore-animate-fade-down-three')
+				if ( entryItemClassList.contains('engiicore-animate-fade-up-one') ) {
+					entryItemClassList.add('engiicore-animate-fade-up-one-active')
+					entryItemClassList.remove('engiicore-animate-fade-down-one')
+				} else if ( entryItemClassList.contains('engiicore-animate-fade-up-two') ) {
+					entryItemClassList.add('engiicore-animate-fade-down-two-active')
+					entryItemClassList.remove('engiicore-animate-fade-down-two')
+				} else if ( entryItemClassList.contains('engiicore-animate-fade-up-three') ) {
+					entryItemClassList.add('engiicore-animate-fade-up-three-active')
+					entryItemClassList.remove('engiicore-animate-fade-down-three')
+				} else if ( entryItemClassList.contains('engiicore-animate-fade-up-four') ) {
+					entryItemClassList.add('engiicore-animate-fade-up-four-active')
+					entryItemClassList.remove('engiicore-animate-fade-down-four')
 				}
 			} else {
 				console.log(entry.target + " is not intersecting")
-				if ( entry.target.classList.contains('engiicore-animate-fade-up-one') ) {
-					entry.target.classList.remove('engiicore-animate-fade-up-one-active')
-					entry.target.classList.add('engiicore-animate-fade-down-one')
-				} else if ( entry.target.classList.contains('engiicore-animate-fade-up-two') ) {
-					entry.target.classList.remove('engiicore-animate-fade-up-two-active')
-					entry.target.classList.add('engiicore-animate-fade-down-two')
-				} else if ( entry.target.classList.contains('engiicore-animate-fade-up-three') ) {
-					entry.target.classList.remove('engiicore-animate-fade-up-three-active')
-					entry.target.classList.add('engiicore-animate-fade-down-three')
+				if ( entryItemClassList.contains('engiicore-animate-fade-up-one') ) {
+					entryItemClassList.remove('engiicore-animate-fade-up-one-active')
+					entryItemClassList.add('engiicore-animate-fade-down-one')
+				} else if ( entryItemClassList.contains('engiicore-animate-fade-up-two') ) {
+					entryItemClassList.remove('engiicore-animate-fade-up-two-active')
+					entryItemClassList.add('engiicore-animate-fade-down-two')
+				} else if ( entryItemClassList.contains('engiicore-animate-fade-up-three') ) {
+					entryItemClassList.remove('engiicore-animate-fade-up-three-active')
+					entryItemClassList.add('engiicore-animate-fade-down-three')
+				} else if( entryItemClassList.contains('engiicore-animate-fade-up-four') ) {
+					entryItemClassList.remove('engiicore-animate-fade-up-four-active')
+					entryItemClassList.add('engiicore-animate-fade-down-four')
 				}
 			}
 		})
 	})
 
-	const fadeUpElements = document.querySelectorAll('.engiicore-animate-fade-up-one, .engiicore-animate-fade-up-two, .engiicore-animate-fade-up-three');
+	const fadeUpElements = document.querySelectorAll('.engiicore-animate-fade-up-one, .engiicore-animate-fade-up-two, .engiicore-animate-fade-up-three, .engiicore-animate-fade-up-four');
 	const slideLeftElements = document.querySelectorAll('.engiicore-animate-slide-left-one, .engiicore-animate-slide-left-two, .engiicore-animate-slide-left-three');
 	const slideRightElements = document.querySelectorAll('.engiicore-animate-slide-right-one, .engiicore-animate-slide-right-two, .engiicore-animate-slide-right-three');
 
 	fadeUpElements.forEach(element => {
 		fadeUpAnimationObservable.observe(element);
-	}) */
+	})
 }() );
 
 
