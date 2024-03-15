@@ -2075,7 +2075,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
          display: flex;
          gap: 5px;
          background: #ffffff;
-         position: absolute;
      }
 
      #ribbon-section li {

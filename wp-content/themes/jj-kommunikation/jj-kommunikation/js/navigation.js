@@ -233,15 +233,15 @@
 	const slideRightElements = document.querySelectorAll('.engiicore-animate-slide-right-one, .engiicore-animate-slide-right-two, .engiicore-animate-slide-right-three, .engiicore-animate-slide-right-four');
 
 	fadeUpElements.forEach(element => {
-		fadeUpAnimationObservable.observe(element);
+		fadeUpAnimationObservable.observe(element, {rootMargin: "0px 0px -100px 0px"});
 	})
 
 	slideLeftElements.forEach(element => {
-		slideLeftAnimationObservable.observe(element);
+		slideLeftAnimationObservable.observe(element, {rootMargin: "0px 0px -100px 0px"});
 	})
 
 	slideRightElements.forEach(element => {
-		slideRightElementsObservable.observe(element)
+		slideRightElementsObservable.observe(element, {rootMargin: "0px 0px -100px 0px"})
 	})
 }() );
 
