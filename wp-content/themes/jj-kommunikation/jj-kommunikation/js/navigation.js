@@ -103,7 +103,7 @@
 
 	// animation observer
 	// not working yet
-	const fadeUpAnimationObservable = new IntersectionObserver((entries, observer) => {
+	/* const fadeUpAnimationObservable = new IntersectionObserver((entries, observer) => {
 		entries.forEach(entry => {
 			if ( entry.isIntersecting ) {
 				console.log(entry.target + " is intersecting")
@@ -139,7 +139,7 @@
 
 	fadeUpElements.forEach(element => {
 		fadeUpAnimationObservable.observe(element);
-	})
+	}) */
 }() );
 
 
