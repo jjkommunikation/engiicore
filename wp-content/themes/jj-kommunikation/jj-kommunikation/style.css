@@ -1002,12 +1002,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
      @keyframes fadeDown {
         0% {
-            opacity: 0;
+            opacity: 1;
             transform: translateY(0px);
         }
         100% {
-            opacity: 1;
-            transform: translateY(-30px);
+            opacity: 0;
+            transform: translateY(30px);
         }
      }
 
