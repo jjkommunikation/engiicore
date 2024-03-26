@@ -2069,12 +2069,18 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         position: relative;
      }
 
+     #ribbon-section ul::-webkit-scrollbar {
+         display: none;
+     }
+
      /* TODO: adding scroll effect with scroll snapping but without have an overflow issue**/
      #ribbon-section ul {
          padding: 20px 20px;
          display: flex;
          gap: 20px;
          background: #ffffff;
+         overflow-x: scroll;
+         scroll-snap-type: x mandatory;
      }
 
      #ribbon-section li {
