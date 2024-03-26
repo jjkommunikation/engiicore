@@ -70,7 +70,7 @@ function updateButtonsText() {
 		if (index === lastItem) {
 			let strNext = menuItems[0].children[2].attributes[1].nodeValue;
 			let color = strNext.match(/#([0-9a-fA-F]{3,6})/)[0];
-			nextButton.innerHTML = `<svg width="97" height="182" viewBox="0 0 97 182" fill="none" xmlns="http://www.w3.org/2000/svg">
+			/* nextButton.innerHTML = `<svg width="97" height="182" viewBox="0 0 97 182" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<g id="Nextbutton - Planl&#195;&#166;gning">
 			<path id="Vector" d="M103.942 7.94709e-06C157.18 1.25779e-05 188 13.1843 188 80.5856L188 101.414C188 168.816 157.18 182 103.942 182L84.0583 182C30.8203 182 1.64172e-05 168.816 2.23394e-05 101.414L2.41695e-05 80.5856C3.00916e-05 13.1842 30.8203 1.58673e-06 84.0584 6.21757e-06L103.942 7.94709e-06Z" fill="${color}"/>
 			</g>
@@ -84,9 +84,16 @@ function updateButtonsText() {
 			<svg width="27" height="15" viewBox="0 0 27 15" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<path id="Vector 26" d="M0.937988 2.62136C6.77132 -0.211977 19.538 -1.97864 23.938 13.6214M23.938 13.6214L18.938 12.6211M23.938 13.6214L25.938 9.12109" stroke="white"/>
 			</svg>
-			</span> <img src='${menuItems[0].firstElementChild.attributes[0].nodeValue}'><span class='feature-name'>Forrige</span>`;
+			</span> <img src='${menuItems[0].firstElementChild.attributes[0].nodeValue}'><span class='feature-name'>Næste</span>`; */
 			console.log(menuItems[0].firstChild.data)
-		nextButton.setAttribute("href", menuItems[0]);
+			nextButton.innerHTML = `
+			</svg><span class='feature-nav next'>Næste feature
+			<svg width="150" height="15" viewBox="0 0 27 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path id="Vector 26" d="M0.937988 2.62136C6.77132 -0.211977 19.538 -1.97864 23.938 13.6214M23.938 13.6214L18.938 12.6211M23.938 13.6214L25.938 9.12109" stroke="white"/>
+			</svg>
+			</span>
+			<span class='feature' style='background-color: ${color}'><img src='${menuItems[0].firstElementChild.attributes[0].nodeValue}'><span class='feature-name'>Næste</span></span>`;
+			nextButton.setAttribute("href", menuItems[0]);
 		} else {
 			//nextButton.setAttribute("style", menuItems[index + 1].children[2].attributes[1].nodeValue);
 			let strNext = menuItems[index + 1].children[2].attributes[1].nodeValue;
@@ -121,7 +128,7 @@ function updateButtonsText() {
 		if (index == 0) {
 			let str = menuItems[lastItem].children[2].attributes[1].nodeValue;
 			let color = str.match(/#([0-9a-fA-F]{3,6})/)[0];
-			prevButton.innerHTML = `<svg width="97" height="182" viewBox="0 0 97 182" fill="none" xmlns="http://www.w3.org/2000/svg">
+/* 			prevButton.innerHTML = `<svg width="97" height="182" viewBox="0 0 97 182" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<g id="Nextbutton - Planl&#195;&#166;gning">
 			<path id="Vector" d="M103.942 7.94709e-06C157.18 1.25779e-05 188 13.1843 188 80.5856L188 101.414C188 168.816 157.18 182 103.942 182L84.0583 182C30.8203 182 1.64172e-05 168.816 2.23394e-05 101.414L2.41695e-05 80.5856C3.00916e-05 13.1842 30.8203 1.58673e-06 84.0584 6.21757e-06L103.942 7.94709e-06Z" fill="${color}"/>
 			</g>
@@ -136,15 +143,21 @@ function updateButtonsText() {
 			<svg width="27" height="15" viewBox="0 0 27 15" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<path id="Vector 26" d="M0.937988 2.62136C6.77132 -0.211977 19.538 -1.97864 23.938 13.6214M23.938 13.6214L18.938 12.6211M23.938 13.6214L25.938 9.12109" stroke="white"/>
 			</svg>
-			</span> <img src='${menuItems[lastItem].firstElementChild.attributes[0].nodeValue}'><span class='feature-name'>Næste</span>`;
+			</span> <img src='${menuItems[lastItem].firstElementChild.attributes[0].nodeValue}'><span class='feature-name'>Forige</span>`; */
+			
+			prevButton.innerHTML = `
+			<span class='feature-nav prev'>Forrige feature
+			<svg width="27" height="15" viewBox="0 0 27 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path id="Vector 26" d="M0.937988 2.62136C6.77132 -0.211977 19.538 -1.97864 23.938 13.6214M23.938 13.6214L18.938 12.6211M23.938 13.6214L25.938 9.12109" stroke="white"/>
+			</svg>
+			</span> <span style='background-color: ${color}' class='feature'><img src='${menuItems[lastItem].firstElementChild.attributes[0].nodeValue}'><span class='feature-name'>Forige</span></span>`;
 			prevButton.setAttribute("href", menuItems[lastItem]);
-
 		} else {
 			
 			//prevButton.setAttribute("style", menuItems[index - 1].children[2].attributes[1].nodeValue);
 			let str = menuItems[index - 1].children[2].attributes[1].nodeValue;
 			let color = str.match(/#([0-9a-fA-F]{3,6})/)[0];
-			prevButton.innerHTML = `<svg width="97" height="182" viewBox="0 0 97 182" fill="none" xmlns="http://www.w3.org/2000/svg">
+			/* prevButton.innerHTML = `<svg width="97" height="182" viewBox="0 0 97 182" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<g id="Nextbutton - Planl&#195;&#166;gning">
 			<path id="Vector" d="M103.942 7.94709e-06C157.18 1.25779e-05 188 13.1843 188 80.5856L188 101.414C188 168.816 157.18 182 103.942 182L84.0583 182C30.8203 182 1.64172e-05 168.816 2.23394e-05 101.414L2.41695e-05 80.5856C3.00916e-05 13.1842 30.8203 1.58673e-06 84.0584 6.21757e-06L103.942 7.94709e-06Z" fill="${color}"/>
 			</g>
@@ -159,7 +172,13 @@ function updateButtonsText() {
 			<svg width="27" height="15" viewBox="0 0 27 15" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<path id="Vector 26" d="M0.937988 2.62136C6.77132 -0.211977 19.538 -1.97864 23.938 13.6214M23.938 13.6214L18.938 12.6211M23.938 13.6214L25.938 9.12109" stroke="white"/>
 			</svg>
-</span> <img src='${menuItems[index - 1].firstElementChild.attributes[0].nodeValue}'><span class='feature-name'>${menuItems[index - 1].firstChild.data}</span>`;
+</span> <img src='${menuItems[index - 1].firstElementChild.attributes[0].nodeValue}'><span class='feature-name'>${menuItems[index - 1].firstChild.data}</span>`; */
+			prevButton.innerHTML = `
+			<span class='feature-nav prev'>Forrige feature
+			<svg width="27" height="15" viewBox="0 0 27 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path id="Vector 26" d="M0.937988 2.62136C6.77132 -0.211977 19.538 -1.97864 23.938 13.6214M23.938 13.6214L18.938 12.6211M23.938 13.6214L25.938 9.12109" stroke="white"/>
+			</svg>
+			</span> <span style='background-color: ${color}' class='feature'><img src='${menuItems[index - 1].firstElementChild.attributes[0].nodeValue}'><span class='feature-name'>Forige</span></span>`;
 			prevButton.setAttribute("href", menuItems[index - 1]);
 		}
 

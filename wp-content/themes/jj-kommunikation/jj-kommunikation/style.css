@@ -1843,7 +1843,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
      label.sub-label {
          display: block;
          font-weight: 400;
-         font-size: 16px;
+         font-size: 14px;
          padding-left: 40px;
          cursor: pointer;
      }
@@ -2071,9 +2071,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
      /* TODO: adding scroll effect with scroll snapping but without have an overflow issue**/
      #ribbon-section ul {
-         padding: 5px 0;
+         padding: 20px 20px;
          display: flex;
-         gap: 5px;
+         gap: 20px;
          background: #ffffff;
      }
 
@@ -2082,10 +2082,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
          scroll-snap-align: start;
          transition: transform 0.3s ease-in-out;
          position: relative;
+         border-radius: 20px;
      }
 
      #ribbon-section li:hover {
-        transform: translateY(-10px);
+        /* transform: translateY(-10px); */
      }
      
      #ribbon-section ul li:nth-child(odd),
@@ -2097,11 +2098,74 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
      #ribbon-section ul a {
          position: relative;
          z-index: 1;
-         padding: 110px 20px 20px 20px;
+         padding: 135px 20px 20px 20px;
          display: block;
-         min-height: 450px;
+         min-height: 350px;
          transition: 300ms ease-in-out;
          height: 100%;
+         color: #fff;
+     }
+
+     #ribbon-section ul a::before {
+        content: "";
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        background-image: url(/wp-content/themes/jj-kommunikation/jj-kommunikation/icons/feature_card_arrow.svg);
+        height: 16px;
+        width: 20px;
+        opacity: 0;
+        transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1s all;
+     }
+
+     #ribbon-section ul a:hover::before {
+        transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1s all;
+        opacity: 1;
+     }
+
+     #ribbon-section ul li a:hover,
+     #ribbon-section ul li a:not(:hover) {
+        transition: ease-in-out 1s all;
+     }
+
+     #ribbon-section ul a img, 
+     label.sub-label {
+        position: absolute;
+     }
+
+     #ribbon-section ul a:hover {
+        padding: 150px 20px 20px 20px;
+        transition: ease-in-out 0.3s all !important;
+     }
+
+     #ribbon-section ul a:not(:hover) {
+        transition: ease-in-out 0.3s all !important;
+     }
+
+     #ribbon-section ul a img {
+        top: 60px !important;
+     }
+
+     #ribbon-section ul a label.sub-label {
+        top: 165px !important;
+     }
+
+     #ribbon-section ul a:hover img {
+        top: 75px !important;
+        transition: ease-in-out 0.3s all !important;
+     }
+
+     #ribbon-section ul a:not(:hover) img {
+        transition: ease-in-out 0.3s all !important;
+     }
+
+     #ribbon-section ul a:hover label.sub-label {
+        top: 180px !important;
+        transition: ease-in-out 0.3s all !important;
+     }
+
+     #ribbon-section ul a:not(:hover) label.sub-label {
+        transition: ease-in-out 0.3s all !important;
      }
      
      #ribbon-section .ribbon-background-color {
@@ -2112,13 +2176,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
          width: 100%;
          z-index: -1;
          left: 0;
-         opacity: .2;
+         /* opacity: .2; */
+         border-radius: 20px;
      }
 
      #ribbon-section ul a:hover, #ribbon-section ul .current-menu-item a {
          color: #fff !important;
-         min-height: 370px;
-         margin-top: -20px;
+         min-height: 365px;
+         margin-top: -15px;
      }
      
      #ribbon-section ul a:hover .ribbon-background-color, #ribbon-section ul .current-menu-item a .ribbon-background-color {
@@ -2131,7 +2196,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
          height: 60px;
          width: 60px;
      }
-     #ribbon-section ul a:hover .menu-icon, #ribbon-section ul .current-menu-item .menu-icon  {
+     #ribbon-section ul a .menu-icon, #ribbon-section ul .current-menu-item .menu-icon  {
          filter: brightness(0) invert(1);
      }
      
@@ -2281,13 +2346,17 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
      }
      
      a#prev-button {
-        left:0;
+        left:-105px;
          border-bottom-right-radius: 50px;
          border-top-right-radius: 50px;
      }
+
+     a#prev-button:hover {
+        left: 0;
+     }
      
      a#next-button {
-        right:-105px;
+        right:-100px;
      }
 
      a#next-button:hover {
@@ -2303,10 +2372,18 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
          line-height: 1;
          top: -60px;
      }
+
+     a#next-button span.feature-name {
+        padding: 10px 40px 10px 15px;
+     }
+
+     a#prev-button span.feature-name {
+        padding: 10px 15px 10px 40px;
+     }
      
      span.feature-name {
          display: block;
-         padding: 10px 50px 10px 10px;
+        
          /* writing-mode: tb; */
          color: #fff;
          font-size: 14px;
@@ -2326,7 +2403,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
          top: -60px;
      }
      
-     span.feature-nav + img {
+     span.feature-nav + img,
+     span.feature img {
          /*transform: rotate(90deg);*/
          filter: brightness(0) invert(1);
          /* position: absolute; */
@@ -2334,7 +2412,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
          height: 40px;
          width: 40px;
          top: 50%;
-         margin-top: -20px;
+         /* margin-top: -20px; */
      }
      
      a#next-button img {
@@ -2350,6 +2428,15 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         height: 75px;
         border-radius: 30px 0px 0px 30px;
      }
+
+     a#prev-button .feature {
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        padding-inline: 20px 10px;
+        height: 75px;
+        border-radius: 0px 30px 30px 0px;
+     }
      
      span.feature-nav.prev {
          position: absolute;
@@ -2357,8 +2444,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
          transform: rotate(12deg);
          color: #fff;
          text-shadow: 1px 1px 2px #000;
-         top: -30px;
-         left: 20px;
+         top: -50px;
+         left: 170px;
          transition: 1500ms ease-in-out;
          width: 170px;
          height: 30px;
@@ -2386,7 +2473,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
          position: absolute;
          top: 5px;
          transform: rotate(85deg);
-         right: 50px;
+         right: 130px;
      }
      
      a#next-button .feature-nav svg {
