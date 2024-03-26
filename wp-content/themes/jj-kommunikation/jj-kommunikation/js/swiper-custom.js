@@ -19,7 +19,7 @@ jQuery(document).ready(function(){
 
     });
 
-    const ribbonSwiper = new Swiper('.menu-regnbue-banner-container', {
+    /* const ribbonSwiper = new Swiper('.menu-regnbue-banner-container', {
         direction: 'horizontal',
 		slidesPerView: "auto",
 		loop: false,
@@ -27,5 +27,5 @@ jQuery(document).ready(function(){
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
 		},
-	});
+	}); */
 }); 

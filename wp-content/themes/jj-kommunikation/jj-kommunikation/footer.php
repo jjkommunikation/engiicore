@@ -21,7 +21,7 @@
 	<footer id="footer-section" class="widget-area">
 		<div class="alignwide">
 			<div class="site-info">
-				<?php dynamic_sidebar( 'sidebar-3' ); ?>
+				<?php 	dynamic_sidebar( 'sidebar-3' ); ?>
 			</div><!-- .site-info -->
 		</div><!-- .alignwide -->
 	</footer><!-- #footer-section -->

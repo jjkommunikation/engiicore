@@ -2269,47 +2269,53 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
          position: relative;
          z-index: -1;
      }
+
+     a#prev-button,
+     a#next-button {
+        position: fixed;
+        top: 50%;
+        z-index: 5;
+        height: 60px;
+        display: flex;
+        align-items: center;
+     }
      
      a#prev-button {
-         position: fixed;
-         left: 0;
-         top: 50%;
-         z-index: 5;
+        left:0;
          border-bottom-right-radius: 50px;
          border-top-right-radius: 50px;
      }
      
      a#next-button {
-         position: fixed;
-         right: 0;
-         top: 50%;
-         z-index: 5;
-         border-bottom-left-radius: 50px;
-         border-top-left-radius: 50px;
+        right:-105px;
+     }
+
+     a#next-button:hover {
+        right: 0;
      }
      
      a#next-button .feature-nav.next {
          position: absolute;
-         right: 100px !important;
+         right: 210px !important;
          color: #fff;
          text-shadow: 1px 1px 3px #000;
          transform: rotate(-15deg);
          line-height: 1;
-         top: -40px;
+         top: -60px;
      }
      
      span.feature-name {
          display: block;
          padding: 10px 50px 10px 10px;
-         writing-mode: tb;
+         /* writing-mode: tb; */
          color: #fff;
          font-size: 14px;
-         height: 160px;
+         height: auto;
          text-align: center;
      }
      a#next-button span.feature-name {
-         writing-mode: vertical-lr;
-         transform: rotate(180deg);
+         /* writing-mode: vertical-lr;
+         transform: rotate(180deg); */
      }
      span.feature-nav.next {
          position: relative;
@@ -2317,12 +2323,13 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
          transform: rotate(15deg);
          color: #fff;
          text-shadow: 1px 1px 3px #000;
+         top: -60px;
      }
      
      span.feature-nav + img {
-         transform: rotate(90deg);
+         /*transform: rotate(90deg);*/
          filter: brightness(0) invert(1);
-         position: absolute;
+         /* position: absolute; */
          right: 7px;
          height: 40px;
          width: 40px;
@@ -2331,9 +2338,17 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
      }
      
      a#next-button img {
-         transform: rotate(-90deg);
+         /* transform: rotate(-90deg); */
          right: unset;
          left: 7px;
+     }
+
+     a#next-button .feature {
+        display: flex;
+        align-items: center;
+        padding-inline: 20px 10px;
+        height: 75px;
+        border-radius: 30px 0px 0px 30px;
      }
      
      span.feature-nav.prev {
@@ -2343,7 +2358,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
          color: #fff;
          text-shadow: 1px 1px 2px #000;
          top: -30px;
-         left: -150px;
+         left: 20px;
          transition: 1500ms ease-in-out;
          width: 170px;
          height: 30px;
