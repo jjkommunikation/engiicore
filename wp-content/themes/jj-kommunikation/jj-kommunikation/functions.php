@@ -530,7 +530,9 @@ function ajax_category_filter_shortcode() {
 					success: function( result ) {
 						$('#category-posts').html( result );
 						// trigger fade in animation
-						$('#category-posts').fadeIn(250);
+						$('#category-posts > .post-grid')
+							.removeClass('engiicore-animate-fade-down-one')
+							.addClass('engiicore-animate-fade-up-one')
 					}
 				})
 			}
@@ -540,7 +542,9 @@ function ajax_category_filter_shortcode() {
 				$('.category-filter:checked').each(function(){
 					category_ids.push($(this).val());
 				});
-				$('#category-posts').fadeOut(250)
+				$('#category-posts > .post-grid')
+					.removeClass('engiicore-animate-fade-up-one')
+					.addClass('engiicore-animate-fade-down-one')
 				fetchPosts(category_ids);
 			});	
 		});
