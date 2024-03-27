@@ -518,29 +518,31 @@ function ajax_category_filter_shortcode() {
     </div>
     <div id="category-posts"></div>
 
-    <script>
-    jQuery(document).ready(function($){
-        function fetchPosts(category_ids){
-            $.ajax({
-                url: '<?php echo admin_url('admin-ajax.php'); ?>',
-                type: 'post',
-                data: { action: 'filter_posts', category_ids: category_ids },
-                success: function( result ) {
-                    $('#category-posts').html( result );
-                }
-            });
-        }
+	<script>
+		jQuery(document).ready(function($) {
+			function fetchPosts(category_ids){
+				$.ajax({
+					url: '<?php echo admin_url('admin-ajax.php'); ?>',
+					type: 'post',
+					data: { action: 'filter_posts', category_ids: category_ids },
+					success: function( result ) {
+						$('#category-posts').html( result );
+						// trigger fade in animation
+						$('#category-posts').fadeIn(250);
+					}
+				})
+			}
 
-        $('.category-filter').on('change', function() {
-            var category_ids = [];
-            $('.category-filter:checked').each(function(){
-                category_ids.push($(this).val());
-            });
-            fetchPosts(category_ids);
-        });
-
-    });
-    </script>
+			$('.category-filter').on('change', function() {
+				var category_ids = [];
+				$('.category-filter:checked').each(function(){
+					category_ids.push($(this).val());
+				});
+				$('#category-posts').fadeOut(250)
+				fetchPosts(category_ids);
+			});	
+		});
+	</script>
 
     <?php
     // Return output buffer content

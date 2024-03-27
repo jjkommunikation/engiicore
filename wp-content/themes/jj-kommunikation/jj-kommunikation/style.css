@@ -1062,6 +1062,16 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         transition: ease-in-out 0.5s all;
      }
 
+     .engiicore-animate-news-ticker {
+        opacity: 0;
+        animation: fadeUp 0.5s ease-in-out forwards;
+     }
+
+     .engiicore-anumate-news-ticker-out {
+        opacity: 0;
+        animation: fadeDown 0.5s ease-in-out forwards;
+     }
+
      .engiicore-animate-fade-up-one,
      .engiicore-animate-fade-up-two,
      .engiicore-animate-fade-up-three,
