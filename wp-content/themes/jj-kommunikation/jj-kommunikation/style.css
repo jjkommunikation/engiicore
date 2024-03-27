@@ -1832,6 +1832,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
          line-height: 1.1;
          padding-left: 40px;
          cursor: pointer;
+         width: 100%;
+         display: block;
      }
      ul.mega-sub-menu .menu {
          display: grid;
