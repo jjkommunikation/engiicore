@@ -2106,7 +2106,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
      #ribbon-section ul a {
          position: relative;
          z-index: 1;
-         padding: 135px 20px 20px 20px;
+         padding: 110px 20px 20px 20px;
          display: block;
          min-height: 400px;
          transition: 300ms ease-in-out;
@@ -2142,7 +2142,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
      }
 
      #ribbon-section ul a:hover {
-        padding: 150px 20px 20px 20px;
+        padding: 125px 20px 20px 20px;
         transition: ease-in-out 0.3s all !important;
      }
 
@@ -2151,7 +2151,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
      }
 
      #ribbon-section ul a img {
-        top: 60px !important;
+        top: 30px !important;
      }
 
      #ribbon-section ul a label.sub-label {
@@ -2161,7 +2161,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
      }
 
      #ribbon-section ul a:hover img {
-        top: 75px !important;
+        top: 45px !important;
         transition: ease-in-out 0.3s all !important;
      }
 
