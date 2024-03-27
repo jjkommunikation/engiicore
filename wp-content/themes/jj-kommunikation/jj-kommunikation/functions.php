@@ -516,7 +516,9 @@ function ajax_category_filter_shortcode() {
 			</div>
         <?php endforeach; ?>
     </div>
-    <div id="category-posts"></div>
+	<div class="category-posts-wrapper" style="min-height: 475px;">
+		<div id="category-posts"></div>
+	</div>
 
 	<script>
 		jQuery(document).ready(function($) {
@@ -567,7 +569,7 @@ function filter_posts_by_category() {
     $query = new WP_Query($args);
 	
     if ($query->have_posts()) {
-		echo '<div class="post-grid">';
+		echo '<div class="post-grid engiicore-animate-fade-up-one">';
         while ($query->have_posts()) {
             $query->the_post();
             // Output the title and excerpt of each post
