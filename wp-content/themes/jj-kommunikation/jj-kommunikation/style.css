@@ -1970,7 +1970,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
          background: url(/wp-content/uploads/mega-menu-arrow.svg) no-repeat !important;
          display: block !important;
          position: absolute;
-         right: 25px;
+         right: 0px;
          top: calc(50% - 3px);
          transition: ease-in-out 0.2s all;
      }
