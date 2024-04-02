@@ -2538,7 +2538,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
          -ms-filter: "FlipH";
      }
      
-     body:not(.home) #overblik:before {
+     body:not(.home) #overblik.bluecircle:before {
         content: "";
         height: 40%;
         bottom: unset;
