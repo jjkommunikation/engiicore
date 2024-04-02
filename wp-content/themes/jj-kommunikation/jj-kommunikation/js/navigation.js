@@ -113,32 +113,13 @@
 			if ( entry.isIntersecting ) {
 				console.log(entry.target + " is intersecting")
 				if ( entryItemClassList.contains('engiicore-animate-fade-up-one') ) {
-					entryItemClassList.add('engiicore-animate-fade-up-one');
-					entryItemClassList.remove('engiicore-animate-fade-down-one');
+					entryItemClassList.add('animating');
 				} else if ( entryItemClassList.contains('engiicore-animate-fade-up-two') ) {
-					entryItemClassList.add('engiicore-animate-fade-up-two')
-					entryItemClassList.remove('engiicore-animate-fade-down-two')
+					entryItemClassList.add('animating')
 				} else if ( entryItemClassList.contains('engiicore-animate-fade-up-three') ) {
-					entryItemClassList.add('engiicore-animate-fade-up-three')
-					entryItemClassList.remove('engiicore-animate-fade-down-three')
+					entryItemClassList.add('animating')
 				} else if ( entryItemClassList.contains('engiicore-animate-fade-up-four') ) {
-					entryItemClassList.add('engiicore-animate-fade-up-four')
-					entryItemClassList.remove('engiicore-animate-fade-down-four')
-				}
-			} else {
-				console.log(entry.target + " is not intersecting")
-				if ( entryItemClassList.contains('engiicore-animate-fade-up-one') ) {
-					entryItemClassList.remove('engiicore-animate-fade-up-one-active')
-					entryItemClassList.add('engiicore-animate-fade-down-one')
-				} else if ( entryItemClassList.contains('engiicore-animate-fade-up-two') ) {
-					entryItemClassList.remove('engiicore-animate-fade-up-two-active')
-					entryItemClassList.add('engiicore-animate-fade-down-two')
-				} else if ( entryItemClassList.contains('engiicore-animate-fade-up-three') ) {
-					entryItemClassList.remove('engiicore-animate-fade-up-three-active')
-					entryItemClassList.add('engiicore-animate-fade-down-three')
-				} else if( entryItemClassList.contains('engiicore-animate-fade-up-four') ) {
-					entryItemClassList.remove('engiicore-animate-fade-up-four-active')
-					entryItemClassList.add('engiicore-animate-fade-down-four')
+					entryItemClassList.add('animating')
 				}
 			}
 		})
@@ -155,32 +136,13 @@
 			if (entry.isIntersecting) {
 				console.log("fade down entry is intersecting");
 				if (entryItemClassList.contains('engiicore-animate-slide-left-out-one')) {
-					entryItemClassList.add('engiicore-animate-slide-left-one')
-					entryItemClassList.remove('engiicore-animate-slide-left-out-one')
+					entryItemClassList.add('animating')
 				} else if (entryItemClassList.contains('engiicore-animate-slide-left-out-two')) {
-					entryItemClassList.add('engiicore-animate-slide-left-two')
-					entryItemClassList.remove('engiicore-animate-slide-left-out-two')
+					entryItemClassList.add('animating')
 				} else if (entryItemClassList.contains('engiicore-animate-slide-left-out-three')) {
-					entryItemClassList.add('engiicore-animate-slide-left-three')
-					entryItemClassList.remove('engiicore-animate-slide-left-out-three')
+					entryItemClassList.add('animating')
 				} else if (entryItemClassList.contains('engiicore-animate-slide-left-out-four')) {
-					entryItemClassList.add('engiicore-animate-slide-left-four')
-					entryItemClassList.remove('engiicore-animate-slide-left-out-four')
-				}
-			} else {
-				console.log("fade down entry is not intersecting")
-				if (entryItemClassList.contains('engiicore-animate-slide-left-out-one')) {
-					entryItemClassList.remove('engiicore-animate-slide-left-out-one')
-					entryItemClassList.add('engiicore-animate-slide-left-one')
-				} else if (entryItemClassList.contains('engiicore-animate-slide-left-two')) {
-					entryItemClassList.remove('engiicore-animate-slide-left-two-out-two')
-					entryItemClassList.add('engiicore-animate-slide-left-out-two')
-				} else if (entryItemClassList.contains('engiicore-animate-slide-left-three')) {
-					entryItemClassList.remove('engiicore-animate-slide-left-three-active')
-					entryItemClassList.add('engiicore-animate-slide-left-out-three')
-				} else if (entryItemClassList.contains('engiicore-animate-slide-left-four')) {
-					entryItemClassList.remove('engiicore-animate-slide-left-four')
-					entryItemClassList.add('engiicore-animate-slide-left-out-four')
+					entryItemClassList.add('ainmating')
 				}
 			}
 		})
@@ -196,33 +158,14 @@
 			const entryItemClassList = entry.target.classList;
 			if (entry.isIntersecting) {
 				console.log("fade down entry is intersecting");
-				if (entryItemClassList.contains('engiicore-animate-slide-right-out-one')) {
-					entryItemClassList.add('engiicore-animate-slide-right-one')
-					entryItemClassList.remove('engiicore-animate-slide-right-out-one')
-				} else if (entryItemClassList.contains('engiicore-animate-slide-right-out-two')) {
-					entryItemClassList.add('engiicore-animate-slide-right-two');
-					entryItemClassList.remove('engiicore-animate-slide-right-out-two')
-				} else if (entryItemClassList.contains('engiicore-animate-slide-right-out-three')) {
-					entryItemClassList.add('engiicore-animate-slide-right-three');
-					entryItemClassList.remove('engiicore-animate-slide-right-out-three')
-				} else if (entryItemClassList.contains('engiicore-animate-slide-right-out-four')) {
-					entryItemClassList.add('engiicore-animate-slide-right-four');
-					entryItemClassList.remove('engiicore-animate-slide-right-out-four')
-				}
-			} else {
-				console.log("fade down entry is not intersecting")
 				if (entryItemClassList.contains('engiicore-animate-slide-right-one')) {
-					entryItemClassList.remove('engiicore-animate-slide-right-out-one');
-					entryItemClassList.add('engiicore-animate-slide-right-one')
+					entryItemClassList.add('animating')
 				} else if (entryItemClassList.contains('engiicore-animate-slide-right-two')) {
-					entryItemClassList.remove('engiicore-animate-slide-right-two-out-two');
-					entryItemClassList.add('engiicore-animate-slide-right-out-two')
+					entryItemClassList.add('animating');
 				} else if (entryItemClassList.contains('engiicore-animate-slide-right-three')) {
-					entryItemClassList.remove('engiicore-animate-slide-right-three-active');
-					entryItemClassList.add('engiicore-animate-slide-right-out-three')
+					entryItemClassList.add('animating');
 				} else if (entryItemClassList.contains('engiicore-animate-slide-right-four')) {
-					entryItemClassList.remove('engiicore-animate-slide-right-four');
-					entryItemClassList.add('engiicore-animate-slide-right-out-four')
+					entryItemClassList.add('animating');
 				}
 			}
 		})
