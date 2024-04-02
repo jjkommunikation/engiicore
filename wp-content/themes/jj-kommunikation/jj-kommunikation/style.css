@@ -2538,6 +2538,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
          -ms-filter: "FlipH";
      }
      
+     #overblik:before {
+        content: "";
+        height: 85%;
+        bottom: unset;
+        top: 3%;
+     }
      
      .yellowcircle.top::before, .bluecircle.top::before  {
          content: "";
