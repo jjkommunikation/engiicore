@@ -2540,7 +2540,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
      
      #overblik:before {
         content: "";
-        height: 85%;
+        height: 40%;
         bottom: unset;
         top: 3%;
      }
