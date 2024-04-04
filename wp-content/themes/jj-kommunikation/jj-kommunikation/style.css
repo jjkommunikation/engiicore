@@ -1074,12 +1074,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
      .engiicore-animate-news-ticker {
         opacity: 0;
-        animation: fadeUp 0.5s ease-in-out forwards;
+        animation: fadeUp 0.75s ease-in-out forwards;
      }
 
-     .engiicore-anumate-news-ticker-out {
+     .engiicore-animate-news-ticker-out {
         opacity: 0;
-        animation: fadeDown 0.5s ease-in-out forwards;
+        animation: fadeUp 0.5s ease-in-out reverse;
      }
 
      .engiicore-animate-fade-in-one.animating,

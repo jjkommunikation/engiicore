@@ -545,8 +545,8 @@ function ajax_category_filter_shortcode() {
 						$('#category-posts').html( result );
 						// trigger fade in animation
 						$('#category-posts > .post-grid')
-							.removeClass('engiicore-animate-fade-down-one')
-							.addClass('engiicore-animate-fade-up-one')
+						.removeClass('engiicore-animate-news-ticker-out')
+						.addClass('engiicore-animate-fade-up-one')
 					}
 				})
 			}
@@ -558,8 +558,11 @@ function ajax_category_filter_shortcode() {
 				});
 				$('#category-posts > .post-grid')
 					.removeClass('engiicore-animate-fade-up-one')
-					.addClass('engiicore-animate-fade-down-one')
-				fetchPosts(category_ids);
+					.addClass('engiicore-animate-news-ticker-out')
+
+					setTimeout(() => {
+						fetchPosts(category_ids);
+					}, 1000);
 			});	
 		});
 	</script>
