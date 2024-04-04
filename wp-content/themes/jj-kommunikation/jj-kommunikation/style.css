@@ -3069,7 +3069,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         .feature-card-menu .widget .menu-engiicore-feature-slider-menu-container #menu-engiicore-feature-slider-menu .engiicore-feature-card,
         .feature-card-menu .widget .menu-engiicore-feature-slider-menu-container #menu-engiicore-feature-slider-menu .engiicore-feature-card:not(.active) {
             width: 70% !important;
-            height: 180px !important;
+            height: 220px !important;
             min-height: 150px !important;
         }
     }
@@ -3077,7 +3077,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     @media (min-width: 768px) and (max-width: 1023px) {
         .feature-card-menu .widget .menu-engiicore-feature-slider-menu-container #menu-engiicore-feature-slider-menu .engiicore-feature-card {
             width: 70% !important;
-            height: 180px !important;
+            height: 220px !important;
             min-height: 150px !important;
         }
     }
