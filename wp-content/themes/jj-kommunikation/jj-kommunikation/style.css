@@ -2933,6 +2933,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         &::-webkit-scrollbar {
             display: none;
         }
+
+        .alignwide {
+            margin-left: 0;
+            margin-right: 0;
+        }
      }
 
     .feature-card-menu {
