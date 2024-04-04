@@ -2170,6 +2170,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         opacity: 1;
      }
 
+     #ribbon-section ul li.current_page_item a::before {
+        opacity: 1;
+     }
+
      #ribbon-section ul li a:hover,
      #ribbon-section ul li a:not(:hover) {
         transition: ease-in-out 1s all;
@@ -2183,6 +2187,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
      #ribbon-section ul a:hover {
         padding: 125px 20px 20px 20px;
         transition: ease-in-out 0.3s all !important;
+     }
+
+     #ribbon-section ul li.current_page_item a {
+        padding: 125px 20px 20px 20px;
      }
 
      #ribbon-section ul a:not(:hover) {
@@ -2202,6 +2210,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
      #ribbon-section ul a:hover img {
         top: 45px !important;
         transition: ease-in-out 0.3s all !important;
+     }
+
+     #ribbon-section ul li.current_page_item a img {
+        top: 45px !important;
      }
 
      #ribbon-section ul a:not(:hover) img {
