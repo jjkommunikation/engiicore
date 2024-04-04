@@ -46,7 +46,7 @@ jQuery(document).ready(function(){
                 slidesPerView: 2,
             },
 			1024: {
-				slidesPerView: 2.5,
+				slidesPerView: 'auto',
                 spaceBetween: 30,
                 slideToClickedSlide: true,
                 roundLengths: true,
