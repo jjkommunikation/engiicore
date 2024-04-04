@@ -546,7 +546,7 @@ function ajax_category_filter_shortcode() {
 						// trigger fade in animation
 						$('#category-posts > .post-grid')
 						.removeClass('engiicore-animate-news-ticker-out')
-						.addClass('engiicore-animate-fade-up-one')
+						.addClass('engiicore-animate-news-ticker')
 					}
 				})
 			}
@@ -557,12 +557,10 @@ function ajax_category_filter_shortcode() {
 					category_ids.push($(this).val());
 				});
 				$('#category-posts > .post-grid')
-					.removeClass('engiicore-animate-fade-up-one')
+					.removeClass('engiicore-animate-news-ticker')
 					.addClass('engiicore-animate-news-ticker-out')
 
-					setTimeout(() => {
-						fetchPosts(category_ids);
-					}, 1000);
+					fetchPosts(category_ids);
 			});	
 		});
 	</script>
@@ -590,7 +588,7 @@ function filter_posts_by_category() {
     $query = new WP_Query($args);
 	
     if ($query->have_posts()) {
-		echo '<div class="post-grid engiicore-animate-fade-up-one">';
+		echo '<div class="post-grid engiicore-animate-news-ticker">';
         while ($query->have_posts()) {
             $query->the_post();
             // Output the title and excerpt of each post
