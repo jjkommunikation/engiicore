@@ -2170,7 +2170,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         opacity: 1;
      }
 
-     #ribbon-section ul li.current_page_item a::before {
+     #ribbon-section ul li.current_page_item a::before,
+     #ribbon-section ul li.current-menu-item a::before {
         opacity: 1;
      }
 
@@ -2189,7 +2190,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         transition: ease-in-out 0.3s all !important;
      }
 
-     #ribbon-section ul li.current_page_item a {
+     #ribbon-section ul li.current_page_item a,
+     #ribbon-section ul li.current-menu-item a {
         padding: 125px 20px 20px 20px;
      }
 
@@ -2212,7 +2214,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         transition: ease-in-out 0.3s all !important;
      }
 
-     #ribbon-section ul li.current_page_item a img {
+     #ribbon-section ul li.current_page_item a img,
+     #ribbon-section ul li.current-menu-item a img{
         top: 45px !important;
      }
 
