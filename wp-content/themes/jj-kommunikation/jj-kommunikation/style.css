@@ -2569,7 +2569,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
      
      body:not(.home) #overblik.bluecircle:before {
         content: "";
-        height: 40%;
+        height: 85%;
         bottom: unset;
         top: 3%;
      }
