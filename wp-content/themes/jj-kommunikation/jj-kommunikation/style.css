@@ -2872,6 +2872,270 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
      .swiper-slide a {
         width: auto !important;
      }
+
+     /*
+     * Top Features Card menu
+     */
+
+     #top-features-section {
+        overflow-y: hidden;
+        overflow-x: scroll;
+
+        /* scrollbar */
+        &::-webkit-scrollbar {
+            display: none;
+        }
+     }
+
+    .feature-card-menu {
+        position: relative;
+
+        .widget {
+            .widget-title {
+                font-size: 32px;
+            }
+
+            .menu-engiicore-feature-slider-menu-container {
+                height: 400px;
+                min-height: 400px;
+
+                &.swiper {
+                    overflow: unset !important;
+                }
+
+                #menu-engiicore-feature-slider-menu {
+                    display: flex;
+                    gap: 50px;
+                    padding: 20px 0;
+                    height: inherit;
+
+                    @media (min-width: 768px) and (max-width: 1024px) {
+                        padding-inline: 20px;
+                        gap: 0;
+                    }
+
+                    .swiper-slide:not(.active) {
+                        height: 300px !important;
+                        opacity: 0.5 !important;
+                    }
+
+                    .swiper-slide.active {
+                        opacity: 1 !important;
+                    }
+
+                    .engiicore-feature-card {
+                        height: inherit;
+                        min-height: inherit;
+                        position: relative;
+                        /* width: 402px !important; */
+                        height: 300px !important;
+
+                        a {
+                            height: inherit;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 10px;
+                            padding: 125px 24px 0px 24px;
+                            border-radius: 20px;
+                            background: #fff;
+                            box-shadow: 0px 25px 15px -5px rgba(0, 0, 0, 0.15);
+                            transition: 300ms ease-in-out;
+                            min-height: inherit;
+                            font-size: 20px;
+                            font-weight: bold;
+                            /* width: 402px !important; */
+
+                            &:hover {
+                                color: var(--secondayr-color) !important;
+                                background-color:var(--light-blue-color);
+                                .sub-label {
+                                    color: var(--secondary-color);
+                                }
+                            }
+
+                            .sub-label {
+                                position: relative;
+                                font-size: 1rem;
+                                margin-top: 15px;
+                                width: 70%;
+                            }
+
+                            img {
+                                position: absolute;
+                                top: 50px;
+                                left: 10px;
+                                height: 55px;
+                                width: 68px;
+                            }
+                        }
+                    }   
+                }
+
+                .swiper-button-prev, .swiper-button-next {
+                    top: -30px !important;
+                    right: 0 !important;
+                    left: unset !important;
+                    height: 50px;
+                    width: 50px;
+                }
+
+                .swiper-button-next:after,
+                .swiper-button-prev:after {
+                    content: "" !important;
+                }
+
+                .swiper-button-next:before {
+                    content: "" !important;
+                    background-image: url(/wp-content/uploads/slide_next.png);
+                    height: 36px;
+                    width: 35px;
+                }
+
+                .swiper-button-prev {
+                    right: 45px !important;
+                }
+
+                .swiper-button-prev:before {
+                    content: "";
+                    background-image: url(/wp-content/uploads/slide_previous.png);
+                    height: 36px;
+                    width: 35px;
+                }
+            }
+        }
+    }
+
+    @media (min-width: 320px) and (max-width: 639px) {
+        .feature-card-menu .widget .menu-engiicore-feature-slider-menu-container #menu-engiicore-feature-slider-menu .engiicore-feature-card.active {
+            margin-left: 20px;
+        }
+    }
+    
+    @media (min-width: 320px) and (max-width: 767px) {
+        .feature-card-menu .widget .menu-engiicore-feature-slider-menu-container #menu-engiicore-feature-slider-menu {
+            margin-left: 35px !important;
+        }
+
+        .feature-card-menu .widget .menu-engiicore-feature-slider-menu-container #menu-engiicore-feature-slider-menu .engiicore-feature-card,
+        .feature-card-menu .widget .menu-engiicore-feature-slider-menu-container #menu-engiicore-feature-slider-menu .engiicore-feature-card:not(.active) {
+            width: 70% !important;
+            height: 180px !important;
+            min-height: 150px !important;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 1023px) {
+        .feature-card-menu .widget .menu-engiicore-feature-slider-menu-container #menu-engiicore-feature-slider-menu .engiicore-feature-card {
+            width: 70% !important;
+            height: 180px !important;
+            min-height: 150px !important;
+        }
+    }
+
+
+    @media (max-width: 1023px) {
+
+        .feature-card-menu .widget .menu-engiicore-feature-slider-menu-container.swiper {
+            overflow: unset !important;
+            /* max-width: calc(100% - 70px) !important; */
+            max-width: auto !important;
+        }
+
+        .feature-card-menu
+        .widget
+        .menu-engiicore-feature-slider-menu-container
+        #menu-engiicore-feature-slider-menu
+        .engiicore-feature-card.active {
+            margin-right: 70px !important;
+        }
+
+        .feature-card-menu .widget .menu-engiicore-feature-slider-menu-container #menu-engiicore-feature-slider-menu .engiicore-feature-card a {
+            background: linear-gradient(45deg, white 30%, transparent 100%);
+        }
+
+        .feature-card-menu .widget .menu-engiicore-feature-slider-menu-container #menu-engiicore-feature-slider-menu {
+            padding: unset !important;
+            margin-left: 20px !important;
+        }
+
+        #menu-engiicore-feature-slider-menu {
+            gap: 0px !important;
+        }
+
+        #menu-engiicore-feature-slider-menu .engiicore-feature-card a {
+            width: 100% !important;
+        }
+
+        .feature-card-menu .widget .menu-engiicore-feature-slider-menu-container .swiper-button-prev,
+        .feature-card-menu .widget .menu-engiicore-feature-slider-menu-container .swiper-button-next {
+            top: -40px !important;
+        }
+
+        .feature-card-menu .widget .menu-engiicore-feature-slider-menu-container .swiper-button-prev {
+            right: 85px !important;
+        }
+
+        .feature-card-menu .widget .menu-engiicore-feature-slider-menu-container .swiper-button-next {
+            right: 35px !important;
+        }
+
+        .feature-card-menu .widget .menu-engiicore-feature-slider-menu-container #menu-engiicore-feature-slider-menu .swiper-slide:not(.active) {
+            opacity: 0 !important;
+        }
+
+        .feature-card-menu .widget .menu-engiicore-feature-slider-menu-container #menu-engiicore-feature-slider-menu .engiicore-feature-card a .sub-label {
+            font-size: 1.25rem;
+            width: 50%;
+        }
+    }
+
+    @media (min-width: 1024px) and (max-width: 1199px) {
+
+       /*  .feature-card-menu .widget .menu-engiicore-feature-slider-menu-container #menu-engiicore-feature-slider-menu .engiicore-feature-card {
+            width: calc(100% /)
+        }
+ */
+        .feature-card-menu .widget .menu-engiicore-feature-slider-menu-container #menu-engiicore-feature-slider-menu .engiicore-feature-card,
+        .feature-card-menu .widget .menu-engiicore-feature-slider-menu-container #menu-engiicore-feature-slider-menu .engiicore-feature-card a {
+            width: 482px !important;
+        }
+    }
+
+    @media (min-width: 1200px) and (max-width: 1440px) {
+        .feature-card-menu .widget .menu-engiicore-feature-slider-menu-container #menu-engiicore-feature-slider-menu .engiicore-feature-card,
+        .feature-card-menu .widget .menu-engiicore-feature-slider-menu-container #menu-engiicore-feature-slider-menu .engiicore-feature-card a {
+            width: 402px !important;
+        }
+
+        .feature-card-menu .widget .menu-engiicore-feature-slider-menu-container #menu-engiicore-feature-slider-menu {
+            gap: 0px !important;
+        }
+    }
+
+    @media (min-width: 1024px) and (max-width: 1440px) {
+        .feature-card-menu .widget .menu-engiicore-feature-slider-menu-container #menu-engiicore-feature-slider-menu .engiicore-feature-card {
+            margin-left: 20px;
+        }
+    }
+
+    @media (min-width: 1441px) {
+        .feature-card-menu .widget .menu-engiicore-feature-slider-menu-container #menu-engiicore-feature-slider-menu .engiicore-feature-card,
+        .feature-card-menu .widget .menu-engiicore-feature-slider-menu-container #menu-engiicore-feature-slider-menu .engiicore-feature-card a {
+            width: 402px !important;
+        }
+    }
+
+    @media (max-width: 1440px) {
+        .feature-card-menu .widget .widget-title {
+            padding-inline: 20px;
+        }
+
+        .swiper-slide {
+            padding: 0 0 !important;
+        }
+    }
+
+     /* --------------------------------------------- */
      
      /*
      * Max width: 781px

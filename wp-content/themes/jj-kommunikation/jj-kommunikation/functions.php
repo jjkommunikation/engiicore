@@ -166,10 +166,7 @@ function display_slideshow($atts) {
 	}
 	
 	
-	wp_enqueue_style( 'swiper-style', get_template_directory_uri() . '/css/swiper-bundle.min.css' );
-	wp_enqueue_style( 'swiper-style2', get_template_directory_uri() . '/css/swiper-custom.css' );
-	wp_enqueue_script( 'swiper-script', get_template_directory_uri() . '/js/swiper-bundle.min.js', 'jquery' );
-	wp_enqueue_script( 'swiper-script2', get_template_directory_uri() . '/js/swiper-custom.js');
+	
 	
 
 	return $slideshow_string;
@@ -204,6 +201,19 @@ function jj_kommunikation_widgets_init() {
 		array(
 			'name'          => esc_html__( 'Sidebar', 'jj-kommunikation' ),
 			'id'            => 'sidebar-1',
+			'description'   => esc_html__( 'Add widgets here.', 'jj-kommunikation' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h4 class="widget-title">',
+			'after_title'   => '</h4>',
+		)
+	);
+
+	// registers top feature section
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Features_top', 'jj-kommunikation' ),
+			'id'            => 'features',
 			'description'   => esc_html__( 'Add widgets here.', 'jj-kommunikation' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
@@ -264,6 +274,10 @@ function jj_kommunikation_scripts() {
     wp_localize_script('jj-kommunikation-customizer', 'ajax_object', array('ajax_url' => admin_url('admin-ajax.php')));
 	wp_enqueue_script('jj-kommunikation-lottie', get_template_directory_uri() . '/js/lottie.js', array('jquery'));
 
+	wp_enqueue_style( 'swiper-style', get_template_directory_uri() . '/css/swiper-bundle.min.css' );
+	wp_enqueue_style( 'swiper-style2', get_template_directory_uri() . '/css/swiper-custom.css' );
+	wp_enqueue_script( 'swiper-script', get_template_directory_uri() . '/js/swiper-bundle.min.js', 'jquery' );
+	wp_enqueue_script( 'swiper-script2', get_template_directory_uri() . '/js/swiper-custom.js');
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -612,3 +626,18 @@ function filter_posts_by_category() {
 
 add_action('wp_ajax_filter_posts', 'filter_posts_by_category');
 add_action('wp_ajax_nopriv_filter_posts', 'filter_posts_by_category');
+
+
+if ( ! function_exists('engiicore_render_feature_card_menu') ) {
+	function engiicore_render_feature_card_menu($attr) {
+		ob_start();
+		dynamic_sidebar('features_top');
+		$features_top = ob_get_clean();
+		$html = '<div class="feature-card-menu" style="max-width: var(--grid); margin: auto;">';
+		$html .= $features_top;
+		$html .= '</div>';
+		return $html;
+	}
+}
+
+add_shortcode('engiicore-feature-card-menu', 'engiicore_render_feature_card_menu');

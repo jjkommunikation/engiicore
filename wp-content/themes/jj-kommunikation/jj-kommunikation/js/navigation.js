@@ -187,8 +187,10 @@
 		slideRightElementsObservable.observe(element, {rootMargin: "0px 0px -100px 0px"})
 	})
 
-
-
+	// adding swiper effect to top features section
+	
+	jQuery('.menu-engiicore-feature-slider-menu-container').addClass('swiper').find('ul').addClass('swiper-wrapper').find('li').addClass('swiper-slide');
+	jQuery('.menu-engiicore-feature-slider-menu-container').append('<div class="swiper-button-prev"></div><div class="swiper-button-next"></div>');
 
 	// --------------------------------------------------------------------------------------------
 
