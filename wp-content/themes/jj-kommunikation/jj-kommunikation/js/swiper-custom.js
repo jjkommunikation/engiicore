@@ -43,7 +43,7 @@ jQuery(document).ready(function(){
                 autoResize: true,
             },
             768: {
-                slidesPerView: 1,
+                slidesPerView: 2,
             },
 			1024: {
 				slidesPerView: 2.5,
