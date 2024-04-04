@@ -2937,6 +2937,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
                     gap: 50px;
                     padding: 20px 0;
                     height: inherit;
+                    transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94) !important; 
+                    transition-duration: 1s !important;
 
                     @media (min-width: 768px) and (max-width: 1024px) {
                         padding-inline: 20px;
@@ -2946,10 +2948,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
                     .swiper-slide:not(.active) {
                         height: 300px !important;
                         opacity: 0.5 !important;
+                        transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+                        transition-duration: 0.5s !important;
                     }
 
                     .swiper-slide.active {
                         opacity: 1 !important;
+                        transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+                        transition-duration: 0.5s !important;
                     }
 
                     .engiicore-feature-card {
@@ -3109,12 +3115,13 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         }
 
         .feature-card-menu .widget .menu-engiicore-feature-slider-menu-container #menu-engiicore-feature-slider-menu .swiper-slide:not(.active) {
-            opacity: 0 !important;
+            opacity: 0.5 !important;
+            height: 180px !important;
         }
 
         .feature-card-menu .widget .menu-engiicore-feature-slider-menu-container #menu-engiicore-feature-slider-menu .engiicore-feature-card a .sub-label {
             font-size: 1.25rem;
-            width: 50%;
+            width: 100%;
         }
     }
 
