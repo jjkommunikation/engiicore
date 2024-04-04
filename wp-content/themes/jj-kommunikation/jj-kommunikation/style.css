@@ -3148,7 +3148,15 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  */
         .feature-card-menu .widget .menu-engiicore-feature-slider-menu-container #menu-engiicore-feature-slider-menu .engiicore-feature-card,
         .feature-card-menu .widget .menu-engiicore-feature-slider-menu-container #menu-engiicore-feature-slider-menu .engiicore-feature-card a {
-            width: 482px !important;
+            width: 382px !important;
+        }
+
+        .feature-card-menu .widget .menu-engiicore-feature-slider-menu-container .swiper-button-next {
+            right: 20px !important;
+        }
+
+        .feature-card-menu .widget .menu-engiicore-feature-slider-menu-container .swiper-button-prev {
+            right: 65px !important;
         }
     }
 

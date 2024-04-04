@@ -25,6 +25,7 @@ jQuery(document).ready(function(){
         watchOverflow: true,
         enabled: true,
         visibilityFullFit: true,
+        autoResize: true,
         centeredSlies: true,
 		navigation: {
 			nextEl: '.swiper-button-next',
@@ -44,14 +45,21 @@ jQuery(document).ready(function(){
             768: {
                 slidesPerView: 'auto',
                 spaceBetween: 50,
+                slideToClickedSlide: true,
+                roundLengths: true,
             },
 			1024: {
-				slidesPerView: 2,
-                spaceBetween: 0,
+				slidesPerView: 2.5,
+                spaceBetween: 30,
+                slideToClickedSlide: true,
+                roundLengths: true,
+                visibilityFullFit: true,
+                centeredSlies: true,
 			},
             1200: {
                 slidesPerView: 'auto',
-                spaceBetween:100,
+                spaceBetween:60,
+                slideToClickedSlide: true,
             },
             1400: {
                 slidesPerView: 3,
