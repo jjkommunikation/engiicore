@@ -1102,7 +1102,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
      .engiicore-animate-fade-up-two.animating,
      .engiicore-animate-fade-up-three.animating,
      .engiicore-animate-fade-up-four.animating {
-        opacity: 0;
         animation: fadeUp 1s ease-in-out forwards;
      }
 
