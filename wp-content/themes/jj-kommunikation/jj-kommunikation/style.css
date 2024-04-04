@@ -2921,6 +2921,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
      * Top Features Card menu
      */
 
+     .has-overflow {
+        overflow: hidden;
+     }
+
      #top-features-section {
         overflow-y: hidden;
         overflow-x: scroll;
