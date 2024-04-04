@@ -3038,7 +3038,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
                     content: "" !important;
                     background-image: url(/wp-content/uploads/slide_next.png);
                     height: 36px;
-                    width: 35px;
+                    width: 36px;
                 }
 
                 .swiper-button-prev {
@@ -3049,7 +3049,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
                     content: "";
                     background-image: url(/wp-content/uploads/slide_previous.png);
                     height: 36px;
-                    width: 35px;
+                    width: 36px;
                 }
             }
         }
