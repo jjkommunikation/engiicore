@@ -87,11 +87,6 @@ function updateButtonsText() {
 			</span> <img src='${menuItems[0].firstElementChild.attributes[0].nodeValue}'><span class='feature-name'>Næste</span>`; */
 			console.log(menuItems[0].firstChild.data)
 			nextButton.innerHTML = `
-			</svg><span class='feature-nav next'>Næste feature
-			<svg width="150" height="15" viewBox="0 0 27 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path id="Vector 26" d="M0.937988 2.62136C6.77132 -0.211977 19.538 -1.97864 23.938 13.6214M23.938 13.6214L18.938 12.6211M23.938 13.6214L25.938 9.12109" stroke="white"/>
-			</svg>
-			</span>
 			<span class='feature' style='background-color: ${color}'><img src='${menuItems[0].firstElementChild.attributes[0].nodeValue}'><span class='feature-name'>Næste</span></span>`;
 			nextButton.setAttribute("href", menuItems[0]);
 		} else {
@@ -115,11 +110,6 @@ function updateButtonsText() {
 			</span> <img src='${menuItems[index + 1].firstElementChild.attributes[0].nodeValue}'><span class='feature-name'>Næste</span>`; */
 
 			nextButton.innerHTML = `
-			</svg><span class='feature-nav next'>Næste feature
-			<svg width="150" height="15" viewBox="0 0 27 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path id="Vector 26" d="M0.937988 2.62136C6.77132 -0.211977 19.538 -1.97864 23.938 13.6214M23.938 13.6214L18.938 12.6211M23.938 13.6214L25.938 9.12109" stroke="white"/>
-			</svg>
-			</span>
 			<span class='feature' style='background-color: ${color}'><img src='${menuItems[index + 1].firstElementChild.attributes[0].nodeValue}'><span class='feature-name'>Næste</span></span>`;
 			nextButton.setAttribute("href", menuItems[index + 1]);
 			console.log(menuItems[index + 1].firstChild.data)
@@ -146,11 +136,7 @@ function updateButtonsText() {
 			</span> <img src='${menuItems[lastItem].firstElementChild.attributes[0].nodeValue}'><span class='feature-name'>Forige</span>`; */
 			
 			prevButton.innerHTML = `
-			<span class='feature-nav prev'>Forrige feature
-			<svg width="27" height="15" viewBox="0 0 27 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path id="Vector 26" d="M0.937988 2.62136C6.77132 -0.211977 19.538 -1.97864 23.938 13.6214M23.938 13.6214L18.938 12.6211M23.938 13.6214L25.938 9.12109" stroke="white"/>
-			</svg>
-			</span> <span style='background-color: ${color}' class='feature'><img src='${menuItems[lastItem].firstElementChild.attributes[0].nodeValue}'><span class='feature-name'>Forige</span></span>`;
+			 <span style='background-color: ${color}' class='feature'><img src='${menuItems[lastItem].firstElementChild.attributes[0].nodeValue}'><span class='feature-name'>Forige</span></span>`;
 			prevButton.setAttribute("href", menuItems[lastItem]);
 		} else {
 			
@@ -174,11 +160,7 @@ function updateButtonsText() {
 			</svg>
 </span> <img src='${menuItems[index - 1].firstElementChild.attributes[0].nodeValue}'><span class='feature-name'>${menuItems[index - 1].firstChild.data}</span>`; */
 			prevButton.innerHTML = `
-			<span class='feature-nav prev'>Forrige feature
-			<svg width="27" height="15" viewBox="0 0 27 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path id="Vector 26" d="M0.937988 2.62136C6.77132 -0.211977 19.538 -1.97864 23.938 13.6214M23.938 13.6214L18.938 12.6211M23.938 13.6214L25.938 9.12109" stroke="white"/>
-			</svg>
-			</span> <span style='background-color: ${color}' class='feature'><img src='${menuItems[index - 1].firstElementChild.attributes[0].nodeValue}'><span class='feature-name'>Forige</span></span>`;
+			<span style='background-color: ${color}' class='feature'><img src='${menuItems[index - 1].firstElementChild.attributes[0].nodeValue}'><span class='feature-name'>Forige</span></span>`;
 			prevButton.setAttribute("href", menuItems[index - 1]);
 		}
 
