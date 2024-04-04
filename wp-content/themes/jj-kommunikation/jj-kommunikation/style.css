@@ -989,6 +989,16 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
      /*
     * keyframes
     */
+
+     @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+     }
+
     @keyframes fadeUp {
         0% {
             opacity: 0;
@@ -1002,12 +1012,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
      @keyframes fadeDown {
         0% {
-            opacity: 1;
-            transform: translateY(0px);
+            opacity: 0;
+            transform: translateY(-30px);
         }
         100% {
-            opacity: 0;
-            transform: translateY(30px);
+            opacity: 1;
+            transform: translateY(0px);
         }
      }
 
@@ -1072,6 +1082,22 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         animation: fadeDown 0.5s ease-in-out forwards;
      }
 
+     .engiicore-animate-fade-in-one.animating,
+     .engiicore-animate-fade-in-two.animating,
+     .engiicore-animate-fade-in-three.animating,
+     .engiicore-animate-fade-in-four.animating {
+        opacity: 0;
+        animation: fadeIn 1s ease-in-out forwards;
+     }
+
+     .engiicore-animate-fade-down-one.animating,
+     .engiicore-animate-fade-down-two.animating,
+     .engiicore-animate-fade-down-three.animating,
+     .engiicore-animate-fade-down-four.animating {
+        opacity: 0;
+        animation: fadeDown 1s ease-in-out forwards;
+     }
+
      .engiicore-animate-fade-up-one.animating,
      .engiicore-animate-fade-up-two.animating,
      .engiicore-animate-fade-up-three.animating,
@@ -1129,6 +1155,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     }
 
     .engiicore-animate-fade-up-two,
+    .engiicore-animate-fade-in-two,
     .engiicore-animate-fade-down-two,
     .engiicore-animate-slide-left-two,
     .engiicore-animate-slide-left-out-two,
@@ -1138,6 +1165,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     }
 
     .engiicore-animate-fade-up-three,
+    .engiicore-animate-fade-in-three,
     .engiicore-animate-fade-down-three,
     .engiicore-animate-slide-left-three,
     .engiicore-animate-slide-left-out-three,
@@ -1147,6 +1175,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     }
 
     .engiicore-animate-fade-up-four,
+    .engiicore-animate-fade-in-four,
     .engiicore-animate-fade-down-four,
     .engiicore-animate-slide-left-four,
     .engiicore-animate-slide-left-out-four,

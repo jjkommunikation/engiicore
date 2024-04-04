@@ -101,6 +101,23 @@
 		}
 	}
 
+	const fadeInAnimationObservable = new IntersectionObserver((entries, observer) => {
+		entries.forEach(entry => {
+			const entryItemClassList = entry.target.classList;
+			if ( entry.isIntersecting ) {
+				if ( entryItemClassList.contains('engiicore-animate-fade-in-one') ) {
+					entryItemClassList.add('animating');
+				} else if ( entryItemClassList.contains('engiicore-animate-fade-in-two') ) {
+					entryItemClassList.add('animating');
+				} else if ( entryItemClassList.contains('engiicore-animate-fade-in-three') ) {
+					entryItemClassList.add('animating');
+				} else if ( entryItemClassList.contains('engiicore-animate-fade-in-four') ) {
+					entryItemClassList.add('animating');
+				}
+			}
+		})
+	});
+
 	// animation observer
 	/**
 	 * Animation observer for fadeup and fadeDown animations
@@ -119,6 +136,28 @@
 				} else if ( entryItemClassList.contains('engiicore-animate-fade-up-three') ) {
 					entryItemClassList.add('animating')
 				} else if ( entryItemClassList.contains('engiicore-animate-fade-up-four') ) {
+					entryItemClassList.add('animating')
+				}
+			}
+		})
+	})
+
+	/**
+	 * Observer for all entries with fade down animation class
+	 */
+	const fadeDownAnimationObservble = new IntersectionObserver((entries, observer) => {
+		entries.forEach(entry => {
+			const entryItemClassList = entry.target.classList;
+			if ( entry.isIntersecting ) {
+				if ( entryItemClassList.contains('engiicore-animate-fade-down-one') ) {
+					entryItemClassList.add('animating')
+				} else if ( entryItemClassList.contains('engiicore-animate-fade-down-two') ) {
+					entryItemClassList.add('animating')
+				}
+				else if ( entryItemClassList.contains('engiicore-animate-fade-down-three') ) {
+					entryItemClassList.add('animating')
+				}
+				else if ( entryItemClassList.contains('engiicore-animate-fade-down-four') ) {
 					entryItemClassList.add('animating')
 				}
 			}
@@ -171,24 +210,37 @@
 		})
 	})
 
+	const fadeInElements = document.querySelectorAll('.engiicore-animate-fade-in-one, .engiicore-animate-fade-in-two, .engiicore-animate-fade-in-three, .engiicore-animate-fade-in-four');
 	const fadeUpElements = document.querySelectorAll('.engiicore-animate-fade-up-one, .engiicore-animate-fade-up-two, .engiicore-animate-fade-up-three, .engiicore-animate-fade-up-four');
 	const slideLeftElements = document.querySelectorAll('.engiicore-animate-slide-left-one, .engiicore-animate-slide-left-two, .engiicore-animate-slide-left-three, engiicore-animate-slide-right-four');
 	const slideRightElements = document.querySelectorAll('.engiicore-animate-slide-right-one, .engiicore-animate-slide-right-two, .engiicore-animate-slide-right-three, .engiicore-animate-slide-right-four');
+	const fadeDownElements = document.querySelectorAll('.engiicore-animate-fade-down-one, .engiicore-animate-fade-down-two, .engiicore-animate-fade-down-three, .engiicore-animate-fade-down-four');
+	
+	fadeInElements.forEach(element => {
+		fadeInAnimationObservable.observe(element, {rootMargin: "0px 0px -100px 0px"});
+	})
 
+	// observe each element with fade up animation class
 	fadeUpElements.forEach(element => {
 		fadeUpAnimationObservable.observe(element, {rootMargin: "0px 0px -100px 0px"});
 	})
 
+	// observe each element with fade down animation class
+	fadeDownElements.forEach(element => {
+		fadeDownAnimationObservble.observe(element, {rootMargin: "0px 0px -100px 0px"});
+	})
+
+	// observe each element with slide left animation class
 	slideLeftElements.forEach(element => {
 		slideLeftAnimationObservable.observe(element, {rootMargin: "0px 0px -100px 0px"});
 	})
 
+	// observe each element with slide right animation class
 	slideRightElements.forEach(element => {
 		slideRightElementsObservable.observe(element, {rootMargin: "0px 0px -100px 0px"})
 	})
 
 	// adding swiper effect to top features section
-	
 	jQuery('.menu-engiicore-feature-slider-menu-container').addClass('swiper').find('ul').addClass('swiper-wrapper').find('li').addClass('swiper-slide');
 	jQuery('.menu-engiicore-feature-slider-menu-container').append('<div class="swiper-button-prev"></div><div class="swiper-button-next"></div>');
 
