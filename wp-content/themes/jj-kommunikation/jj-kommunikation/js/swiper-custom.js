@@ -47,6 +47,11 @@ jQuery(document).ready(function(){
             },
 			1024: {
 				slidesPerView: 'auto',
+                spaceBetween: 10,
+                slideToClickedSlide: true,
+                roundLengths: true,
+                visibilityFullFit: true,
+                centeredSlies: true,
 			},
             1200: {
                 slidesPerView: 'auto',
