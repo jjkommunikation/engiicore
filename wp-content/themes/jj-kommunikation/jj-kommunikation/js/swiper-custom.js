@@ -47,7 +47,6 @@ jQuery(document).ready(function(){
             },
 			1024: {
 				slidesPerView: 2,
-                spaceBetween: 10,
 			},
             1200: {
                 slidesPerView: 'auto',
