@@ -3192,7 +3192,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
         .feature-card-menu .widget .menu-engiicore-feature-slider-menu-container #menu-engiicore-feature-slider-menu .engiicore-feature-card,
         .feature-card-menu .widget .menu-engiicore-feature-slider-menu-container #menu-engiicore-feature-slider-menu .engiicore-feature-card:not(.active) {
-            width: 70% !important;
+            /* width: 70% !important; */
             height: 300px !important;
             min-height: 150px !important;
         }
