@@ -3276,7 +3276,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  */
         .feature-card-menu .widget .menu-engiicore-feature-slider-menu-container #menu-engiicore-feature-slider-menu .engiicore-feature-card,
         .feature-card-menu .widget .menu-engiicore-feature-slider-menu-container #menu-engiicore-feature-slider-menu .engiicore-feature-card a {
-            width: 406px !important;
+            width: 330px !important;
         }
 
         .feature-card-menu .widget .menu-engiicore-feature-slider-menu-container .swiper-button-next {
@@ -3291,7 +3291,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     @media (min-width: 1200px) and (max-width: 1440px) {
         .feature-card-menu .widget .menu-engiicore-feature-slider-menu-container #menu-engiicore-feature-slider-menu .engiicore-feature-card,
         .feature-card-menu .widget .menu-engiicore-feature-slider-menu-container #menu-engiicore-feature-slider-menu .engiicore-feature-card a {
-            width: 402px !important;
+            /* width: 402px !important; */
         }
 
         .feature-card-menu .widget .menu-engiicore-feature-slider-menu-container #menu-engiicore-feature-slider-menu {
@@ -3301,7 +3301,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
     @media (min-width: 1200px) and (max-width: 1440px) {
         .feature-card-menu .widget .menu-engiicore-feature-slider-menu-container #menu-engiicore-feature-slider-menu .engiicore-feature-card {
-            margin-left: 20px;
+           /*  margin-left: 20px; */
         }
     }
 
