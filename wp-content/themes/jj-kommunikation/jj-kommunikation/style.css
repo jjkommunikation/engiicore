@@ -2942,7 +2942,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     }
 
     .feature-card-menu .widget .menu-engiicore-feature-slider-menu-container {
-        height: 400px;
+        /* height: 400px; */
         min-height: 400px;
     }
 
