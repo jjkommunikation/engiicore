@@ -2420,6 +2420,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
      a#next-button:hover {
         right: 0;
      }
+
+     #next-button.hidden {
+        right: -1000px;
+     }
+
+     #prev-button.hidden {
+        left: -1000px;
+     }
      
      a#next-button .feature-nav.next {
          position: absolute;

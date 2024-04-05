@@ -210,12 +210,37 @@
 		})
 	})
 
+	/**
+	 * Intersection observer for feature navigation
+	 */
+	const featureNavigationObserver = new IntersectionObserver((entries, observer) => {
+		entries.forEach(entry => {
+			if (entry.isIntersecting) {
+				console.log("entry is inside view")
+				// check if entry contains id of ribbon-section
+				console.log(entry.target.id)
+				if (entry.target.id === 'ribbon-section') {
+					jQuery('#next-button').addClass('hidden');
+					jQuery('#prev-button').addClass('hidden');
+				}
+			} else {
+				jQuery('#next-button').removeClass('hidden');
+				jQuery('#prev-button').removeClass('hidden');
+			}
+		})
+	})
+
 	const fadeInElements = document.querySelectorAll('.engiicore-animate-fade-in-one, .engiicore-animate-fade-in-two, .engiicore-animate-fade-in-three, .engiicore-animate-fade-in-four');
 	const fadeUpElements = document.querySelectorAll('.engiicore-animate-fade-up-one, .engiicore-animate-fade-up-two, .engiicore-animate-fade-up-three, .engiicore-animate-fade-up-four');
 	const slideLeftElements = document.querySelectorAll('.engiicore-animate-slide-left-one, .engiicore-animate-slide-left-two, .engiicore-animate-slide-left-three, engiicore-animate-slide-right-four');
 	const slideRightElements = document.querySelectorAll('.engiicore-animate-slide-right-one, .engiicore-animate-slide-right-two, .engiicore-animate-slide-right-three, .engiicore-animate-slide-right-four');
 	const fadeDownElements = document.querySelectorAll('.engiicore-animate-fade-down-one, .engiicore-animate-fade-down-two, .engiicore-animate-fade-down-three, .engiicore-animate-fade-down-four');
 	
+	const featureNavigation = document.getElementById('ribbon-section');
+
+	// observe feature navigation
+	featureNavigationObserver.observe(featureNavigation);
+
 	fadeInElements.forEach(element => {
 		fadeInAnimationObservable.observe(element, {rootMargin: "0px 0px -100px 0px"});
 	})
