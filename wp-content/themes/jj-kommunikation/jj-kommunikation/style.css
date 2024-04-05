@@ -3086,6 +3086,18 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         }
     }
 
+    @media (max-width: 767px) {
+        #menu-engiicore-feature-slider-menu .engiicore-feature-card a {
+            width: 86% !important;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 1023px) {
+        #menu-engiicore-feature-slider-menu .engiicore-feature-card a {
+            width: 100% !important;
+        }
+    }
+
 
     @media (max-width: 1023px) {
 
@@ -3114,9 +3126,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
             gap: 0px !important;
         }
 
-        #menu-engiicore-feature-slider-menu .engiicore-feature-card a {
-            width: 100% !important;
-        }
+        
 
         .feature-card-menu .widget .menu-engiicore-feature-slider-menu-container .swiper-button-prev,
         .feature-card-menu .widget .menu-engiicore-feature-slider-menu-container .swiper-button-next {
