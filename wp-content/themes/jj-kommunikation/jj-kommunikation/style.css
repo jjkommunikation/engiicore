@@ -2561,7 +2561,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
          height: 110%;
          width: 50%;
          position: absolute;
-         bottom: 0;
+         /* bottom: 0; */
          left: 0;
          background-image: url(/wp-content/uploads/yellow-circle-left.svg);
          background-repeat: no-repeat;
@@ -3542,7 +3542,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     */
     @media (min-width: 439px) and (max-width: 511px) {
         .bluecircle.right:before {
-            top: 450px;
+            top: 450px !important;
         }
     }
 
@@ -3552,7 +3552,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     */
     @media (min-width: 512px) and (max-width: 574px) {
         .bluecircle.right:before {
-            top: 430px;
+            top: 490px !important;
+        }
+
+        body:not(.home) #overblik.bluecircle:before {
+            top: 50% !important;
         }
     }
 
