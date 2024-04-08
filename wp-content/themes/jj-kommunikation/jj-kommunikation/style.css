@@ -2566,7 +2566,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
          background-image: url(/wp-content/uploads/yellow-circle-left.svg);
          background-repeat: no-repeat;
          background-size: contain;
-         z-index: 1;
+         z-index: 0;
      }
      .bluecircle:before {
          background-image: url(/wp-content/uploads/blue-circle-left.svg);
@@ -3106,6 +3106,29 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         }
     }
 
+    @media (max-width: 423px) {
+        .feature-card-menu .widget .menu-engiicore-feature-slider-menu-container .swiper-button-prev,
+        .feature-card-menu .widget .menu-engiicore-feature-slider-menu-container .swiper-button-next {
+            top: -20px !important;
+        }   
+
+        .feature-card-menu .widget .menu-engiicore-feature-slider-menu-container .swiper-button-pref {
+            right: unset;
+            left: 25px;
+        }
+
+        .feature-card-menu-widget .menu-engiicore-feature-slider-menu-container .swiper-button-next {
+            right: 45px;
+        }
+    }
+
+    @media (min-width: 424px) and (max-width: 1023px) {
+        .feature-card-menu .widget .menu-engiicore-feature-slider-menu-container .swiper-button-prev,
+        .feature-card-menu .widget .menu-engiicore-feature-slider-menu-container .swiper-button-next {
+            top: -60px !important;
+        }
+    }
+
 
     @media (max-width: 1023px) {
 
@@ -3124,13 +3147,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
         #menu-engiicore-feature-slider-menu {
             gap: 0px !important;
-        }
-
-        
-
-        .feature-card-menu .widget .menu-engiicore-feature-slider-menu-container .swiper-button-prev,
-        .feature-card-menu .widget .menu-engiicore-feature-slider-menu-container .swiper-button-next {
-            top: -40px !important;
         }
 
         .feature-card-menu .widget .menu-engiicore-feature-slider-menu-container .swiper-button-prev {
