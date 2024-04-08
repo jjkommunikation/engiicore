@@ -3561,6 +3561,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         .bluecircle.right:before {
             top: 450px !important;
         }
+        body.home .bluecircle.right:before {
+            top: 490px !important;
+        }
+
+        body:not(.home) #overblik.bluecircle:before {
+            top: unset !important;
+            bottom: -36% !important;
+        }
     }
 
     /*
