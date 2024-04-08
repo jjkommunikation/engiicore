@@ -1661,6 +1661,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
          color: #fff;
          border-radius: 50px;
      }
+
+     @media (min-width: 992px) and (max-width: 1199px) {
+        ul#secondary-menu > li.button > a {
+            min-width: 50px;
+            font-size: 0;
+            padding: 12px 20px 12px 25px !important;
+        }
+     }
      
       a.wp-block-button__link:after, li.button a:after, .tab-panel a:last-child:after {
          content: "";
