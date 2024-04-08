@@ -1668,7 +1668,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         }
 
         .mega-menu > .mega-menu-item {
-            margin-inline: 0;
+            margin: 0px 0px !important;
         }
      }
 
