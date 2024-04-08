@@ -3724,6 +3724,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
             height: 75%;
             width: 100%;
          }
+
+         body:not(.home) #overblik.bluecircle:before {
+            height: 44%;
+         }
      }
      
      /*
