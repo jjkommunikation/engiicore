@@ -45,9 +45,13 @@ const currentUrl = window.location.href;
 
 const nextButton = document.createElement("a");
 nextButton.id = "next-button";
+nextButton.classList.add("engiicore-animate-slide-right-three");
+nextButton.classList.add('animating');
 
 const prevButton = document.createElement("a");
 prevButton.id = "prev-button";
+prevButton.classList.add("engiicore-animate-slide-left-three");
+prevButton.classList.add('animating');
 
 const ribbonSection = document.querySelector("#ribbon-section");
 
@@ -87,7 +91,7 @@ function updateButtonsText() {
 			</span> <img src='${menuItems[0].firstElementChild.attributes[0].nodeValue}'><span class='feature-name'>Næste</span>`; */
 			console.log(menuItems[0].firstChild.data)
 			nextButton.innerHTML = `
-			<span class='feature feature-next' style='background-color: ${color}'><img src='${menuItems[0].firstElementChild.attributes[0].nodeValue}'><span class='feature-name'>Næste</span></span>`;
+			<span class='feature feature-next engiicore-animate-slide-right-three' style='background-color: ${color}'><img src='${menuItems[0].firstElementChild.attributes[0].nodeValue}'><span class='feature-name'>Næste</span></span>`;
 			nextButton.setAttribute("href", menuItems[0]);
 		} else {
 			//nextButton.setAttribute("style", menuItems[index + 1].children[2].attributes[1].nodeValue);
@@ -110,7 +114,7 @@ function updateButtonsText() {
 			</span> <img src='${menuItems[index + 1].firstElementChild.attributes[0].nodeValue}'><span class='feature-name'>Næste</span>`; */
 
 			nextButton.innerHTML = `
-			<span class='feature feature-next' style='background-color: ${color}'><img src='${menuItems[index + 1].firstElementChild.attributes[0].nodeValue}'><span class='feature-name'>Næste</span></span>`;
+			<span class='feature feature-next engiicore-animate-slide-right-three' style='background-color: ${color}'><img src='${menuItems[index + 1].firstElementChild.attributes[0].nodeValue}'><span class='feature-name'>Næste</span></span>`;
 			nextButton.setAttribute("href", menuItems[index + 1]);
 			console.log(menuItems[index + 1].firstChild.data)
 		}
@@ -136,7 +140,7 @@ function updateButtonsText() {
 			</span> <img src='${menuItems[lastItem].firstElementChild.attributes[0].nodeValue}'><span class='feature-name'>Forige</span>`; */
 			
 			prevButton.innerHTML = `
-			 <span style='background-color: ${color}' class='feature feature-previous'><img src='${menuItems[lastItem].firstElementChild.attributes[0].nodeValue}'><span class='feature-name'>Forige</span></span>`;
+			 <span style='background-color: ${color}' class='feature feature-previous engiicore-animate-slide-left-three'><img src='${menuItems[lastItem].firstElementChild.attributes[0].nodeValue}'><span class='feature-name'>Forige</span></span>`;
 			prevButton.setAttribute("href", menuItems[lastItem]);
 		} else {
 			
@@ -160,7 +164,7 @@ function updateButtonsText() {
 			</svg>
 </span> <img src='${menuItems[index - 1].firstElementChild.attributes[0].nodeValue}'><span class='feature-name'>${menuItems[index - 1].firstChild.data}</span>`; */
 			prevButton.innerHTML = `
-			<span style='background-color: ${color}' class='feature feature-previous'><img src='${menuItems[index - 1].firstElementChild.attributes[0].nodeValue}'><span class='feature-name'>Forige</span></span>`;
+			<span style='background-color: ${color}' class='feature feature-previous engiicore-animate-slide-left-three'><img src='${menuItems[index - 1].firstElementChild.attributes[0].nodeValue}'><span class='feature-name'>Forige</span></span>`;
 			prevButton.setAttribute("href", menuItems[index - 1]);
 		}
 
