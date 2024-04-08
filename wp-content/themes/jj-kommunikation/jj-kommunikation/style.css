@@ -2089,7 +2089,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         }
      }
 
-     @media (min-width: 992px) and (max-width: 1199px) {
+     @media (min-width: 992px) and (max-width: 1299px) {
         ul#secondary-menu > li.button > a {
             min-width: 50px;
             font-size: 0;
