@@ -1662,7 +1662,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
          border-radius: 50px;
      }
 
-     @media (min-width: 992px) and (max-width: 1068) {
+     @media (min-width: 992px) and (max-width: 1068px) {
         .site-header > div {
             justify-content: flex-start;
         }
