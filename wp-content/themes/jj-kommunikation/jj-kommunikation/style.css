@@ -3405,7 +3405,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
      @media (min-width: 375px) and (max-width: 992px) {
          ul#secondary-menu {
              justify-content: flex-start;
-             padding: 1.5rem 2rem;
+             padding: 1.5rem 0.8rem;
          }
      }
      
