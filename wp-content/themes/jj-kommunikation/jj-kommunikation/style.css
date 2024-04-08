@@ -2084,10 +2084,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
      }
 
      @media (min-width: 992px) and (max-width: 1068px) {
-        .site-header > div {
-            justify-content: flex-start;
-        }
-
         .mega-menu > .mega-menu-item {
             margin: 0px 0px !important;
         }
