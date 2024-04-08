@@ -1662,23 +1662,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
          border-radius: 50px;
      }
 
-     @media (min-width: 992px) and (max-width: 1068px) {
-        .site-header > div {
-            justify-content: flex-start;
-        }
-
-        .mega-menu > .mega-menu-item {
-            margin: 0px 0px !important;
-        }
-     }
-
-     @media (min-width: 992px) and (max-width: 1199px) {
-        ul#secondary-menu > li.button > a {
-            min-width: 50px;
-            font-size: 0;
-            padding: 12px 20px 12px 25px !important;
-        }
-     }
+     
      
       a.wp-block-button__link:after, li.button a:after, .tab-panel a:last-child:after {
          content: "";
@@ -2097,6 +2081,24 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
      }
      ul#secondary-menu > li.button > a {
          height: 48px !important;
+     }
+
+     @media (min-width: 992px) and (max-width: 1068px) {
+        .site-header > div {
+            justify-content: flex-start;
+        }
+
+        .mega-menu > .mega-menu-item {
+            margin: 0px 0px !important;
+        }
+     }
+
+     @media (min-width: 992px) and (max-width: 1199px) {
+        ul#secondary-menu > li.button > a {
+            min-width: 50px;
+            font-size: 0;
+            padding: 12px 20px 12px 25px !important;
+        }
      }
      
      .integrationer:after {
