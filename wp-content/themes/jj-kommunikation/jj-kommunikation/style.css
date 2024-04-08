@@ -3575,7 +3575,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     * Min width: 512px
     * Max width: 574px
     */
-    @media (min-width: 512px) and (max-width: 574px) {
+    @media (min-width: 512px) and (max-width: 781px) {
         .bluecircle.right:before {
             top: 490px !important;
         }
