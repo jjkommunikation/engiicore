@@ -3123,11 +3123,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
         .feature-card-menu .widget .menu-engiicore-feature-slider-menu-container .swiper-button-prev {
             right: unset;
-            left: 15px !important;
+            left: 0px !important;
         }
 
         .feature-card-menu .widget .menu-engiicore-feature-slider-menu-container .swiper-button-next {
-            left: 60px !important;
+            left: 45px !important;
         }
     }
 
