@@ -2279,13 +2279,13 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
      }
 
      @media(max-width: 1439px) {
-        #ribbon-section ul {
+        /* #ribbon-section ul {
             gap: 0;
         }
 
         #ribbon-section ul li a {
             margin-left: 20px;
-        }
+        } */
      }
      
      #cta-section .wp-block-column:not(:last-child) {
