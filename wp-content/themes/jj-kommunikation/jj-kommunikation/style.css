@@ -2277,6 +2277,16 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
      #ribbon-section label {
          padding-left: 0;
      }
+
+     @media(max-width: 1439px) {
+        #ribbon-section ul {
+            gap: 0;
+        }
+
+        #ribbon-section ul li a {
+            margin-left: 20px;
+        }
+     }
      
      #cta-section .wp-block-column:not(:last-child) {
          border-right: 1px solid #D9D9D9;
