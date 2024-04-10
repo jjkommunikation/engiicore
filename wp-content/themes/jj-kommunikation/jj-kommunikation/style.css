@@ -3583,7 +3583,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
         body:not(.home) #overblik.bluecircle:before {
             top: unset !important;
-            bottom: -36% !important;
+            bottom: -40% !important;
         }
     }
 
