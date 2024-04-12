@@ -3597,6 +3597,13 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         }
     }
 
+    @media (max-width: 575px) {
+        .integrationer > h3 {
+            font-size: 28px;
+            line-height: 1.3;
+        }
+    }
+
     /*
     * Min width: 512px
     * Max width: 574px
