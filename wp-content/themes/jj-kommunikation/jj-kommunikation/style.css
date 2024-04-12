@@ -3134,7 +3134,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         }
 
         .feature-card-menu .widget .menu-engiicore-feature-slider-menu-container #menu-engiicore-feature-slider-menu .swiper-slide:not(.active) {
-            height: 300px !important;
+        .feature-card-menu .widget .menu-engiicore-feature-slider-menu-container #menu-engiicore-feature-slider-menu .swiper-slide.active {
+            height: 325px !important;
         }
     }
 
