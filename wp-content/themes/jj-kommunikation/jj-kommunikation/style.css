@@ -2957,15 +2957,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         overflow-y: hidden;
         overflow-x: scroll;
         padding: 130px
-
-        /* scrollbar */
-        &::-webkit-scrollbar {
-            display: none;
-        }
      }
-
    
-
      #top-features-section::-webkit-scrollbar {
         display: none;
      }
@@ -3598,7 +3591,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     }
 
     @media (max-width: 575px) {
-        #integrationer > h3 {
+        .integrationer .wp-block-group__inner-container .wp-block-columns .wp-block-column .wp-block-columns .wp-block-column .wp-block-heading {
             font-size: 28px !important;
             line-height: 1.3;
         }
