@@ -89,6 +89,10 @@ ul.tab-titles {
 	padding: 3rem;
 	border-radius: 30px;
 	transition: height 0.5s ease-in-out;
+
+	@media (max-width: 768px) {
+		padding: 1rem;
+	}
 }
 
 .tab-panel {
