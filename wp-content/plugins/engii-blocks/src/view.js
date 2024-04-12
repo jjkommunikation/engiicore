@@ -52,15 +52,6 @@ document.addEventListener('DOMContentLoaded', function () {
             setTimeout(() => {
                 content.style.height = endHeight;
             }, 0);
-
-            //
-            /* document.querySelectorAll('.custom-tabs .tab-panel').forEach((panel, idx) => {
-                jQuery('.custom-tabs .tab-content').animate({ height: panel.scrollHeight + 'px' }, 500);
-
-                //jQuery('.custom-tabs .tab-content').animate({ height: panel.scrollHeight + 'px' }, 500);
-                panel.style.transition = 'height 0.5s ease-in-out';
-                panel.style.height = panel.scrollHeight + 'px';
-            }); */
         });
     });
 });

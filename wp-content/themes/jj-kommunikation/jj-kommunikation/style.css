@@ -4111,3 +4111,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
             width: 37% !important;
         }
      }
+
+     @media(max-width: 600px) {
+        .wp-block-media-text.is-stacked-on-mobile .wp-block-media-text__content {
+            padding-inline: 0px;
+            padding-block: 20px 0px;
+        }
+     }
