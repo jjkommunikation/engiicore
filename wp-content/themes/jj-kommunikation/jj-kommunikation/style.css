@@ -3053,7 +3053,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
     .feature-card-menu .swiper-button-prev, 
     .feature-card-menu .swiper-button-next {
-        top: -30px !important;
+        top: -60px !important;
         right: 0 !important;
         left: unset !important;
         height: 50px;
@@ -3110,12 +3110,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
     @media (min-width: 768px) and (max-width: 1023px) {
         .feature-card-menu .widget .menu-engiicore-feature-slider-menu-container #menu-engiicore-feature-slider-menu .engiicore-feature-card {
-            height: 300px !important;
+            height: 325px !important;
             min-height: 150px !important;
-        }
-
-        .feature-card-menu .widget .menu-engiicore-feature-slider-menu-container #menu-engiicore-feature-slider-menu .engiicore-feature-card a .sub-label {
-            width: 60% !important;
         }
     }
 
