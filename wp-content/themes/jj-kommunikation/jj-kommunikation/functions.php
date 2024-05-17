@@ -278,6 +278,7 @@ function jj_kommunikation_scripts() {
 	wp_enqueue_style( 'swiper-style2', get_template_directory_uri() . '/css/swiper-custom.css' );
 	wp_enqueue_script( 'swiper-script', get_template_directory_uri() . '/js/swiper-bundle.min.js', 'jquery' );
 	wp_enqueue_script( 'swiper-script2', get_template_directory_uri() . '/js/swiper-custom.js');
+	wp_enqueue_script( 'jj-kommunikation-search', get_template_directory_uri() . '/js/search.js', array('jquery'));
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
