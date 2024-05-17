@@ -3479,7 +3479,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
      @media (min-width: 375px) and (max-width: 992px) {
          ul#secondary-menu {
              justify-content: flex-start;
-             padding: 1.5rem 0.8rem;
+             padding: 1.5rem 1.8rem;
          }
      }
      
@@ -3903,8 +3903,23 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
              display: none;
          }
          
+         /*
+         * Deprecating
+         */
          #secondary-menu li.astm-search-menu {
              display: none;
+         }
+
+         ul#secondary-menu {
+            flex-wrap: wrap;
+         }
+
+         ul#secondary-menu li.astm-search-menu {
+            width: 100%;
+         }
+
+         .astm-search-menu form {
+            width: 100% !important;
          }
 
          .mega-menu-menu-1-mobile-open li.astm-search-menu {
