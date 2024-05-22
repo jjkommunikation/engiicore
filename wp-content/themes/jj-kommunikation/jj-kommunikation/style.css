@@ -2939,9 +2939,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
      .is-ajax-search-result {
         width: 190px !important;
         border-radius: 20px !important;
-        top: 110px !important;
+        top: 80px !important;
         padding-inline: 15px 0px !important;
         padding-block: 10px !important;
+        left: 1309.12px !important;
      }
 
      .is-ajax-search-no-result {
@@ -3903,9 +3904,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
          /*
          * Deprecating
          */
-         #secondary-menu li.astm-search-menu {
+         /* #secondary-menu li.astm-search-menu {
              display: none;
-         }
+         } */
 
          ul#secondary-menu {
             flex-wrap: wrap;
@@ -3917,6 +3918,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
          .astm-search-menu form {
             width: 100% !important;
+         }
+
+         .is-menu.is-first form {
+            right: 0px !important;
          }
 
          .mega-menu-menu-1-mobile-open li.astm-search-menu {
