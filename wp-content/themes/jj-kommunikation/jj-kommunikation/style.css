@@ -2937,12 +2937,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
      * Search results element
      */
      .is-ajax-search-result {
-        width: 190px !important;
+        width: 185px !important;
         border-radius: 20px !important;
         top: 80px !important;
         padding-inline: 15px 0px !important;
         padding-block: 10px !important;
-        left: 1309.12px !important;
+        left: 1320.12px !important;
      }
 
      .is-ajax-search-no-result {
