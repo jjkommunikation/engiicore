@@ -3941,6 +3941,52 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
             right: 0px !important;
          }
 
+         input#is-search-input-704 {
+            background: transparent !important;
+            color: var(--secondary-color) !important;
+            border-bottom: 2px solid var(--secondary-color) !important;
+            border-radius: 0px !important;
+         }
+
+         input#is-search-input-704::placeholder {
+            color: var(--secondary-color) !important;
+         }
+
+         input#is-search-input-704,
+         input#is-search-input-704::placeholder {
+            font-size: 16px !important;
+         }
+
+         .is-ajax-search-result {
+            width: 92% !important;
+            border-radius: 20px !important;
+            top: 185px !important;
+            padding-inline: 15px 0px !important;
+            padding-block: 10px !important;
+            left: unset !important;
+            right: 20px !important;
+         }
+         .is-ajax-search-details .is-ajax-search-items>div, .is-ajax-search-post {
+            background-color: var(--secondary-color) !important;
+         }
+         .is-ajax-search-details a,
+         .is-ajax-search-details .is-title a {
+            color: var(--secondary-color) !important;
+         }
+
+         ul#secondary-menu > li.astm-search-menu.sliding a svg {
+            top: -2px;
+            left: 5px;
+         }
+
+         .is-ajax-search-details .is-title a, .is-ajax-search-post .is-title a {
+            font-size: 1.5rem !important;
+         }
+
+         .is-menu path.search-icon-path {
+            fill: var(--secondary-color) !important;
+         }
+
          .mega-menu-menu-1-mobile-open li.astm-search-menu {
              /* display: block; */
              display: flex;
