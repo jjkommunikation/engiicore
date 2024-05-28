@@ -2942,7 +2942,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         top: 80px !important;
         padding-inline: 15px 0px !important;
         padding-block: 10px !important;
-        left: 1320.12px !important;
+        left: unset !important;
+        right: 380px !important;
+     }
+
+     @media (min-width: 1800px) {
+        .is-ajax-search-result {
+            right: 390px !important;
+        }
      }
 
      .is-ajax-search-no-result {
@@ -3365,6 +3372,16 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
          .tab-panel.active .tab-panel--image {
             order: 0;
          }
+     }
+
+     /*
+     * Min width: 768px
+     * Max width: 1300px
+     */
+     @media (min-width: 768px) and (max-width: 1300px) {
+        .is-ajax-search-result {
+            right: 160px !important;
+        }
      }
      
      /*
