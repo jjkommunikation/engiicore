@@ -16,6 +16,32 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
+		<?php 
+		
+			// show heading for search results if search paramter is set
+			if ( isset($_GET["s"]) ) {
+				?>
+					<div class="entry-heading" style="margin-bottom: 2rem;">
+						<!-- wp:cover {"url":"https://engiicore-staging.jjkommunikation.aze.dk/wp-content/uploads/Baggrund_udenbrandmark-greennoiseglow.jpg","id":950,"dimRatio":0,"focalPoint":{"x":0.47,"y":0},"minHeight":300,"contentPosition":"center center","align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"}}},"className":"engiicore-animate-fade-in-one","layout":{"type":"constrained"}} -->
+						<div class="wp-block-cover alignfull engiicore-animate-fade-in-one" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60);min-height:300px" id="hero"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span><img class="wp-block-cover__image-background wp-image-950" alt="" src="https://engiicore-staging.jjkommunikation.aze.dk/wp-content/uploads/Baggrund_udenbrandmark-greennoiseglow.jpg" style="object-position:47% 0%" data-object-fit="cover" data-object-position="47% 0%"/><div class="wp-block-cover__inner-container"><!-- wp:columns {"align":"wide"} -->
+						<div class="wp-block-columns alignwide"><!-- wp:column {"verticalAlignment":"center","width":"672px"} -->
+						<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:672px"><!-- wp:heading {"textAlign":"left","level":1,"style":{"color":{"text":"#ffffff"},"elements":{"link":{"color":{"text":"#ffffff"}}}},"className":"engiicore-animate-slide-right-two"} -->
+						<h1 class="wp-block-heading has-text-align-left engiicore-animate-slide-right-two has-text-color has-link-color" style="color:#ffffff"><strong><strong>EngiiCore søge resultater</strong></strong></h1>
+						<!-- /wp:heading -->
+						<!-- /wp:column -->
+
+						<!-- wp:column {"verticalAlignment":"center"} -->
+						<div class="wp-block-column is-vertically-aligned-center"></div>
+						<!-- /wp:column --></div>
+						<!-- /wp:columns --></div></div>
+						<!-- /wp:cover -->
+					</div>
+			</div>
+				<?php
+			}
+		
+		?>
+	
 	<div class="entry-content">
 		<?php
 		if ( have_posts() ) :
