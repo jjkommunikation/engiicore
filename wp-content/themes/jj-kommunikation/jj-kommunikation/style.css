@@ -3973,7 +3973,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
             padding-inline: 15px 0px !important;
             padding-block: 10px !important;
             left: unset !important;
-            right: 20px !important;
+            right: 10px !important;
          }
          .is-ajax-search-details .is-ajax-search-items>div, .is-ajax-search-post {
             background-color: var(--secondary-color) !important;
