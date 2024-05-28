@@ -2884,6 +2884,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
      .is-ajax-search-post {
          padding-left: 10px !important;
      }
+
+     .is-search-content {
+        margin-block: 3rem;
+     }
      
      li a.mega-menu-link:hover {
          color: var(--primary-color) !important;
@@ -3975,6 +3979,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
             left: unset !important;
             right: 10px !important;
          }
+
          .is-ajax-search-details .is-ajax-search-items>div, .is-ajax-search-post {
             background-color: var(--secondary-color) !important;
          }

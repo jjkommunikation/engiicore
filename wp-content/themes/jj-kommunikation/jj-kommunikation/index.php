@@ -21,7 +21,7 @@ get_header();
 			// show heading for search results if search paramter is set
 			if ( isset($_GET["s"]) ) {
 				?>
-					<div class="entry-heading" style="margin-bottom: 2rem;">
+					<div class="entry-heading">
 						<!-- wp:cover {"url":"https://engiicore-staging.jjkommunikation.aze.dk/wp-content/uploads/Baggrund_udenbrandmark-greennoiseglow.jpg","id":950,"dimRatio":0,"focalPoint":{"x":0.47,"y":0},"minHeight":300,"contentPosition":"center center","align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"}}},"className":"engiicore-animate-fade-in-one","layout":{"type":"constrained"}} -->
 						<div class="wp-block-cover alignfull engiicore-animate-fade-in-one" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60);min-height:300px" id="hero"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span><img class="wp-block-cover__image-background wp-image-950" alt="" src="https://engiicore-staging.jjkommunikation.aze.dk/wp-content/uploads/Baggrund_udenbrandmark-greennoiseglow.jpg" style="object-position:47% 0%" data-object-fit="cover" data-object-position="47% 0%"/><div class="wp-block-cover__inner-container"><!-- wp:columns {"align":"wide"} -->
 						<div class="wp-block-columns alignwide"><!-- wp:column {"verticalAlignment":"center","width":"672px"} -->
@@ -42,7 +42,7 @@ get_header();
 		
 		?>
 	
-	<div class="entry-content">
+	<div class="entry-content <?php if(isset($_GET["s"])) { echo "is-search-content"; } ?>">
 		<?php
 		if ( have_posts() ) :
 
