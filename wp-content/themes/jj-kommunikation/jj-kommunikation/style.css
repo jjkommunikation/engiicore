@@ -2888,6 +2888,27 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
      .is-search-content {
         margin-block: 3rem;
      }
+
+     .search-archive-wrapper {
+        background-color: #f9f9f9;
+        padding: 1.5rem;
+        border-radius: 5px;
+     }
+
+     .search-item-entry:hover h2,
+     .search-item-entry:hover .search-item-seemore {
+        color: var(--primary-color);
+        transition: ease-in-out 0.2s all;
+     }
+
+     .search-item-entry:not(:hover) h2,
+     .search-item-entry:not(:hover) .search-item-seemore {
+        transition: ease-in-out 0.2s all;
+     }
+
+     .search-item-excerpt {
+        width: 60%; 
+     }
      
      li a.mega-menu-link:hover {
          color: var(--primary-color) !important;
