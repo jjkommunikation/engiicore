@@ -2969,6 +2969,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         padding-block: 10px !important;
         left: unset !important;
         right: 380px !important;
+        position: fixed !important;
      }
 
      @media (min-width: 1800px) {
