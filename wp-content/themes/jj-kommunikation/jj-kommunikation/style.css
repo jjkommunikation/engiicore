@@ -2964,7 +2964,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
      .is-ajax-search-result {
         width: 185px !important;
         border-radius: 20px !important;
-        top: 110px !important;
+        top: 80px !important;
         padding-inline: 15px 5px !important;
         padding-block: 10px !important;
         left: unset !important;
