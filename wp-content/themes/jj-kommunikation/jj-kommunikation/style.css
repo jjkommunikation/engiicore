@@ -2968,13 +2968,13 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         padding-inline: 15px 5px !important;
         padding-block: 10px !important;
         left: unset !important;
-        right: 380px !important;
+        right: 375px !important;
         position: fixed !important;
      }
 
      @media (min-width: 1800px) {
         .is-ajax-search-result {
-            right: 395px !important;
+            right: 390px !important;
         }
      }
 
