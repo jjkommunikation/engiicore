@@ -2964,7 +2964,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
      .is-ajax-search-result {
         width: 185px !important;
         border-radius: 20px !important;
-        top: 110px !important;
+        top: 80px !important;
         padding-inline: 15px 0px !important;
         padding-block: 10px !important;
         left: unset !important;
@@ -2974,7 +2974,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
      @media (min-width: 1800px) {
         .is-ajax-search-result {
-            right: 390px !important;
+            right: 380px !important;
         }
      }
 
@@ -3001,8 +3001,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
      * @deprecated
      * outline button with green background
      * @author leo knudsen
-     */
-/* 
+     */ 
      ul#secondary-menu > li.button.outline > a:hover {
         border: 2px solid var(--secondary-color);
         background: var(--secondary-color);
