@@ -26,7 +26,8 @@ get_header();
 						<div class="wp-block-cover alignfull engiicore-animate-fade-in-one" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60);min-height:300px" id="hero"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span><img class="wp-block-cover__image-background wp-image-950" alt="" src="https://engiicore-staging.jjkommunikation.aze.dk/wp-content/uploads/Baggrund_udenbrandmark-greennoiseglow.jpg" style="object-position:47% 0%" data-object-fit="cover" data-object-position="47% 0%"/><div class="wp-block-cover__inner-container"><!-- wp:columns {"align":"wide"} -->
 						<div class="wp-block-columns alignwide"><!-- wp:column {"verticalAlignment":"center","width":"672px"} -->
 						<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:672px"><!-- wp:heading {"textAlign":"left","level":1,"style":{"color":{"text":"#ffffff"},"elements":{"link":{"color":{"text":"#ffffff"}}}},"className":"engiicore-animate-slide-right-two"} -->
-						<h1 class="wp-block-heading has-text-align-left engiicore-animate-slide-right-two has-text-color has-link-color" style="color:#ffffff"><strong><strong>EngiiCore søge resultater</strong></strong></h1>
+						<h1 class="wp-block-heading has-text-align-left engiicore-animate-slide-right-two has-text-color has-link-color" style="color:#ffffff"><strong><strong>Søgeresultat</strong></strong></h1>
+						<p class="wp-blockk-paragraph">Du søgte: "<?php echo $_GET["s"]; ?>"</p>
 						<!-- /wp:heading -->
 						<!-- /wp:column -->
 
