@@ -2617,6 +2617,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         height: 85%;
         bottom: unset;
         top: 3%;
+        width: 27%;
      }
      
      .yellowcircle.top::before, .bluecircle.top::before  {
