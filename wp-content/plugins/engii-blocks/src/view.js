@@ -24,7 +24,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const tabs = document.querySelectorAll('.custom-tabs .tab-title');
     const content = document.querySelector('.custom-tabs .tab-content')
     const panels = document.querySelectorAll('.custom-tabs .tab-panel');
-    content.style.height = `${panels[0].clientHeight + 100}px`;
+    const initialHeight = panels[0].clientHeight + 20;
+    content.style.height = `${initialHeight}px`;
 
     tabs.forEach(tab => {
         tab.addEventListener('click', function () {
@@ -50,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // animate the height change to the tab
             setTimeout(() => {
-                content.style.height = endHeight;
+                content.style.height = endHeight - 80;
             }, 0);
         });
     });
