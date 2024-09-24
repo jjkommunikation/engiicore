@@ -27,6 +27,26 @@ document.addEventListener('DOMContentLoaded', function () {
     const initialHeight = panels[0].clientHeight + 20;
     content.style.height = `${initialHeight}px`;
 
+    tabs[0].addEventListener('click', function () {
+            tabs[0].classList.add('active');
+            
+            // first set the content height to auto
+            const startHeight = `${content.clientHeight}px`;
+            content.style.height = "auto";
+            
+            // then set the content height to the captured height of the new tab
+            const endHeight = `${content.clientHeight}px`;
+            content.style.height = startHeight;
+            
+            // forcing reflow to ensure repainting of the contents height from the browser
+            content.getBoundingClientRect();
+
+            // animate the height change to the tab
+            setTimeout(() => {
+                content.style.height = endHeight - 80;
+            }, 0);
+    });
+
     tabs.forEach(tab => {
         tab.addEventListener('click', function () {
             tabs.forEach(t => t.classList.remove('active'));

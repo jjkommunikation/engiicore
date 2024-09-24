@@ -116,6 +116,7 @@ ul.tab-titles {
 		opacity: 0;
 		animation: fadeInFromDown 1s forwards;
 		animation-delay: 1s;
+		font-size: 15px !important;
 	}
 
 	&.active {
